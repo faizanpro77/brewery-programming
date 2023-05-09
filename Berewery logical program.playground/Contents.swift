@@ -1,8 +1,10 @@
 //logical program practice
 
+
 import CoreFoundation
 import Darwin
 import Foundation
+
 
 //import Darwin
 
@@ -91,10 +93,8 @@ import Foundation
 //
 //exercise()
 
-//===================================================================================================
-//===================================================================================================
-
-
+//======================================================================================
+//======================================================================================
 
 //Q5)  let’s filter an array of words such that only words less than 4 characters long remain:
 
@@ -111,7 +111,7 @@ import Foundation
 //["Is", "But", "A"]
 
 
-//------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
 
 //let’s use a for loop to filter an array of words less than 4 characters in length:
 
@@ -135,7 +135,7 @@ import Foundation
 //
 //["Is", "But", "A"]
 
-//===================================================================================================
+//======================================================================================
 
 //Q.6) return all the elements greater than 5
 
@@ -143,7 +143,7 @@ import Foundation
 //var result = number.filter({$0 > 5})
 //print(result)
 
-//===================================================================================================
+//======================================================================================
 
 //Q7) return all the elements that start with "N"
 //var lanuage = ["Swedish", "Nepali", "Slovene", "Norwegian"]
@@ -151,7 +151,7 @@ import Foundation
 //var result = lanuage.filter({$0.hasPrefix("N")})
 //print(result)
 
-//====================================================================================================
+//======================================================================================
 
 //Q8. check if all elements are even numbers or not
 
@@ -161,7 +161,7 @@ import Foundation
 //
 //print(result)
 
-//====================================================================================================
+//======================================================================================
 
 //Q9)filter an array of words such that only words less than 4 characters long remain
 
@@ -193,11 +193,8 @@ import Foundation
 //
 //print(filtered)
 
-//===============
 
-//===================================================================================================
-//===================================================================================================
-
+//======================================================================================
 //Q.10) Filter an Array of Objects in Swift
 
 
@@ -249,8 +246,40 @@ import Foundation
 //
 //}
 
+//=====================================================================================
+//MARK: swap array number using index variable a[0] <-->a[2] (yogesh interview)
 
+//var numbers = [5,10,15]
+//
+//func swapNumberUsingIndex<T>(_ array: inout [T], i:Int, j:Int) {
+//    array.swapAt(i, j)
+//}
+//
+//swapNumberUsingIndex(&numbers, i: 0, j: 2)
+//print(numbers)
 
+//======================================================================================
+//MARK: remove duplicate element from array
+
+var numbers = [1,3,1,2,4,4,6,5,6]
+
+print(Set(numbers))
+//convert to array
+print(Array(Set(numbers)))
+print(Set(numbers).sorted())
+
+var tempArray:[Int] = []
+
+for number in numbers {
+    
+    if !tempArray.contains(number) {
+        tempArray.append(number)
+    }
+}
+print("result", tempArray)
+
+//======================================================================================
+//mdfaizan
 
 
 //===================================================================================================
@@ -297,7 +326,7 @@ import Foundation
 //b = temp
 //print("a = \(a) and b = \(b)")
 
-//===================================================================================================
+//=============================================================================================
 
 //Q3) swap 2 variable value between each other
 
@@ -314,20 +343,42 @@ import Foundation
 
 
 //b = a + b - (a = b) //30 - a(20)==>a(20) & b(10)
+//============================================================================================
+//  swap 2 variable value between each other USING  tuple
 
+//var a = 10
+//var b = 20
 
+//var a = 10.12
+//var b = 4.45
+//
+//(a, b) = (b, a)
+//print("a", a)
+//print("b", b)
 
+//MARK: swap generic and immutable function paramerter with "inout"
 
+//func swap<T>(_ a: inout T, b: inout T){
+//    (a, b) = (b, a)
+//}
+//
+//swap(&a, &b)
+//
+//print("a", a)
+//print("b", b)
+
+//======================================================================================
+//MARK: it work only javaScript,c++,java
 /**
- it work only javaScript,c++,java
+ 
  var  a = 10
  var b = 20
 
  b = a + b - (a = b)
  console.log("a = " + a + " b = " + b)
+*/
 
- 
- */
+//======================================================================================
 
 //it only work in programiz online compiler or  by creating command line tool
 //print("Enter your favorite programming language:")
@@ -337,7 +388,7 @@ import Foundation
 //print("Your favorite programming language is \(name!).")
 
 
-//===================================================================================================
+//======================================================================================
 //Q4) filter an array of words such that only words less than 4 characters long remain
 
 //let words = ["Hello", "This", "Is", "Nothing", "But", "A", "Test"]
@@ -354,7 +405,7 @@ import Foundation
 //print(filtered)
 
 
-//===================================================================================================
+//======================================================================================
 
 //Q5) call function and pass array and add all number inside array
 
@@ -369,7 +420,7 @@ import Foundation
 //
 //print(addTwoNumbers(numbers: [10,10,10,10]))
 
-//===================================================================================================
+//======================================================================================
 //check odd number or even
 //
 //let number = 23
@@ -381,9 +432,9 @@ import Foundation
 //    print("number is odd")
 //}
 
-//===================================================================================================
+//======================================================================================
 
-// find factorial of number
+//MARK: find factorial of number
 
 //var number = 5
 //var factorial = 1
@@ -396,9 +447,11 @@ import Foundation
 //
 //print(factorial)
 
-//===================================================================================================
+//MARK: output:--  4---> 1*2*3*4 = 24
+
+//======================================================================================
 //
-//var number = 5
+//var number = 8
 //var n1 = 0
 //var n2 = 1
 //var next = 0
@@ -414,6 +467,11 @@ import Foundation
 //
 //}
 
+//MARK: output:-- 0, 1, 1, 2, 3, 5, 8
+
+//======================================================================================
+
+//MARK:  proram to print to half pyramid using *
 
 
 //===================================================================================================
@@ -421,7 +479,8 @@ import Foundation
 //===================================================================================================
 //===================================================================================================
 
-//** swift comceptual programming**
+
+//MARK:  ** swift comceptual programming**
 
 
 
@@ -505,7 +564,7 @@ import Foundation
 //let defaults = UserDefaults.standard
 //let sharedURLSession = URLSession.shared
 
-//** this are all known as singleton there is only one copy of it that can be shared across all  class and object
+// this are all known as singleton there is only one copy of it that can be shared across all  class and object
 
 //class Car {
 //    var carColour = "Red"
@@ -519,7 +578,7 @@ import Foundation
 //
 
 
-//**singleton
+//singleton
 
 //class Car {
 //    var carColour = "Red"
@@ -550,12 +609,5 @@ import Foundation
 //let a = A()
 //let b = B()
 //
-
-
-
-
-
-
-
 
 
