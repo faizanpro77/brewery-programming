@@ -23,11 +23,10 @@ import Foundation
 //===================================================================================================
 //===================================================================================================
 //===================================================================================================
-//**logic swift method**
+
+//MARK:  **logic swift method**T7
 
 //Q1)
-
-
 
 //1)expample:--
 //var a = [1,2,3,4,5]
@@ -259,35 +258,145 @@ import Foundation
 //print(numbers)
 
 //======================================================================================
-//MARK: remove duplicate element from array
+//MARK: remove duplicate element from array using function
 
-var numbers = [1,3,1,2,4,4,6,5,6]
 
-print(Set(numbers))
-//convert to array
-print(Array(Set(numbers)))
-print(Set(numbers).sorted())
+//var numbers:[Int] = []
 
-var tempArray:[Int] = []
+//print(Set(numbers))
+////convert to array
+//print(Array(Set(numbers)))
+//print(Set(numbers).sorted())
 
-for number in numbers {
-    
-    if !tempArray.contains(number) {
-        tempArray.append(number)
-    }
-}
-print("result", tempArray)
+//var tempArray:[Int] = [1,3,1,2,4,4,6,5,6]
+////
+//func removeDuplicateValues(array: [Int]) -> [Int] {
+//
+//    guard !numbers.isEmpty else {return []}
+//
+//    for number in array {
+//        if !tempArray.contains(number) {
+//            tempArray.append(number)
+//        }
+//    }
+//
+//    return tempArray
+//}
+//
+//print(removeDuplicateValues(array: numbers))
+
+//MARK: using for Each loop
+//numbers.forEach { item in
+//    if !tempArray.contains(item){
+//        tempArray.append(item)
+//    }
+//}
+//print(tempArray)
+
+
+//-------------------------------------
+//MARK:  remove duplicate element from array using extension
+//MARK:  it accept all type like generic
+
+//var numbers = [1,3,1,2,4,4,6,5,6]
+
+//extension Array where Element == Int {
+//extension Array where Element: Equatable{
+//
+//    func removeDuplicateValues() -> [Element] {
+//        var tempArray: [Element] = []
+//        for number in self {
+//            if !tempArray.contains(number) {
+//                tempArray.append(number)
+//            }
+//        }
+//        return tempArray
+//    }
+//}
+
+//---------------------------------------------------------------------------------
+//MARK:  remove duplicate element from array using extension modify numbers array
+//var numbers = [1,3,1,2,4,4,6,5,6]
+//
+//extension Array where Element: Equatable {
+//
+//
+//   mutating func removeDuplicateValues()  {
+//
+//        var tempArray: [Element] = []
+//        for number in self {
+//
+//            if !tempArray.contains(number) {
+//                tempArray.append(number)
+//            }
+//        }
+//        self = tempArray
+//    }
+//}
+//
+//numbers.removeDuplicateValues()
+//print("result", numbers)
+//
+//var chararcterArray = ["a", "b", "b", "a", "c"]
+//print(chararcterArray.removeDuplicateValues())
+//======================================================================================
+//MARK:  reverse String
+
+//let str = "Hello, world!"
+//let reversed = String(str.reversed())
+//print(reversed)
 
 //======================================================================================
-//mdfaizan
+//MARK: get all capital charachter from string
+//MARK: input:--  Hello World, My name is Ravi
+//MARK: output:-- HW,MR
+
+//var str = "Hello World"
+//
+//func filterCapitalCharacters(fromString input: String) -> String? {
+//
+//    guard input.isEmpty == false else {return nil}
+////    ("A"..."Z") is predicate
+////    let result = input.filter({("A"..."Z").contains($0)})
+//    let result = input.filter({("A"..."Z").contains($0)})
+//
+//    return result.isEmpty ?  nil : result
+//}
+
+//print(filterCapitalCharacters(fromString: str))
+
+//======================================================================================
+//MARK:  convert to [any] to [Int]
+
+//let input: [Any] = [true, 1, "ravi", 2, "codeCate15", false, "test"]
+
+//func convertToIntArray(inputValue: [Any]) -> [Int] {
+//
+//    guard inputValue.isEmpty == false else {return []}
+//
+//    let result = inputValue.compactMap { item in
+//        item as? Int
+//    }
+//    return result.isEmpty == false ? result : []
+//
+//}
+
+//print(convertToIntArray(inputValue: input))
+
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
 
 
-//===================================================================================================
-//===================================================================================================
-//===================================================================================================
-//===================================================================================================
 
-//**pure logic**
+
+
+
+
+
+//MARK: **pure logic**T7
 
 //
 
@@ -326,7 +435,7 @@ print("result", tempArray)
 //b = temp
 //print("a = \(a) and b = \(b)")
 
-//=============================================================================================
+//======================================================================================
 
 //Q3) swap 2 variable value between each other
 
@@ -343,7 +452,8 @@ print("result", tempArray)
 
 
 //b = a + b - (a = b) //30 - a(20)==>a(20) & b(10)
-//============================================================================================
+//======================================================================================
+
 //  swap 2 variable value between each other USING  tuple
 
 //var a = 10
@@ -450,6 +560,7 @@ print("result", tempArray)
 //MARK: output:--  4---> 1*2*3*4 = 24
 
 //======================================================================================
+//MARK: print fibonnacci series
 //
 //var number = 8
 //var n1 = 0
@@ -470,14 +581,104 @@ print("result", tempArray)
 //MARK: output:-- 0, 1, 1, 2, 3, 5, 8
 
 //======================================================================================
+//MARK: reverse number of string String or
+//palindrome number is a number that is same after reverse
+
+//var text = "Reverse Day"
+//var result = ""
+//
+//// loop through each character
+//for character in text {
+// result = "\(character)" + result
+//}
+//
+//print(result)
+
+
+//======================================================================================
+//MARK:  reverse number and check palindrom number example:-- 3443 ==> 3443
+
+//var number = 3553, reverseNum:Int = 0
+//let originalNum = number
+//
+//while(number != 0) {
+//   let remainder = number % 10
+//    reverseNum = reverseNum * 10 + remainder
+//    number = number / 10
+//}
+//
+//print(reverseNum)
+//
+//if originalNum == reverseNum {
+//    print("number is palindrom")
+//} else {
+//    print("number is not palindrom")
+//}
+//----------------------------------------------------
+//o/p:--3553
+
+//MARK:  using function for only practice pupose
+//func isPalindrom(_ x:Int) -> Bool {
+//    var number = x
+//    var reverseNumber = 0
+//
+//    while(number != 0) {
+//
+//        let remainder = number % 10
+//        reverseNumber = reverseNumber * 10 + remainder
+//        number = number / 10
+//    }
+//    print("reverse \(reverseNumber)")
+//    return x == reverseNumber
+//}
+//
+// let result = isPalindrom(43346)
+//
+//if result {
+//    print("number is palindrom")
+//} else {
+//    print("number is not palindrom")
+//}
+
+
+//======================================================================================
+//MARK:  from list of number or array move zero to end of the list
+
+//var list = [1, 0, 2, 0, 4, 0, 6,9,3]
+//
+//for number in list {
+//
+//    if number == 0 {
+//        if let index = list.firstIndex(of: 0) {
+//        list.remove(at: index)
+//        list.append(0)
+//        }
+//    }
+//}
+//print(list)
+
+
+
+//======================================================================================
+
 
 //MARK:  proram to print to half pyramid using *
+//*
+//**
+//***
+//****
+//*****
 
 
-//===================================================================================================
-//===================================================================================================
-//===================================================================================================
-//===================================================================================================
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
+
+
+
+
 
 
 //MARK:  ** swift comceptual programming**
