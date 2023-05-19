@@ -18,17 +18,17 @@ import Foundation
  
  */
 
-//---------------------------------------------------------------------------------------------------
-//===================================================================================================
-//===================================================================================================
-//===================================================================================================
-//===================================================================================================
+//--------------------------------------------------------------------------------------
+//======================================================================================
+//======================================================================================
+//======================================================================================
+//======================================================================================
 
 //MARK:  **logic swift method**T7
 
 //Q1)
 
-//1)expample:--
+//1)expample:--1*2,2*3,3*4,4*5
 //var a = [1,2,3,4,5]
 //desire output:-- var b = [2,6,12,20]
 
@@ -110,29 +110,6 @@ import Foundation
 //["Is", "But", "A"]
 
 
-//--------------------------------------------------------------------------------------
-
-//let’s use a for loop to filter an array of words less than 4 characters in length:
-
-//let words = ["Hello", "This", "Is", "Nothing", "But", "A", "Test"]
-//
-//var filtered: [String] = []
-//
-//// 1. Go through each element
-//for word in words {
-//  // Check if an element satisfies a condition
-//  if word.count < 4 {
-//    // Add an element that passes the check to a result array
-//    filtered.append(word)
-//  }
-//}
-//
-//// 4. After the loop, you can display your result array of filtered items.
-//print(filtered)
-//
-//Output:
-//
-//["Is", "But", "A"]
 
 //======================================================================================
 
@@ -185,7 +162,7 @@ import Foundation
 //}
 //print(filtered)
 
-//==============
+//============================
 
 //let words = ["Hello", "This", "Is", "Nothing", "But", "A", "Test"]
 //let filtered = words.filter({$0.count < 4})
@@ -213,8 +190,8 @@ import Foundation
 //
 //
 //
-//let namesWithL = students.filter{ $0.name.contains("l") }
-//without case insentative
+////let namesWithL = students.filter{ $0.name.contains("l") }
+////without case insentative
 //let namesWithL = students.filter({$0.name.localizedStandardContains("l")})
 //
 //for student in namesWithL {
@@ -382,6 +359,46 @@ import Foundation
 //}
 
 //print(convertToIntArray(inputValue: input))
+//=================================================================================
+//MARK: find large and small number in array
+//let array = [2,4,6,3,7,2]
+//func findLargestNumber(from arg: Array<Int>) -> Int {
+//    guard !arg.isEmpty else {return 0}
+//    return arg.max() ?? 0
+//
+//}
+//print(findLargestNumber(from: array))
+//
+//func findSmallestNumber(from arg: Array<Int>) -> Int {
+//
+//    guard !arg.isEmpty else {return 0}
+//    return arg.min() ?? 0
+//}
+//
+//print(findSmallestNumber(from: array))
+
+//=================================================================================
+//MARK:  Merge two arrays into a new array
+
+var array1: [Int] = [1,2,3,4]
+var array2: [Int] = [5,6,7,8]
+var arrayCombine: [Int] = []
+
+//first method
+//arrayCombine = array1 + array2
+//print(arrayCombine)
+
+//2 method
+//array1.append(contentsOf: array2)
+//print(array1)
+
+//3 method
+//let arrayCollection = [array1, array2].joined()
+//let mergeArray = Array(arrayCollection)
+// print(mergeArray)
+
+
+
 
 //**************************************************************************************
 //**************************************************************************************
@@ -437,7 +454,7 @@ import Foundation
 
 //======================================================================================
 
-//Q3) swap 2 variable value between each other
+//Q3) swap 2 variable value between each other third variable
 
 //var a:Int = 30      //expected OP:- a = 20,b == 10
 //var b:Int = 20
@@ -499,7 +516,7 @@ import Foundation
 
 
 //======================================================================================
-//Q4) filter an array of words such that only words less than 4 characters long remain
+//MARK:  Q4) filter an array of words such that only words less than 4 characters long remain
 
 //let words = ["Hello", "This", "Is", "Nothing", "But", "A", "Test"]
 //
@@ -517,7 +534,7 @@ import Foundation
 
 //======================================================================================
 
-//Q5) call function and pass array and add all number inside array
+//MARK:  Q5) call function and pass array and add all number inside array
 
 //func addTwoNumbers(numbers:[Int]) -> Int {
 //    var number = 0
@@ -531,7 +548,7 @@ import Foundation
 //print(addTwoNumbers(numbers: [10,10,10,10]))
 
 //======================================================================================
-//check odd number or even
+//MARK:  check odd number or even
 //
 //let number = 23
 //
@@ -567,23 +584,24 @@ import Foundation
 //var n2 = 1
 //var next = 0
 //
-//for _ in 0...number {
+//for _ in 1...number {
 //
-//
-//    next = n1 + n2
 //    print(n1)
-//
+//    next = n1 + n2
 //    n1 = n2
 //    n2 = next
 //
 //}
 
-//MARK: output:-- 0, 1, 1, 2, 3, 5, 8
+//MARK: output:-- 0,1,1,2,3,5,8,13,21
+
+
 
 //======================================================================================
 //MARK: reverse number of string String or
 //palindrome number is a number that is same after reverse
 
+//let text = "trrt"
 //var text = "Reverse Day"
 //var result = ""
 //
@@ -594,6 +612,11 @@ import Foundation
 //
 //print(result)
 
+//if result == text{
+//    print("string is palindrom")
+//}else{
+//    print("string is not palindrom")
+//}
 
 //======================================================================================
 //MARK:  reverse number and check palindrom number example:-- 3443 ==> 3443
@@ -658,18 +681,193 @@ import Foundation
 //print(list)
 
 
+//======================================================================================
+//Find two elements in the array that add up to given number ?
+
+//var nums = [2,7,11,15,5,4,8], target = 9
+//func twoSum(_ nums: [Int], _ target: Int)  {
+//    for i in 0..<(nums.count-1) {
+//        let ni = nums[i]
+//        for j in (i + 1)..<nums.count {
+//            if ni + nums[j] == target {
+//                //            return [i, j]
+//                print("index:- \([i, j])")
+//                print("value:- \([nums[i], nums[j]])")
+//            }
+//        }
+//    }
+//}
+
+//twoSum(nums, target)
+
+//we can do it optimize way using dictionary
+//https://medium.com/@armanabkar/solving-the-two-sum-problem-in-swift-cb203ce9e5a7
+
+//======================================================================================
+//MARK:  sort array (assending/descending)
+//var arr:[Int] = [78, 34, 1, 3, 90, 34, -1, -4, 6, 55, 20, -65]
+//print("Array elements after sorting:")
+
+//for i in 0..<arr.count {
+//
+//    for j in (i + 1)..<arr.count {
+//        var tmp:Int = 0
+//
+//        //ascending condition
+//        if (arr[i] > arr[j]){
+//            //dscending condition
+//            //        if (arr[i] < arr[j]){
+//            tmp = arr[i];
+//            arr[i] = arr[j];
+//            arr[j] = tmp;
+//        }
+//    }
+//}
+//print(arr)
+
+
+//======================================================================================
+//MARK: find large and small number in array
+//MARK: retun multiple argument
+
+
+//func getSmallAndGreatestNumber() -> (Int,Int) {
+//
+//    let numbers = [145, 206, 116, 809, 540, 176]
+////    let numbers = [2, -22, -1, -5600, 333, -167]
+//
+//    var largest = numbers[0]
+//    var small = numbers[0]
+//
+//    for i in numbers {
+//        if (i > largest) {
+//            largest = i
+//        }
+//        if (i < small) {
+//            small = i
+//        }
+//    }
+//
+//    print("Maximum Number ====================\(largest)")// 809
+//    print("Minimum Number ====================\(small)")// 116
+//    return (largest,small)
+//}
+//print(getSmallAndGreatestNumber())
+
+//======================================================================================
+//MARK:  reverse array element 10 minutes
+//var array: [Int] = [2,8,4,7,3,2,5]
+//
+//print(array)
+//
+//var j = array.count
+//for i in 0..<array.count/2 {
+//
+//    j = j - 1
+//    var temp = 0
+//    temp = array[i]
+//    array[i] = array[j]
+//    array[j] = temp
+//}
+//
+//print(array)
+//op:-- [5,2,3,7,4,8,2]
+//---------------
+//demo example in java
+
+/**
+ static void reverseArray(intintArray[], int size)
+   {
+       int i, k, temp;
+       for (i = 0; i < size / 2; i++) {
+           temp = intArray[i];
+           intArray[i] = intArray[size - i - 1];
+           intArray[size - i - 1] = temp;
+       }
+ */
 
 //======================================================================================
 
-
-//MARK:  proram to print to half pyramid using *
+//MARK:  program to print to half pyramid using *
 //*
 //**
 //***
 //****
 //*****
 
+//func printLadderNumber(_ n: Int) {
+//    for i in 1...n {
+//        for j in 1...i {
+////            to print number
+////            print(j, terminator: "")
+//            //to print star pattern
+//            print("*", terminator: "")
+//        }
+//        print("")// Helps for printing new line
+//    }
+//}
+//printLadderNumber(4)
 
+//======================================================================================
+
+    // triangle
+//    *
+//   ***
+//  *****
+// *******
+
+// Height of the pyramid
+//let num = 7
+//
+//// Outer for loop is used to handle the
+//// total number of rows in pyramid
+//for i in 1...num{
+//
+//   // Nested for loop is used to print white
+//   // spaces
+//   for _ in 0..<(num-i){
+//      print(" ", terminator: "")
+//   }
+//
+//   // Nested for loop is used to print pyramid of "*"
+//   for _ in 1...2*i-1{
+//      print("*", terminator: "")
+//   }
+//
+//   // Add new line
+//   print("")
+//}
+
+//first loop for handle rows
+//second loop for spaces if number is 7 we decrease space like 5,4,3,2,1
+//third loop for print star pattern we increase star like 1,2,3,4,5 above to below
+
+
+
+//======================================================================================
+
+//MARK: Merge two arrays into a new array
+
+//using for loop
+
+var arrayMerge1:[Int] = [2,3,4,5]
+var arrayMerge2:[Int] = [6,7,8,9]
+//for i in arrayMerge2 {
+//    arrayMerge1.append(i)
+//}
+//print(array1)
+
+//using while loop
+//var i = 0,  j = array2.count - 1
+//while(i <= j) {
+//    array1.append(array2[i])
+//    i = i + 1
+//}
+//print(array1)
+
+
+//======================================================================================
+//MARK:  leap year
 //**************************************************************************************
 //**************************************************************************************
 //**************************************************************************************
@@ -687,11 +885,21 @@ import Foundation
 
 //**closer
 
+//let closure = {print("this is closure")}
+//closure()
+
+//var closer:(String) -> () =  {name in
+//    print(name)
+//}
+//
+//closer("faizan")
+
+
 //let closureWtihParameterandReturnType:(String) -> (String) = { name in
 //    let word = name + "programming"
 //    return word
 //}
-//
+
 //let result = closureWtihParameterandReturnType("closure Wtih Parameter")
 //print(result)
 
@@ -730,9 +938,8 @@ import Foundation
 //}
 
 
-
-//=============================================================================================
-//=============================================================================================
+//======================================================================================
+//======================================================================================
 
 
 //**NSUSER DEFAULT
