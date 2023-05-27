@@ -40,7 +40,7 @@ import Foundation
 ////myArray.insert("Frog", at: 0)
 //
 // var index = 1
-//var computedNumbers : [Int] =    []
+//var computedNumbers : [Int] =  []
 //
 //for item in 0...2 {
 //    print(item , "good boy", numbers[item] , numbers[index])
@@ -55,8 +55,8 @@ import Foundation
 //
 //
 
-//========================================================================================================================
-//========================================================================================================================
+//======================================================================================
+//======================================================================================
 
 //Q2)
 
@@ -80,19 +80,20 @@ import Foundation
 //
 //    }
 //
-//
-//    //Write your code above this line 👆
-//    //####################################
-//
-//    //🚨 Don't change the code below 👇
-//    print(password)
-//
-//
+
 //}
 //
 //exercise()
 
 //======================================================================================
+//======================================================================================
+//**generate random number
+
+
+//    let randomNumber = Int.random(in: 0..<6)
+//print(randomNumber)
+
+
 //======================================================================================
 
 //Q5)  let’s filter an array of words such that only words less than 4 characters long remain:
@@ -140,8 +141,9 @@ import Foundation
 //======================================================================================
 
 //Q9)filter an array of words such that only words less than 4 characters long remain
-
 //for more learnig
+//passing manual function to filter
+
 //
 //let words = ["Hello", "This", "Is", "Nothing", "But", "A", "Test"]
 //
@@ -162,18 +164,8 @@ import Foundation
 //}
 //print(filtered)
 
-//============================
-
-//let words = ["Hello", "This", "Is", "Nothing", "But", "A", "Test"]
-//let filtered = words.filter({$0.count < 4})
-//
-//print(filtered)
-
-
 //======================================================================================
-//Q.10) Filter an Array of Objects in Swift
-
-
+//MARK:  Q.10) Filter an Array of Objects in Swift
 
 //class Student {
 //    let name: String
@@ -198,6 +190,8 @@ import Foundation
 //  print(student.name)
 //}
 
+
+//MARK:  using Structure
 //struct User {
 //
 //    let first:String
@@ -206,7 +200,7 @@ import Foundation
 //
 //let user = [
 //
-//    User(first: "Emma", last: "Jones"),
+//       User(first: "Emma", last: "Jones"),
 //       User(first: "Mike", last: "Thompson"),
 //       User(first: "Lucy", last: "Johnson"),
 //       User(first: "James", last: "Wood"),
@@ -226,7 +220,8 @@ import Foundation
 //MARK: swap array number using index variable a[0] <-->a[2] (yogesh interview)
 
 //var numbers = [5,10,15]
-//
+//var characterc = ["a","b","c"]
+
 //func swapNumberUsingIndex<T>(_ array: inout [T], i:Int, j:Int) {
 //    array.swapAt(i, j)
 //}
@@ -238,6 +233,10 @@ import Foundation
 //MARK: remove duplicate element from array using function
 
 
+
+
+//var tempArray:[Int] = [1,3,1,2,4,4,6,5,6]
+//
 //var numbers:[Int] = []
 
 //print(Set(numbers))
@@ -245,23 +244,22 @@ import Foundation
 //print(Array(Set(numbers)))
 //print(Set(numbers).sorted())
 
-//var tempArray:[Int] = [1,3,1,2,4,4,6,5,6]
-////
 //func removeDuplicateValues(array: [Int]) -> [Int] {
 //
-//    guard !numbers.isEmpty else {return []}
+//    guard !tempArray.isEmpty else {return []}
 //
 //    for number in array {
-//        if !tempArray.contains(number) {
-//            tempArray.append(number)
+//        if !numbers.contains(number) {
+//            numbers.append(number)
 //        }
 //    }
 //
-//    return tempArray
+//    return numbers
 //}
 //
-//print(removeDuplicateValues(array: numbers))
+//print(removeDuplicateValues(array: tempArray))
 
+//===================================
 //MARK: using for Each loop
 //numbers.forEach { item in
 //    if !tempArray.contains(item){
@@ -273,7 +271,7 @@ import Foundation
 
 //-------------------------------------
 //MARK:  remove duplicate element from array using extension
-//MARK:  it accept all type like generic
+
 
 //var numbers = [1,3,1,2,4,4,6,5,6]
 
@@ -293,6 +291,7 @@ import Foundation
 
 //---------------------------------------------------------------------------------
 //MARK:  remove duplicate element from array using extension modify numbers array
+//MARK:  it accept all type like generic (Equatable)
 //var numbers = [1,3,1,2,4,4,6,5,6]
 //
 //extension Array where Element: Equatable {
@@ -334,7 +333,7 @@ import Foundation
 //
 //    guard input.isEmpty == false else {return nil}
 ////    ("A"..."Z") is predicate
-////    let result = input.filter({("A"..."Z").contains($0)})
+
 //    let result = input.filter({("A"..."Z").contains($0)})
 //
 //    return result.isEmpty ?  nil : result
@@ -380,9 +379,9 @@ import Foundation
 //=================================================================================
 //MARK:  Merge two arrays into a new array
 
-var array1: [Int] = [1,2,3,4]
-var array2: [Int] = [5,6,7,8]
-var arrayCombine: [Int] = []
+//var array1: [Int] = [1,2,3,4]
+//var array2: [Int] = [5,6,7,8]
+//var arrayCombine: [Int] = []
 
 //first method
 //arrayCombine = array1 + array2
@@ -397,8 +396,15 @@ var arrayCombine: [Int] = []
 //let mergeArray = Array(arrayCollection)
 // print(mergeArray)
 
-
-
+// ===================================================================================
+//MARK:  only learning
+//let arrayOfIntegers = [1, 2, 3, 4]
+//
+//let arrayOfStrings = arrayOfIntegers.map { String($0) }
+//
+//print(arrayOfStrings)
+//
+//// Prints ["1", "2", "3", "4"]
 
 //**************************************************************************************
 //**************************************************************************************
@@ -850,8 +856,8 @@ var arrayCombine: [Int] = []
 
 //using for loop
 
-var arrayMerge1:[Int] = [2,3,4,5]
-var arrayMerge2:[Int] = [6,7,8,9]
+//var arrayMerge1:[Int] = [2,3,4,5]
+//var arrayMerge2:[Int] = [6,7,8,9]
 //for i in arrayMerge2 {
 //    arrayMerge1.append(i)
 //}
@@ -864,7 +870,19 @@ var arrayMerge2:[Int] = [6,7,8,9]
 //    i = i + 1
 //}
 //print(array1)
+//======================================================================================
+//MARK:  array of integers into an array of strings.
 
+//let arrayOfIntegers = [1, 2, 3, 4]
+//var arrayOfStrings: [String] = []
+//
+//for i in arrayOfIntegers {
+//    arrayOfStrings.append(String(i))
+//}
+//
+//print(arrayOfStrings)
+//
+//// Prints ["1", "2", "3", "4"]
 
 //======================================================================================
 //MARK:  leap year
@@ -883,7 +901,7 @@ var arrayMerge2:[Int] = [6,7,8,9]
 
 
 
-//**closer
+//MARK: **closer
 
 //let closure = {print("this is closure")}
 //closure()
@@ -939,6 +957,166 @@ var arrayMerge2:[Int] = [6,7,8,9]
 
 
 //======================================================================================
+//MARK: map
+//var numbers = [1, 2, 3, 4]
+//
+//// add 2 to each element
+//var result = numbers.map({ $0 + 2})
+//
+//print(result)
+
+// Output: [3, 4, 5, 6]
+
+//-------------------------
+// define array of Strings
+//var languages = ["swift", "java", "python"]
+//
+//print("Before:", languages)
+//
+//// use map() and uppercased() to transform array
+//var result = languages.map { $0.uppercased() }
+//
+//print("After:", result)
+//======================================================================================
+//MARK: * reduce
+
+//let nums = [1, 2, 3, 4, 5]
+//
+//let total2 = nums.reduce(0) { x, y in x + y }
+//
+//let total3 = nums.reduce(0) { $0 + $1 }
+//
+//let total4 = nums.reduce(0, +)
+
+
+
+//====================================================================================
+
+
+//MARK: * compact map
+
+//let numbers = [“5”, “42”, “nine”, “100”, “Bob”]
+//let result = numbers.compactMap({ Int($0) })
+//print(result)
+//-----------------------
+//let arrayOfIntegers = [1, 2, nil, 4]
+//
+//let arrayOfStrings = arrayOfIntegers.compactMap { optionalInteger -> String? in
+//  guard let integer = optionalInteger else { return nil }
+//
+//  return String(integer)
+//}
+//print(arrayOfStrings)
+
+// Prints ["1", "2", "4"]
+
+//====================================================================================
+//MARK:  FlatMap
+
+//let numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+//let result = numbers.flatMap({ $0 })
+
+//------------------------------
+//let giraffes = [[5, 6, 9], [11, 2, 13, 20], [1, 13, 7, 8, 2]]
+//let tallest = giraffes.flatMap({ $0.filter({ $0 > 10 }) })
+//print(tallest)
+
+//------------------------------
+//let arrayOfIntegers = [[1, 3, 5, nil], [2, nil, 6]]
+//let arrayOfStrings = arrayOfIntegers.flatMap { $0 }.compactMap { $0 }
+//print(arrayOfStrings)
+// Prints [1, 3, 5, 2, 6]
+//====================================================================================
+
+//MARK: Dictionaries
+
+//var myDictionary = [String:String]()
+//
+//var someDict = [Int: String]()
+//
+//var capitalCity = ["Nepal": "Kathmandu", "Italy": "Rome", "England": "London"]
+//var numbers:[Int:String] = [1:"One", 2:"Two", 3:"Three"]
+//print(numbers)
+//print(capitalCity)
+
+//-------------------------
+//MARK:  Add Elements to a Dictionary
+//var capitalCity = ["Nepal": "Kathmandu", "England": "London"]
+//print("Initial Dictionary: ",capitalCity)
+//
+//capitalCity["Japan"] = "Tokyo"
+//
+//print("Updated Dictionary: ",capitalCity)
+//print(capitalCity["Japan"])
+//-------------------------
+
+//MARK:  Change Value of Dictionary
+//var studentID = [111: "Eric", 112: "Kyle", 113: "Butters"]
+//print("Initial Dictionary: ", studentID)
+//
+//
+//studentID[112] = "Stan"
+//
+//print("Updated Dictionary: ", studentID)
+
+//--------------------------------------
+
+//MARK: Access Values Only
+//var cities = ["Nepal":"Kathmandu", "China":"Beijing", "Japan":"Tokyo"]
+//
+//print("Dictionary: ", cities)
+//
+//// cities.values return all values of cities
+//var countryName  = Array(cities.values)
+//
+//print("Values: ", countryName)
+
+//--------------------------------------
+//MARK: Remove an Element from a Dictionary
+
+//var studentID = [111: "Eric", 112: "Kyle", 113: "Butters"]
+//
+//print("Initial Dictionary: ", studentID)
+//
+//var removedValue  = studentID.removeValue(forKey: 112)
+//
+//print("Dictionary After removeValue(): ", studentID)
+
+//====================================================================================
+//====================================================================================
+
+//MARK:  set
+
+//MARK: Create a Set in Swift
+
+// create a set of integer type
+//var studentID : Set = [112, 114, 116, 118, 115]
+//
+//print("Student ID: \(studentID)")
+
+//---------------------------------------------
+//MARK: Add Elements to a Set
+
+//var numbers: Set = [21, 34, 54, 12]
+//
+//print("Initial Set: \(numbers)")
+//
+//// using insert method
+//numbers.insert(32)
+//
+//print("Updated Set: \(numbers)")
+
+//---------------------------------------------
+//MARK: Remove an Element from a Set
+//var languages: Set = ["Swift", "Java", "Python"]
+//
+//print("Initial Set: \(languages)")
+//
+//// remove Java from a set
+//let removedValue = languages.remove("Java")
+//
+//print("Set after remove(): \(languages)")
+
 //======================================================================================
 
 
