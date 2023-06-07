@@ -412,16 +412,7 @@ import Foundation
 //**************************************************************************************
 //**************************************************************************************
 
-
-
-
-
-
-
-
 //MARK: **pure logic**T7
-
-//
 
 /**
  **swift interview logical and conceptual question**
@@ -567,7 +558,7 @@ import Foundation
 
 //======================================================================================
 
-//MARK: find factorial of number
+//MARK: find factorial of number and (0 factorial is 1)
 
 //var number = 5
 //var factorial = 1
@@ -604,7 +595,7 @@ import Foundation
 
 
 //======================================================================================
-//MARK: reverse number of string String or
+//MARK: reverse string or
 //palindrome number is a number that is same after reverse
 
 //let text = "trrt"
@@ -691,20 +682,26 @@ import Foundation
 //Find two elements in the array that add up to given number ?
 
 //var nums = [2,7,11,15,5,4,8], target = 9
-//func twoSum(_ nums: [Int], _ target: Int)  {
+//func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+//    var firstIndex = 0
+//    var secondIndex = 0
+//
+//    var temp:[Int] = []
 //    for i in 0..<(nums.count-1) {
 //        let ni = nums[i]
 //        for j in (i + 1)..<nums.count {
 //            if ni + nums[j] == target {
-//                //            return [i, j]
+//                temp.append(contentsOf: [i,j])
 //                print("index:- \([i, j])")
 //                print("value:- \([nums[i], nums[j]])")
 //            }
 //        }
+//
 //    }
+//   return temp
 //}
-
-//twoSum(nums, target)
+//
+//print(twoSum(nums, target))
 
 //we can do it optimize way using dictionary
 //https://medium.com/@armanabkar/solving-the-two-sum-problem-in-swift-cb203ce9e5a7
@@ -801,6 +798,23 @@ import Foundation
 //****
 //*****
 
+//MARK: surabh shukla
+
+//for i in 1...5{
+//for j in 1...5 {
+//    if(j<=i){
+//    print("* ",terminator: "")
+//    }else{
+//    print(" ",terminator: "")
+//    }
+//
+//}
+//    print("")
+//}
+
+
+
+//-----------------------------------------
 //func printLadderNumber(_ n: Int) {
 //    for i in 1...n {
 //        for j in 1...i {
@@ -821,6 +835,25 @@ import Foundation
 //   ***
 //  *****
 // *******
+
+//MARK:  saurabh shukla
+
+//for i in 1...5{
+//    for j in 1...9{
+//        if(j >= 6 - i && j <= 4 + i) {
+//            print(i,terminator: "")
+//            print("*",terminator: "")
+//            print(j,terminator: "")
+//        }else{
+//            print(" ",terminator: "")
+//        }
+//
+//    }
+//    print("")
+//
+//}
+
+//--------------------------------------------------------------------------------
 
 // Height of the pyramid
 //let num = 7
@@ -906,6 +939,7 @@ import Foundation
 //let closure = {print("this is closure")}
 //closure()
 
+//MARK: closure with parameter
 //var closer:(String) -> () =  {name in
 //    print(name)
 //}
@@ -920,9 +954,6 @@ import Foundation
 
 //let result = closureWtihParameterandReturnType("closure Wtih Parameter")
 //print(result)
-
-
-
 
 
 //
@@ -941,14 +972,14 @@ import Foundation
 
 //closure by completion handler
 
-//func functionPassingClosureWithCompletionHandler(numbers:[Int],completionHandler:(_ additionOfNumberUsingClosure:Int) -> Void) {
+//func functionPassingClosureWithCompletionHandler(numbers:[Int],completionHandler:(Int,Bool) -> Void) {
 //
 //    var number = 0
 //    for num in numbers {
 //      number = number + num
 //    }
 //
-//    completionHandler(number)
+//    completionHandler(number,true)
 //}
 //
 //functionPassingClosureWithCompletionHandler(numbers: [2,4,5,6,7]) { num in
@@ -995,16 +1026,23 @@ import Foundation
 
 //MARK: * compact map
 
-//let numbers = [“5”, “42”, “nine”, “100”, “Bob”]
+//MARK: it handle optinal and ignore nil
+//let numbers = [“5”, “42”, “nine”, “Bob”]
 //let result = numbers.compactMap({ Int($0) })
 //print(result)
+//O/P:-- [5,42]
+
+/**
+if we do it with map output is
+O/p:-- [Optional(5), Optional(42), nil, nil]
+ */
 //-----------------------
 //let arrayOfIntegers = [1, 2, nil, 4]
 //
 //let arrayOfStrings = arrayOfIntegers.compactMap { optionalInteger -> String? in
 //  guard let integer = optionalInteger else { return nil }
 //
-//  return String(integer)
+//  return String(integer)d
 //}
 //print(arrayOfStrings)
 
