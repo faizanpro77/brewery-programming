@@ -1118,7 +1118,7 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //
 //var removedValue  = studentID.removeValue(forKey: 112)
 //
-//print("Dictionary After removeValue(): ", studentID)
+
 
 //====================================================================================
 //====================================================================================
@@ -1217,6 +1217,7 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //let yourCar = Car.singletonCar
 //print(yourCar.carColour)
 //
+
 //class A {
 //    init() {
 //        Car.singletonCar.carColour = "Brown"
@@ -1235,3 +1236,60 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //
 
 
+//=================================================================================
+
+//MARK: loops
+
+//MARK: for loop
+
+//for i in 1...4 {
+//print (i)
+//}
+
+//let codewithchristeam = ["Chris", "Ellen", "Francis", "Katrina", "Adrien", "Arthur"]
+//for name in codewithchristeam {
+//    print("Hello, \(name)!")
+//}
+
+
+
+//let fruitmarket = ["banana": 1.5, "apple": 3, "mango": 5]
+//for (fruitName, price) in fruitmarket {
+//    print("\(fruitName) is \(price) per piece")
+//}
+
+
+//let codewithchristeam = ["Chris", "Ellen", "Francis", "Katrina", "Adrien", "Arthur"]
+//codewithchristeam.forEach { name in
+//    print("Hello, \(name)!")
+//}
+
+//
+//fruitmarket.forEach { (fruitName, price) in
+//    print("\(fruitName) is \(price) per piece")
+//}
+
+
+
+
+//MARK:  while loop
+
+//var sum = 1
+//
+//// while loop from i = 1 to 5
+//while (sum <= 8) {
+//  print(sum)
+//   sum = sum + 1
+//}
+
+
+//MARK: repeate while
+
+//var sum = 1
+//// repeat...while loop from 1 to 5
+//repeat {
+//
+//  print(sum)
+//sum = sum + 1
+//
+//} while (sum <= 8)
