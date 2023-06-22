@@ -982,11 +982,53 @@ import Foundation
 //    completionHandler(number,true)
 //}
 //
-//functionPassingClosureWithCompletionHandler(numbers: [2,4,5,6,7]) { num in
-//    print(num)
+//functionPassingClosureWithCompletionHandler(numbers: [2,4,5,6,7]) { num,check in
+//    print(num,check)
+//}
+//---------------------------------
+
+//func passArrayWithClosure(completionHandler:(_ data:[Int])->()) {
+//
+//    completionHandler([2,3,4])
+//}
+//
+//passArrayWithClosure { data in
+//    print(data,"===========>")
 //}
 
+//----------------------------------
 
+//class A {
+//
+//    var reload:(()->())? = nil
+//
+//    func callClosure(){
+//        print("callClosure")
+//        self.reload?()
+//
+//    }
+//
+//}
+//
+//class B {
+//
+//    let a = A()
+//
+//    func closureBlock() {
+//
+//        print("closureBlock")
+//        a.reload = {
+//            print("execute clouse block======>>")
+//        }
+//
+//        a.callClosure()
+//
+//    }
+//}
+//
+//var b = B()
+//b.closureBlock()
+    
 //======================================================================================
 //MARK: map
 //var numbers = [1, 2, 3, 4]
