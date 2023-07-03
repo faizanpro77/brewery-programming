@@ -1107,6 +1107,53 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //print(arrayOfStrings)
 // Prints [1, 3, 5, 2, 6]
 //====================================================================================
+//MARK: generic
+//generic function
+//func additionUsingGeneric<T:Numeric>(d1:T, d2:T) -> T {
+//
+//    return d1 + d2
+//
+//}
+//
+//let generic1 = additionUsingGeneric(d1: 6, d2: 6.16)
+//print(generic1)
+//let generic2 = additionUsingGeneric(d1: 5, d2: 5)
+//print(generic2)
+
+//---------------------------------
+//MARK: generic structure
+
+//struct Addition<Element> {
+//
+//    var feedData = [Element]()
+//
+//    mutating func push(_ item: Element) {
+//        feedData.append(item)
+//    }
+//
+//    mutating func pop() -> Element {
+//
+//        return feedData.removeLast()
+//    }
+//}
+//
+//var add = Addition<Double>()
+//add.push(8.16)
+//add.push(100)
+//print(add)
+//add.pop()
+//print(add)
+//add.push(125)
+//print(add)
+//
+//
+//var str = Addition<String>()
+//str.push("faizan")
+//str.push("MD")
+//print(str)
+//str.pop()
+//print(str)
+//====================================================================================
 
 //MARK: Dictionaries
 
@@ -1164,6 +1211,31 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 
 //====================================================================================
 //====================================================================================
+
+//MARK: tuple
+
+
+//// create tuple with two elements
+//var product = ("MacBook", 1099.99)
+//
+//// access tuple elements
+//print("Name:", product.0)
+//print("Price:", product.1)
+//
+//
+//
+////Named Tuple
+//
+//var company = (product: "Programiz App", version: 2.1)
+//
+//// access tuple element using name
+//print("Product:", company.product)
+//print("Version:", company.version)
+
+
+//====================================================================================
+//====================================================================================
+
 
 //MARK:  set
 
