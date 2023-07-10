@@ -12,11 +12,21 @@ import Foundation
 
 /**
  **content table**
- pure logic
+ 
  logic swift method
+ pure logic
  swift comceptual programming
+ i
+ *
  
  */
+
+//MARK: interview question topic
+/**
+ class vs structure
+
+*/
+   
 
 //--------------------------------------------------------------------------------------
 //======================================================================================
@@ -1029,7 +1039,23 @@ import Foundation
 //var b = B()
 //b.closureBlock()
     
-//======================================================================================
+//===================================================================================
+//MARK: (HOF)
+
+//MARK: filter
+
+//var numbers = [2, 3, 6, 9]
+//
+//// return all the elements greater than 5
+//var result = numbers.filter({ $0 > 5})
+//
+//print(result)
+
+// Output: [6, 9]
+
+//===================================================================================
+
+
 //MARK: map
 //var numbers = [1, 2, 3, 4]
 //
@@ -1315,6 +1341,8 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //print(yourCar.carColour)
 //
 
+//=================================================================================
+
 
 //singleton
 
@@ -1407,3 +1435,114 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //sum = sum + 1
 //
 //} while (sum <= 8)
+
+
+//===========================================================
+
+//MARK: interview topic
+//MARK:  class vs struture
+
+//class Developer {
+//
+//    var name:String
+//    var jobTitle:String
+//
+//
+//    init(name:String, jobTitle:String) {
+//
+//        self.name = name
+//        self.jobTitle = jobTitle
+//
+//    }
+//}
+
+//var jack = Developer(name: "salman", jobTitle: "IOS Developer")
+//var kate =  jack
+//kate.name = "steve"
+//
+//print(jack.name)
+//print(kate.name)
+ 
+////===========================================================
+
+//struct  Developer {
+//
+//    var name:String
+//    var jobTitle:String
+//
+//
+//}
+//
+//
+//var jack = Developer(name: "salman", jobTitle: "ios")
+//var kate = jack
+//
+//print(jack.name)
+//print(kate.name)
+//
+
+////===========================================================
+
+//MARK: optional
+
+//MARK:  optinal using if else
+//let name:String? = "faizan"
+//
+//if name != nil {
+//    print("my name is \(name!)")
+//}else{
+//print("nil value")
+//}
+
+
+//MARK: optional binding
+//let password:String? = "hol@87&"
+//
+//if let newPassword = password{
+//    
+//    print("your password is \(newPassword)")
+//}else{
+//    print("this is nil")
+//}
+
+//MARK: optional chaining
+
+//class Exam {
+//   var student: Toppers? = Toppers()
+//}
+//class Toppers {
+//   var name = "Faizan"
+//}
+//let stud = Exam()
+//
+//if let studname = stud.student?.name {
+//   print("Student name is \(studname)")
+//} else {
+//   print("Student name cannot be retrieved")
+//}
+
+//MARK:  gard statement (optional)
+
+//func testFunction() {
+//    let someValue:Int? = 5
+//    guard let temp = someValue else {
+//        return
+//    }
+//    print("It has some value \(temp)")
+//}
+//
+//testFunction()
+
+//-==========================================
+
+//func checkEvenOdd() {
+//    let i = 2 //3
+//    guard i%2 == 0 else {
+//        print("odd number")
+//        return
+//    }
+//    print("even number")
+//
+//}
+
+//checkEvenOdd()
