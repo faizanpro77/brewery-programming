@@ -28,11 +28,11 @@ import Foundation
 */
    
 
-//--------------------------------------------------------------------------------------
-//======================================================================================
-//======================================================================================
-//======================================================================================
-//======================================================================================
+//-----------------------------------------------------------------------------------
+//===================================================================================
+//===================================================================================
+//===================================================================================
+//===================================================================================
 
 //MARK:  **logic swift method**T7
 
@@ -72,14 +72,14 @@ import Foundation
 
 //consider one arrray that contain 26 alphabet like ["a", "b", "c"...."z"] generat 6 digit passwrd random
 
+//random number with upper bound
+//var random = arc4random_uniform(10)
+
 //func exercise() {
 //
 //    //The number of letters in alphabet equals 26
 //    let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-//
-//    // 🚨 Don't change the code above 👆
-//    //####################################
-//    //Write your code below this line 👇
+
 //
 //    var password = ""
 //
@@ -138,7 +138,7 @@ import Foundation
 //var result = lanuage.filter({$0.hasPrefix("N")})
 //print(result)
 
-//======================================================================================
+//===================================================================================
 
 //Q8. check if all elements are even numbers or not
 
@@ -148,7 +148,7 @@ import Foundation
 //
 //print(result)
 
-//======================================================================================
+//===================================================================================
 
 //Q9)filter an array of words such that only words less than 4 characters long remain
 //for more learnig
@@ -168,7 +168,7 @@ import Foundation
 
 
 //==================
-
+//MARK: filter with closure
 //let filtered = words.filter{word in
 //    word.count < 4
 //}
@@ -227,10 +227,11 @@ import Foundation
 //}
 
 //=====================================================================================
-//MARK: swap array number using index variable a[0] <-->a[2] (yogesh interview)
+//MARK: swap array number using index variable a[0] <-->a[2] (yogesh interview)(generic)
 
 //var numbers = [5,10,15]
 //var characterc = ["a","b","c"]
+//inout we use for making immutable variable to making mutable
 
 //func swapNumberUsingIndex<T>(_ array: inout [T], i:Int, j:Int) {
 //    array.swapAt(i, j)
@@ -298,7 +299,8 @@ import Foundation
 //        return tempArray
 //    }
 //}
-
+//
+//print(numbers.removeDuplicateValues())
 //---------------------------------------------------------------------------------
 //MARK:  remove duplicate element from array using extension modify numbers array
 //MARK:  it accept all type like generic (Equatable)
@@ -351,7 +353,7 @@ import Foundation
 
 //print(filterCapitalCharacters(fromString: str))
 
-//======================================================================================
+//===================================================================================
 //MARK:  convert to [any] to [Int]
 
 //let input: [Any] = [true, 1, "ravi", 2, "codeCate15", false, "test"]
@@ -371,6 +373,7 @@ import Foundation
 //=================================================================================
 //MARK: find large and small number in array
 //let array = [2,4,6,3,7,2]
+//func findLargestNumber(from arg: [Int])
 //func findLargestNumber(from arg: Array<Int>) -> Int {
 //    guard !arg.isEmpty else {return 0}
 //    return arg.max() ?? 0
@@ -407,7 +410,7 @@ import Foundation
 // print(mergeArray)
 
 // ===================================================================================
-//MARK:  only learning
+//MARK:  only learning ---> conver interger into string
 //let arrayOfIntegers = [1, 2, 3, 4]
 //
 //let arrayOfStrings = arrayOfIntegers.map { String($0) }
@@ -461,7 +464,7 @@ import Foundation
 
 //======================================================================================
 
-//Q3) swap 2 variable value between each other third variable
+//Q3) swap 2 variable value between each other without third variable
 
 //var a:Int = 30      //expected OP:- a = 20,b == 10
 //var b:Int = 20
@@ -541,7 +544,7 @@ import Foundation
 
 //======================================================================================
 
-//MARK:  Q5) call function and pass array and add all number inside array
+//MARK:  Q5) call function and pass array and add(addition) all number inside single variable
 
 //func addTwoNumbers(numbers:[Int]) -> Int {
 //    var number = 0
@@ -566,9 +569,11 @@ import Foundation
 //    print("number is odd")
 //}
 
-//======================================================================================
+//===================================================================================
 
 //MARK: find factorial of number and (0 factorial is 1)
+
+//MARK: output:--  4---> 1*2*3*4 = 24
 
 //var number = 5
 //var factorial = 1
@@ -581,10 +586,12 @@ import Foundation
 //
 //print(factorial)
 
-//MARK: output:--  4---> 1*2*3*4 = 24
+
 
 //======================================================================================
 //MARK: print fibonnacci series
+
+//MARK: output:-- 0,1,1,2,3,5,8,13,21
 //
 //var number = 8
 //var n1 = 0
@@ -600,12 +607,12 @@ import Foundation
 //
 //}
 
-//MARK: output:-- 0,1,1,2,3,5,8,13,21
+
 
 
 
 //======================================================================================
-//MARK: reverse string or
+//MARK: reverse string
 //palindrome number is a number that is same after reverse
 
 //let text = "trrt"
@@ -823,7 +830,7 @@ import Foundation
 //}
 
 
-
+//or
 //-----------------------------------------
 //func printLadderNumber(_ n: Int) {
 //    for i in 1...n {
@@ -863,39 +870,63 @@ import Foundation
 //
 //}
 
-//--------------------------------------------------------------------------------
-
-// Height of the pyramid
-//let num = 7
+//----------------------------------------------------------------------------------------
+//MARK: prim number
+//for i in 3...14 {
+//    var roundComplete = true
+//    for j in 2..<i {
 //
-//// Outer for loop is used to handle the
-//// total number of rows in pyramid
-//for i in 1...num{
+//        if (i % j == 0 ) {
+//            roundComplete = false
+//        }
+//    }
 //
-//   // Nested for loop is used to print white
-//   // spaces
-//   for _ in 0..<(num-i){
-//      print(" ", terminator: "")
-//   }
-//
-//   // Nested for loop is used to print pyramid of "*"
-//   for _ in 1...2*i-1{
-//      print("*", terminator: "")
-//   }
-//
-//   // Add new line
-//   print("")
+//    if  roundComplete {
+//        print(i)
+//    }
 //}
 
-//first loop for handle rows
-//second loop for spaces if number is 7 we decrease space like 5,4,3,2,1
-//third loop for print star pattern we increase star like 1,2,3,4,5 above to below
+//----------------------------------------------------------------------------------------
+//MARK:  check prime number
+let primNumber = 14
+var flag = true
+for i in 2..<primNumber {
+    
+    if (primNumber%i == 0) {
+        flag = false
+    }
+}
 
+if flag {
+    print("it is prime")
+}else{
+    print("it is not prime")
+}
 
 
 //======================================================================================
+//MARK:  print first table
 
-//MARK: Merge two arrays into a new array
+//1*1=1
+//1*2=2
+//1*3=6 -
+//1*4=4
+//1*5=5
+//1*6=12 -
+
+//for digit in 1...6 {
+//
+//    if digit == 3 {
+//        print("1 * \(digit) = \(2*digit)")
+//    } else if digit == 6 {
+//        print("1 * \(digit) = \(2*digit)")
+//    } else {
+//        print("1 * \(digit) = \(1*digit)")
+//    }
+//}
+//======================================================================================
+
+//MARK: Merge two arrays into a new array flight
 
 //using for loop
 
@@ -914,6 +945,7 @@ import Foundation
 //}
 //print(array1)
 //======================================================================================
+
 //MARK:  array of integers into an array of strings.
 
 //let arrayOfIntegers = [1, 2, 3, 4]
@@ -1346,36 +1378,37 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 
 //singleton
 
-//class Car {
-//    var carColour = "Red"
+//class FileManager{
 //
-//    static let singletonCar = Car()
+// // create a singleton
+// static let fileObj = FileManager()
+//
+// // create a private initializer
+//private init() {
 //
 //}
 //
-//let myCar =  Car.singletonCar
-//myCar.carColour = "Blue"
+// // method to request file
+//func checkFileAccess(user: String) {
 //
-//let yourCar = Car.singletonCar
-//print(yourCar.carColour)
+//  // condition to check username
+//  if user == ("@programiz.com") {
 //
-
-//class A {
-//    init() {
-//        Car.singletonCar.carColour = "Brown"
-//    }
+//    print("Access Granted")
+//  }
+//
+//  else {
+//    print(" Access Denied")
+//  }
+//}
 //}
 //
-//class B {
+//let userName = "@programiz.com"
 //
-//    init() {
-//        print(Car.singletonCar.carColour)
-//    }
-//}
+//// access method
+//let file = FileManager.fileObj
 //
-//let a = A()
-//let b = B()
-//
+//file.checkFileAccess(user: userName)
 
 
 //=================================================================================
@@ -1546,3 +1579,60 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //}
 
 //checkEvenOdd()
+//============================================
+
+//MARK: retain cycle
+
+//class Person {
+//    
+//    var name:String?
+//   weak var book:Book?
+//    
+//    init(name:String, book:Book?) {
+//        
+//        self.name = name
+//        self.book = book
+//    }
+//    
+//    deinit {
+//        
+//        print("\(name!) is deinitialize")
+//    }
+//    
+//}
+//
+//
+//class Book {
+//    
+//    var name:String?
+//    var owner:Person?
+//    
+//    init(name:String, owner:Person?) {
+//    
+//        self.name = name
+//        self.owner = owner
+//        
+//    }
+//    
+//    deinit {
+//        print("book \(name!) deinitialize")
+//    }
+//    
+//}
+//
+//var person:Person?
+//var book:Book?
+//
+//person = Person(name: "jack", book: nil)
+//book = Book(name: "kate", owner: nil)
+//
+////person = nil
+////book = nil
+//
+//person?.book = book
+//book?.owner = person
+//
+//person = nil
+//book = nil
+
+
