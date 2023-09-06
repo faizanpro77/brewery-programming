@@ -439,17 +439,10 @@ import Foundation
  */
 
 
-//Q1)  addition of two number
-
-//let a = 2
-//let b = 3
-//let c = a + b
-//print("addition is :- \(c)")
-
 
 //===================================================================================================
 
-// Q2) swap 2 variable value between each other
+// Q1) swap 2 variable value between each other
  
 
 //var a:Int = 10
@@ -464,7 +457,7 @@ import Foundation
 
 //======================================================================================
 
-//Q3) swap 2 variable value between each other without third variable
+//*) swap 2 variable value between each other without third variable
 
 //var a:Int = 30      //expected OP:- a = 20,b == 10
 //var b:Int = 20
@@ -492,6 +485,7 @@ import Foundation
 //(a, b) = (b, a)
 //print("a", a)
 //print("b", b)
+//======================================================================================
 
 //MARK: swap generic and immutable function paramerter with "inout"
 
@@ -505,17 +499,6 @@ import Foundation
 //print("b", b)
 
 //======================================================================================
-//MARK: it work only javaScript,c++,java
-/**
- 
- var  a = 10
- var b = 20
-
- b = a + b - (a = b)
- console.log("a = " + a + " b = " + b)
-*/
-
-//======================================================================================
 
 //it only work in programiz online compiler or  by creating command line tool
 //print("Enter your favorite programming language:")
@@ -526,7 +509,7 @@ import Foundation
 
 
 //======================================================================================
-//MARK:  Q4) filter an array of words such that only words less than 4 characters long remain
+//MARK:  Q2) filter an array of words such that only words less than 4 characters long remain
 
 //let words = ["Hello", "This", "Is", "Nothing", "But", "A", "Test"]
 //
@@ -544,7 +527,7 @@ import Foundation
 
 //======================================================================================
 
-//MARK:  Q5) call function and pass array and add(addition) all number inside single variable
+//MARK:  *) call function and pass array and add(addition) all number inside single variable
 
 //func addTwoNumbers(numbers:[Int]) -> Int {
 //    var number = 0
@@ -558,7 +541,7 @@ import Foundation
 //print(addTwoNumbers(numbers: [10,10,10,10]))
 
 //======================================================================================
-//MARK:  check odd number or even
+//Q3) MARK:  check odd number or even
 //
 //let number = 23
 //
@@ -571,7 +554,7 @@ import Foundation
 
 //===================================================================================
 
-//MARK: find factorial of number and (0 factorial is 1)
+//Q4)MARK: find factorial of number and (0 factorial is 1)
 
 //MARK: output:--  4---> 1*2*3*4 = 24
 
@@ -589,7 +572,7 @@ import Foundation
 
 
 //======================================================================================
-//MARK: print fibonnacci series
+//MARK: 5) print fibonnacci series
 
 //MARK: output:-- 0,1,1,2,3,5,8,13,21
 //
@@ -612,7 +595,7 @@ import Foundation
 
 
 //======================================================================================
-//MARK: reverse string
+//MARK: 6) reverse string
 //palindrome number is a number that is same after reverse
 
 //let text = "trrt"
@@ -633,7 +616,7 @@ import Foundation
 //}
 
 //======================================================================================
-//MARK:  reverse number and check palindrom number example:-- 3443 ==> 3443
+//MARK: 7) reverse number and check palindrom number example:-- 3443 ==> 3443
 
 //var number = 3553, reverseNum:Int = 0
 //let originalNum = number
@@ -679,7 +662,7 @@ import Foundation
 
 
 //======================================================================================
-//MARK:  from list of number or array move zero to end of the list
+//MARK: 8) from list of number or array move zero to end of the list
 
 //var list = [1, 0, 2, 0, 4, 0, 6,9,3]
 //
@@ -696,7 +679,7 @@ import Foundation
 
 
 //======================================================================================
-//Find two elements in the array that add up to given number ?
+//MARK: 9) Find two elements in the array that add up to given number ?
 
 //var nums = [2,7,11,15,5,4,8], target = 9
 //func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
@@ -724,7 +707,7 @@ import Foundation
 //https://medium.com/@armanabkar/solving-the-two-sum-problem-in-swift-cb203ce9e5a7
 
 //======================================================================================
-//MARK:  sort array (assending/descending)
+//MARK: 10) sort array (assending/descending)
 //var arr:[Int] = [78, 34, 1, 3, 90, 34, -1, -4, 6, 55, 20, -65]
 //print("Array elements after sorting:")
 
@@ -747,7 +730,7 @@ import Foundation
 
 
 //======================================================================================
-//MARK: find large and small number in array
+//MARK: 11) find large and small number in array
 //MARK: retun multiple argument
 
 
@@ -775,7 +758,7 @@ import Foundation
 //print(getSmallAndGreatestNumber())
 
 //======================================================================================
-//MARK:  reverse array element 10 minutes
+//MARK: 12) reverse array element 10 minutes flight77
 //var array: [Int] = [2,8,4,7,3,2,5]
 //
 //print(array)
@@ -793,27 +776,25 @@ import Foundation
 //print(array)
 //op:-- [5,2,3,7,4,8,2]
 //---------------
-//demo example in java
 
-/**
- static void reverseArray(intintArray[], int size)
-   {
-       int i, k, temp;
-       for (i = 0; i < size / 2; i++) {
-           temp = intArray[i];
-           intArray[i] = intArray[size - i - 1];
-           intArray[size - i - 1] = temp;
-       }
- */
+
 
 //======================================================================================
 
-//MARK:  program to print to half pyramid using *
+//MARK: 13) program to print to half pyramid using *
 //*
 //**
 //***
 //****
 //*****
+
+//or
+
+//12345
+//1234
+//123
+//12
+//1
 
 //MARK: surabh shukla
 
@@ -828,7 +809,6 @@ import Foundation
 //}
 //    print("")
 //}
-
 
 //or
 //-----------------------------------------
@@ -847,7 +827,7 @@ import Foundation
 
 //======================================================================================
 
-    // triangle
+    //MARK:  14) triangle
 //    *
 //   ***
 //  *****
@@ -871,8 +851,9 @@ import Foundation
 //}
 
 //----------------------------------------------------------------------------------------
-//MARK: prim number
-//for i in 3...14 {
+//MARK: 15) prim number
+//2,3,5,7,11
+//for i in 2...14 {
 //    var roundComplete = true
 //    for j in 2..<i {
 //
@@ -887,25 +868,25 @@ import Foundation
 //}
 
 //----------------------------------------------------------------------------------------
-//MARK:  check prime number
-let primNumber = 14
-var flag = true
-for i in 2..<primNumber {
-    
-    if (primNumber%i == 0) {
-        flag = false
-    }
-}
-
-if flag {
-    print("it is prime")
-}else{
-    print("it is not prime")
-}
+//MARK: 16) check prime number
+//let primNumber = 14
+//var flag = true
+//for i in 2..<primNumber {
+//
+//    if (primNumber%i == 0) {
+//        flag = false
+//    }
+//}
+//
+//if flag {
+//    print("it is prime")
+//}else{
+//    print("it is not prime")
+//}
 
 
 //======================================================================================
-//MARK:  print first table
+//MARK: 17) print first table flight77
 
 //1*1=1
 //1*2=2
@@ -925,6 +906,39 @@ if flag {
 //    }
 //}
 //======================================================================================
+//MARK: find same repeated particular word from paragraph text
+
+//func countWord(wordToCount: String, in paragraph: String) -> Int
+//{
+//
+//    let words = paragraph.components(separatedBy: .whitespacesAndNewlines)
+//    let filteredWords = words.filter { !$0.isEmpty }
+////    let wordCount = filteredWords.filter { $0.lowercased() == wordToCount.lowercased()
+////
+////    }.count
+////    return wordCount
+//
+//    //--------------------------------
+//    var filterData:[String] = []
+//        for word in filteredWords {
+//
+//            if word == wordToCount {
+//
+//                filterData.append(word)
+//            }
+//        }
+//    return filterData.count
+//    //--------------------------------
+//
+//}
+//
+//
+//let inputParagraph = "This is a sample ` paragraph with several words. This is a sample paragraph with more words."
+//let wordToCount = "sample"
+//let wordCount = countWord(wordToCount: wordToCount, in: inputParagraph)
+//print("The word '\(wordToCount)' appears \(wordCount) times.")
+
+//======================================================================================
 
 //MARK: Merge two arrays into a new array flight
 
@@ -935,15 +949,17 @@ if flag {
 //for i in arrayMerge2 {
 //    arrayMerge1.append(i)
 //}
-//print(array1)
+//print(arrayMerge1)
 
 //using while loop
-//var i = 0,  j = array2.count - 1
-//while(i <= j) {
-//    array1.append(array2[i])
-//    i = i + 1
+//var count = 0
+//while(count < arrayMerge2.count) {
+//
+//    arrayMerge1.append(arrayMerge2[count])
+//    count += 1
+//
 //}
-//print(array1)
+//print(arrayMerge1)
 //======================================================================================
 
 //MARK:  array of integers into an array of strings.
