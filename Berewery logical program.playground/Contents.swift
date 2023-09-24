@@ -851,21 +851,7 @@ import Foundation
 //}
 
 //----------------------------------------------------------------------------------------
-//MARK: 15) prim number
-//2,3,5,7,11
-//for i in 2...14 {
-//    var roundComplete = true
-//    for j in 2..<i {
-//
-//        if (i % j == 0 ) {
-//            roundComplete = false
-//        }
-//    }
-//
-//    if  roundComplete {
-//        print(i)
-//    }
-//}
+
 
 //----------------------------------------------------------------------------------------
 //MARK: 16) check prime number
@@ -886,59 +872,9 @@ import Foundation
 
 
 //======================================================================================
-//MARK: 17) print first table flight77
-
-//1*1=1
-//1*2=2
-//1*3=6 -
-//1*4=4
-//1*5=5
-//1*6=12 -
-
-//for digit in 1...6 {
-//
-//    if digit == 3 {
-//        print("1 * \(digit) = \(2*digit)")
-//    } else if digit == 6 {
-//        print("1 * \(digit) = \(2*digit)")
-//    } else {
-//        print("1 * \(digit) = \(1*digit)")
-//    }
-//}
-//======================================================================================
-//MARK: find same repeated particular word from paragraph text
-
-//func countWord(wordToCount: String, in paragraph: String) -> Int
-//{
-//
-//    let words = paragraph.components(separatedBy: .whitespacesAndNewlines)
-//    let filteredWords = words.filter { !$0.isEmpty }
-////    let wordCount = filteredWords.filter { $0.lowercased() == wordToCount.lowercased()
-////
-////    }.count
-////    return wordCount
-//
-//    //--------------------------------
-//    var filterData:[String] = []
-//        for word in filteredWords {
-//
-//            if word == wordToCount {
-//
-//                filterData.append(word)
-//            }
-//        }
-//    return filterData.count
-//    //--------------------------------
-//
-//}
-//
-//
-//let inputParagraph = "This is a sample ` paragraph with several words. This is a sample paragraph with more words."
-//let wordToCount = "sample"
-//let wordCount = countWord(wordToCount: wordToCount, in: inputParagraph)
-//print("The word '\(wordToCount)' appears \(wordCount) times.")
 
 //======================================================================================
+
 
 //MARK: Merge two arrays into a new array flight
 
@@ -976,12 +912,234 @@ import Foundation
 //// Prints ["1", "2", "3", "4"]
 
 //======================================================================================
+
+//MARK:  find number how much time it repeate
+//let numbers = [10, 20, 30, 40, 30, 50]
+//
+//let elementToFind = 30
+//var indices:[Int] = []
+//for (index, number) in numbers.enumerated() {
+//
+//    if number == elementToFind {
+//        indices.append(index)
+//    }
+//
+//}
+//print(indices)
+
+//======================================================================================
+
+
 //MARK:  leap year
 //**************************************************************************************
 //**************************************************************************************
 //**************************************************************************************
 //**************************************************************************************
 //**************************************************************************************
+
+//***MARK: self interview Question*****
+
+//======================================================================================
+//======================================================================================
+//MARK:  o2h pvt lmt
+
+//MARK: find even element from array
+//let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+////let evenNumbers = numbers.filter{$0 % 2 == 0}
+////print(evenNumbers)
+//
+//
+//var evenNumbers:[Int] = []
+//
+//for number in numbers {
+//
+//    if number % 2 == 0 {
+//
+//        evenNumbers.append(number)
+//
+//    }
+//}
+//print(evenNumbers)
+
+//-------------------------------------------------------------------------
+//MARK: find index of particular element from array..?
+
+//let numbers = [10, 20, 30, 40, 50]
+//
+//if let index = numbers.firstIndex(of: 30) {
+//    print("Index of 30 is: \(index)") // Output: Index of 30 is: 2
+//} else {
+//    print("Element not found")
+//}
+
+
+//======================================================================================
+//======================================================================================
+
+//MARK: Yup TV
+
+//MARK: 15) prim number
+//2,3,5,7,11
+//for i in 2...14 {
+//    var roundComplete = true
+//    for j in 2..<i {
+//
+//        if (i % j == 0 ) {
+//            roundComplete = false
+//        }
+//    }
+//
+//    if  roundComplete {
+//        print(i)
+//    }
+//}
+
+//-------------------------------------------------------------------------
+
+//MARK: 17) print first table flight77
+
+//1*1=1
+//1*2=2
+//1*3=6 -
+//1*4=4
+//1*5=5
+//1*6=12 -
+
+//for digit in 1...6 {
+//
+//    if digit == 3 {
+//        print("1 * \(digit) = \(2*digit)")
+//    } else if digit == 6 {
+//        print("1 * \(digit) = \(2*digit)")
+//    } else {
+//        print("1 * \(digit) = \(1*digit)")
+//    }
+//}
+
+//======================================================================================
+//======================================================================================
+
+//MARK: havizon private limited
+
+//MARK: find same repeated particular word from paragraph text
+
+//func countWord(wordToCount: String, in paragraph: String) -> Int
+//{
+//
+//    let words = paragraph.components(separatedBy: .whitespacesAndNewlines)
+//    let filteredWords = words.filter { !$0.isEmpty }
+////    let wordCount = filteredWords.filter { $0.lowercased() == wordToCount.lowercased()
+////
+////    }.count
+////    return wordCount
+//
+//    //--------------------------------
+//    var filterData:[String] = []
+//        for word in filteredWords {
+//
+//            if word == wordToCount {
+//
+//                filterData.append(word)
+//            }
+//        }
+//    return filterData.count
+//    //--------------------------------
+//
+//}
+//
+//
+//let inputParagraph = "This is a sample ` paragraph with several words. This is a sample paragraph with more words."
+//let wordToCount = "sample"
+//let wordCount = countWord(wordToCount: wordToCount, in: inputParagraph)
+//print("The word '\(wordToCount)' appears \(wordCount) times.")
+
+//======================================================================================
+//======================================================================================
+
+//MARK: interview program conceptual question
+
+//MARK:  appriciation
+//MARK: How will you verify given string json array or json object
+
+
+//// Define structs that match your expected JSON structures
+///struct for only decoding
+
+//struct MyJSONObject: Codable {
+//    // Define properties that match the JSON object's structure
+//    let name: String
+//    let age: Int
+//    let city: String
+//}
+//
+//struct MyJSONArray: Codable {
+//    // Define properties that match the JSON array's structure
+//    let fruits: [String]
+//}
+//func isJSONObject(_ jsonData: Data) -> Bool {
+//    do {
+//        // Attempt to decode the JSON data into your specific struct
+//        _ = try JSONDecoder().decode(MyJSONObject.self, from: jsonData)
+//        return true
+//    } catch {
+//        return false
+//    }
+//}
+//
+//func isJSONArray(_ jsonData: Data) -> Bool {
+//    do {
+//        // Attempt to decode the JSON data into your specific struct
+//        _ = try JSONDecoder().decode(MyJSONArray.self, from: jsonData)
+//        return true
+//    } catch {
+//        return false
+//    }
+//}
+
+
+//==================================================================
+
+
+//func isJSONObject(_ jsonData: Data) -> Bool {
+//    do {
+//        let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+//        return jsonObject is [String: Any]
+//    } catch {
+//        return false
+//    }
+//}
+//
+//func isJSONArray(_ jsonData: Data) -> Bool {
+//    do {
+//        let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+//        return jsonObject is [Any]
+//    } catch {
+//        return false
+//    }
+//}
+
+
+
+
+// Example usage:
+//let jsonStringObject = "{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}"
+//if let jsonDataObject = jsonStringObject.data(using: .utf8) {
+//    let isObject = isJSONObject(jsonDataObject)
+//    print("Is JSON Object: \(isObject)") // Should print "Is JSON Object: true"
+//}
+//
+//let jsonStringArray = "[\"apple\",\"banana\",\"cherry\"]"
+//if let jsonDataArray = jsonStringArray.data(using: .utf8) {
+//    let isArray = isJSONArray(jsonDataArray)
+//    print("Is JSON Array: \(isArray)") // Should print "Is JSON Array: true"
+//}
+
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
+
 
 
 
@@ -1087,6 +1245,47 @@ import Foundation
 //var b = B()
 //b.closureBlock()
     
+
+//MARK: escaping closure
+
+//func performOperation(completion: () -> Void) {
+//    print("Performing operation")
+//    completion()
+//}
+//
+//// The closure is non-escaping in this case.
+//performOperation {
+//    print("Operation completed")
+//}
+
+
+//MARK:  nonescaping closure
+
+//    var complitionHandler: ((Int)->Void)?
+//    func getSumOf(array:[Int], handler: @escaping ((Int)->Void)) {
+//        //step 2
+//       //here I'm taking for loop just for example, in real case it'll be something else like API call
+//       var sum: Int = 0
+//        for value in array {
+//            sum += value
+//        }
+//
+////           handler(sum)
+//         complitionHandler = handler
+//        // complitionHandler!(sum)
+//
+//    }
+//
+//    func doSomething() {
+//        //setp 1
+//      getSumOf(array: [1,2,3,4,5]) { (sum) in
+//            print(sum)
+//            //step 4, finishing the execution
+//        }
+//    }
+//
+//doSomething()
+
 //===================================================================================
 //MARK: (HOF)
 
@@ -1651,4 +1850,58 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //person = nil
 //book = nil
 
+
+//======================================================================
+//======================================================================
+//MARK: add this code inside practice uikit project 
+
+//MARK: notification centre
+
+//class ViewController: UIViewController {
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        // Register as an observer for the "ButtonTapped" notification
+//        NotificationCenter.default.addObserver(self, selector: #selector(handleButtonTap), name: NSNotification.Name("ButtonTapped"), object: nil)
+//    }
+//
+//    @objc func handleButtonTap() {
+//        // Handle the button tap event
+//        print("Button was tapped!")
+//    }
+//
+//    @IBAction func buttonTapped(_ sender: UIButton) {
+//        // Post a notification when the button is tapped
+//        NotificationCenter.default.post(name: NSNotification.Name("ButtonTapped"), object: nil)
+//    }
+//
+//    deinit {
+//        // Unregister as an observer when the view controller is deallocated
+//        NotificationCenter.default.removeObserver(self)
+//    }
+//}
+
+//======================================================================
+//======================================================================
+
+//struct Faizan {
+//    var label: UILabel = UILabel()
+//}
+//
+//
+//extension Faizan {
+//    func blackHair() {
+//        label.textColor = .black
+//    }
+//}
+//
+//func sslfkj() {
+//    let fz = Faizan()
+//
+//    fz.blackHair()
+//}
+//extension String{
+//
+//}
 
