@@ -5,7 +5,7 @@ import CoreFoundation
 import Darwin
 import Foundation
 
-
+// start77
 //import Darwin
 
 
@@ -16,7 +16,7 @@ import Foundation
  logic swift method
  pure logic
  swift comceptual programming
- i
+ self interview Question
  *
  
  */
