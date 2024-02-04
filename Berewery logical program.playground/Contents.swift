@@ -8,7 +8,6 @@ import Foundation
 // start77
 //import Darwin
 
-//***(revised)***
 
 
 /**
@@ -44,7 +43,7 @@ import Foundation
 //desire output:-- var b = [2,6,12,20]
 
 
-//var numbers = [45, 73, 195, 53]
+//var numbers = [45, 73, 195, 53,]
 //print(numbers.count - 2)
 //
 ////myArray.append("Raccoon")
@@ -53,7 +52,7 @@ import Foundation
 // var index = 1
 //var computedNumbers : [Int] =  []
 //
-//for item in 0...numbers.count - 2 {
+//for item in 0...2 {
 //    print(item , "good boy", numbers[item] , numbers[index])
 //    computedNumbers.append(numbers[item] * numbers[index])
 //    index = index + 1
@@ -134,11 +133,10 @@ import Foundation
 //======================================================================================
 
 //Q7) return all the elements that start with "N"
+//var lanuage = ["Swedish", "Nepali", "Slovene", "Norwegian"]
 //
-//var result = lanuage.filter({$0..hasPrefix("N")})
+//var result = lanuage.filter({$0.hasPrefix("N")})
 //print(result)
-
-//var result = lanuage.filter({$0.uppercased().hasPrefix("N")})
 
 //===================================================================================
 
@@ -197,7 +195,7 @@ import Foundation
 ////let namesWithL = students.filter{ $0.name.contains("l") }
 ////without case insentative
 //let namesWithL = students.filter({$0.name.localizedStandardContains("l")})
-//let filterData = StudentName.filter({$0.name.lowercased().contains("l")})
+//
 //for student in namesWithL {
 //  print(student.name)
 //}
@@ -282,7 +280,53 @@ import Foundation
 //print(tempArray)
 
 
-//***(revised)***
+//-------------------------------------
+//MARK:  remove duplicate element from array using extension
+
+
+//var numbers = [1,3,1,2,4,4,6,5,6]
+
+//extension Array where Element == Int {
+//extension Array where Element: Equatable{
+//
+//    func removeDuplicateValues() -> [Element] {
+//        var tempArray: [Element] = []
+//        for number in self {
+//            if !tempArray.contains(number) {
+//                tempArray.append(number)
+//            }
+//        }
+//        return tempArray
+//    }
+//}
+//
+//print(numbers.removeDuplicateValues())
+//---------------------------------------------------------------------------------
+//MARK:  remove duplicate element from array using extension modify numbers array
+//MARK:  it accept all type like generic (Equatable)
+//var numbers = [1,3,1,2,4,4,6,5,6]
+//
+//extension Array where Element: Equatable {
+//
+//
+//   mutating func removeDuplicateValues()  {
+//
+//        var tempArray: [Element] = []
+//        for number in self {
+//
+//            if !tempArray.contains(number) {
+//                tempArray.append(number)
+//            }
+//        }
+//        self = tempArray
+//    }
+//}
+//
+//numbers.removeDuplicateValues()
+//print("result", numbers)
+//
+//var chararcterArray = ["a", "b", "b", "a", "c"]
+//print(chararcterArray.removeDuplicateValues())
 //======================================================================================
 //MARK:  reverse String
 
@@ -374,55 +418,6 @@ import Foundation
 //print(arrayOfStrings)
 //
 //// Prints ["1", "2", "3", "4"]
-///
-///
-/////------------------------------------------------------------------
-//MARK:  remove duplicate element from array using extension
-
-
-//var numbers = [1,3,1,2,4,4,6,5,6]
-
-//extension Array where Element == Int {
-//extension Array where Element: Equatable{
-//
-//    func removeDuplicateValues() -> [Element] {
-//        var tempArray: [Element] = []
-//        for number in self {
-//            if !tempArray.contains(number) {
-//                tempArray.append(number)
-//            }
-//        }
-//        return tempArray
-//    }
-//}
-//
-//print(numbers.removeDuplicateValues())
-//---------------------------------------------------------------------------------
-//MARK:  remove duplicate element from array using extension modify numbers array
-//MARK:  it accept all type like generic (Equatable)
-//var numbers = [1,3,1,2,4,4,6,5,6]
-//
-//extension Array where Element: Equatable {
-//
-//
-//   mutating func removeDuplicateValues()  {
-//
-//        var tempArray: [Element] = []
-//        for number in self {
-//
-//            if !tempArray.contains(number) {
-//                tempArray.append(number)
-//            }
-//        }
-//        self = tempArray
-//    }
-//}
-//
-//numbers.removeDuplicateValues()
-//print("result", numbers)
-//
-//var chararcterArray = ["a", "b", "b", "a", "c"]
-//print(chararcterArray.removeDuplicateValues())
 
 //**************************************************************************************
 //**************************************************************************************
