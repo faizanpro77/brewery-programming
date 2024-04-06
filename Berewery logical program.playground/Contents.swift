@@ -1,9 +1,11 @@
 //logical program practice
-
+//setup github repository default name then push
 
 import CoreFoundation
 import Darwin
 import Foundation
+
+//**revised**
 
 // start77
 //import Darwin
@@ -280,53 +282,7 @@ import Foundation
 //print(tempArray)
 
 
-//-------------------------------------
-//MARK:  remove duplicate element from array using extension
 
-
-//var numbers = [1,3,1,2,4,4,6,5,6]
-
-//extension Array where Element == Int {
-//extension Array where Element: Equatable{
-//
-//    func removeDuplicateValues() -> [Element] {
-//        var tempArray: [Element] = []
-//        for number in self {
-//            if !tempArray.contains(number) {
-//                tempArray.append(number)
-//            }
-//        }
-//        return tempArray
-//    }
-//}
-//
-//print(numbers.removeDuplicateValues())
-//---------------------------------------------------------------------------------
-//MARK:  remove duplicate element from array using extension modify numbers array
-//MARK:  it accept all type like generic (Equatable)
-//var numbers = [1,3,1,2,4,4,6,5,6]
-//
-//extension Array where Element: Equatable {
-//
-//
-//   mutating func removeDuplicateValues()  {
-//
-//        var tempArray: [Element] = []
-//        for number in self {
-//
-//            if !tempArray.contains(number) {
-//                tempArray.append(number)
-//            }
-//        }
-//        self = tempArray
-//    }
-//}
-//
-//numbers.removeDuplicateValues()
-//print("result", numbers)
-//
-//var chararcterArray = ["a", "b", "b", "a", "c"]
-//print(chararcterArray.removeDuplicateValues())
 //======================================================================================
 //MARK:  reverse String
 
@@ -352,6 +308,7 @@ import Foundation
 //}
 
 //print(filterCapitalCharacters(fromString: str))
+
 
 //===================================================================================
 //MARK:  convert to [any] to [Int]
@@ -418,6 +375,56 @@ import Foundation
 //print(arrayOfStrings)
 //
 //// Prints ["1", "2", "3", "4"]
+///
+/////-------------------------------------
+///
+
+//MARK:  remove duplicate element from array using extension
+
+
+//var numbers = [1,3,1,2,4,4,6,5,6]
+
+//extension Array where Element == Int {
+//extension Array where Element: Equatable{
+//
+//    func removeDuplicateValues() -> [Element] {
+//        var tempArray: [Element] = []
+//        for number in self {
+//            if !tempArray.contains(number) {
+//                tempArray.append(number)
+//            }
+//        }
+//        return tempArray
+//    }
+//}
+//
+//print(numbers.removeDuplicateValues())
+//---------------------------------------------------------------------------------
+//MARK:  remove duplicate element from array using extension modify numbers array
+//MARK:  it accept all type like generic (Equatable)
+//var numbers = [1,3,1,2,4,4,6,5,6]
+//
+//extension Array where Element: Equatable {
+//
+//
+//   mutating func removeDuplicateValues()  {
+//
+//        var tempArray: [Element] = []
+//        for number in self {
+//
+//            if !tempArray.contains(number) {
+//                tempArray.append(number)
+//            }
+//        }
+//        self = tempArray
+//    }
+//}
+//
+//numbers.removeDuplicateValues()
+//print("result", numbers)
+//
+//var chararcterArray = ["a", "b", "b", "a", "c"]
+//print(chararcterArray.removeDuplicateValues())
 
 //**************************************************************************************
 //**************************************************************************************
@@ -509,6 +516,7 @@ import Foundation
 
 
 //======================================================================================
+
 //MARK:  Q2) filter an array of words such that only words less than 4 characters long remain
 
 //let words = ["Hello", "This", "Is", "Nothing", "But", "A", "Test"]
@@ -637,6 +645,7 @@ import Foundation
 //----------------------------------------------------
 //o/p:--3553
 
+
 //MARK:  using function for only practice pupose
 //func isPalindrom(_ x:Int) -> Bool {
 //    var number = x
@@ -662,6 +671,7 @@ import Foundation
 
 
 //======================================================================================
+
 //MARK: 8) from list of number or array move zero to end of the list
 
 //var list = [1, 0, 2, 0, 4, 0, 6,9,3]
@@ -679,6 +689,7 @@ import Foundation
 
 
 //======================================================================================
+
 //MARK: 9) Find two elements in the array that add up to given number ?
 
 //var nums = [2,7,11,15,5,4,8], target = 9
@@ -707,6 +718,7 @@ import Foundation
 //https://medium.com/@armanabkar/solving-the-two-sum-problem-in-swift-cb203ce9e5a7
 
 //======================================================================================
+
 //MARK: 10) sort array (assending/descending)
 //var arr:[Int] = [78, 34, 1, 3, 90, 34, -1, -4, 6, 55, 20, -65]
 //print("Array elements after sorting:")
@@ -732,33 +744,40 @@ import Foundation
 //======================================================================================
 //MARK: 11) find large and small number in array
 //MARK: retun multiple argument
+//MARK: second largest element
 
 
-//func getSmallAndGreatestNumber() -> (Int,Int) {
+//let numbers  = [3,6,55,4,8]
+//let numbers = [9,7,3,8,5]
+//var greater = numbers[0]
+//var lesser = numbers[0]
+//var secondeLargest = numbers[0]
+//var secondLessor = numbers[0]
 //
-//    let numbers = [145, 206, 116, 809, 540, 176]
-////    let numbers = [2, -22, -1, -5600, 333, -167]
+//func getSmallAndGreatestNumber(_ data:[Int]) -> (Int,Int) {
 //
-//    var largest = numbers[0]
-//    var small = numbers[0]
+//    for number in numbers {
 //
-//    for i in numbers {
-//        if (i > largest) {
-//            largest = i
+//        if greater > number {
+//            secondeLargest = greater
+//            greater = number
+//        }else if number > secondeLargest && number != greater {
+//            secondeLargest = number
 //        }
-//        if (i < small) {
-//            small = i
+//
+//        if lesser < number {
+//            secondLessor = lesser
+//            lesser = number
+//        }else if secondLessor < number && number != lesser {
+//            secondLessor = number
 //        }
 //    }
 //
-//    print("Maximum Number ====================\(largest)")// 809
-//    print("Minimum Number ====================\(small)")// 116
-//    return (largest,small)
+//    return(greater,lesser)
 //}
-//print(getSmallAndGreatestNumber())
-
 //======================================================================================
-//MARK: 12) reverse array element 10 minutes flight77
+
+//MARK: 12) reverse array element
 //var array: [Int] = [2,8,4,7,3,2,5]
 //
 //print(array)
@@ -777,9 +796,14 @@ import Foundation
 //op:-- [5,2,3,7,4,8,2]
 //---------------
 
+//for data in array {
+//    print(filter)
+//    filter.insert(data, at: 0)
+//}
 
 
 //======================================================================================
+//**revised**
 
 //MARK: 13) program to print to half pyramid using *
 //*
@@ -801,7 +825,7 @@ import Foundation
 //for i in 1...5{
 //for j in 1...5 {
 //    if(j<=i){
-//    print("* ",terminator: "")
+//    print("*",terminator: "")
 //    }else{
 //    print(" ",terminator: "")
 //    }
@@ -928,6 +952,29 @@ import Foundation
 //print(indices)
 
 //======================================================================================
+
+//func countOccurrences(array: [Int]) -> [Int: Int] {
+//    var occurrencesDictionary: [Int: Int] = [:]
+//
+//    for element in array {
+//        if let count = occurrencesDictionary[element] {
+//            occurrencesDictionary[element] = count + 1
+//        } else {
+//            occurrencesDictionary[element] = 1
+//        }
+//    }
+//
+//    return occurrencesDictionary
+//}
+//
+//let numbers = [1, 2, 3, 2, 4, 1, 5, 3, 2, 4, 6, 7, 6, 8, 9, 9, 8, 7]
+//let occurrences = countOccurrences(array: numbers)
+//
+//for (element, count) in occurrences {
+//    print("Element \(element) occurs \(count) times.")
+//}
+//======================================================================================
+
 
 
 //MARK:  leap year
@@ -1429,6 +1476,14 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //====================================================================================
 
 //MARK: Dictionaries
+
+//declaration different ways
+
+//var emptyDictionary = [Int: String]()
+//
+//var anotherEmptyDictionary = Dictionary<Int, String>()
+//
+//var yetAnotherEmptyDictionary: [Int: String] = [:]
 
 //var myDictionary = [String:String]()
 //
