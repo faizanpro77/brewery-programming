@@ -28,8 +28,11 @@ import Foundation
  class vs structure
 
 */
-   
+//===================================================================================
 
+// **MARK: LINKS  for logic**
+
+//https://docs.google.com/document/d/1n_STkquEqKrwhK1af4ZYQj0UIHfGklT0kZOkv8Le2Rw/edit
 //-----------------------------------------------------------------------------------
 //===================================================================================
 //===================================================================================
@@ -47,9 +50,7 @@ import Foundation
 
 //var numbers = [45, 73, 195, 53,]
 //print(numbers.count - 2)
-//
-////myArray.append("Raccoon")
-////myArray.insert("Frog", at: 0)
+
 //
 // var index = 1
 //var computedNumbers : [Int] =  []
@@ -142,6 +143,7 @@ import Foundation
 
 //===================================================================================
 
+
 //Q8. check if all elements are even numbers or not
 
 //var numbers = [2, 4, 5, 7, 8, 9]
@@ -151,7 +153,7 @@ import Foundation
 //print(result)
 
 //===================================================================================
-
+**revised**
 //Q9)filter an array of words such that only words less than 4 characters long remain
 //for more learnig
 //passing manual function to filter
@@ -803,7 +805,6 @@ import Foundation
 
 
 //======================================================================================
-//**revised**
 
 //MARK: 13) program to print to half pyramid using *
 //*
@@ -875,9 +876,8 @@ import Foundation
 //}
 
 //----------------------------------------------------------------------------------------
-
-
 //----------------------------------------------------------------------------------------
+
 //MARK: 16) check prime number
 //let primNumber = 14
 //var flag = true
@@ -921,6 +921,8 @@ import Foundation
 //}
 //print(arrayMerge1)
 //======================================================================================
+
+
 
 //MARK:  array of integers into an array of strings.
 
@@ -1009,6 +1011,7 @@ import Foundation
 //print(evenNumbers)
 
 //-------------------------------------------------------------------------
+
 //MARK: find index of particular element from array..?
 
 //let numbers = [10, 20, 30, 40, 50]
@@ -1019,13 +1022,22 @@ import Foundation
 //    print("Element not found")
 //}
 
+//--------------------------------------
+
+//var element = 40
+//for (index, number) in numbers.enumerated() {
+//    if element == number {
+//        
+//            print("\(element) index is \(index)")
+//    }
+//}
 
 //======================================================================================
 //======================================================================================
 
 //MARK: Yup TV
 
-//MARK: 15) prim number
+//MARK: 15) print prim number till 14
 //2,3,5,7,11
 //for i in 2...14 {
 //    var roundComplete = true
@@ -1042,6 +1054,7 @@ import Foundation
 //}
 
 //-------------------------------------------------------------------------
+
 
 //MARK: 17) print first table flight77
 
@@ -1187,12 +1200,6 @@ import Foundation
 //**************************************************************************************
 //**************************************************************************************
 
-
-
-
-
-
-
 //MARK:  ** swift comceptual programming**
 
 
@@ -1215,7 +1222,7 @@ import Foundation
 //    return word
 //}
 
-//let result = closureWtihParameterandReturnType("closure Wtih Parameter")
+//let result = closureWtihParameterandReturnType("swift")
 //print(result)
 
 
@@ -1261,13 +1268,14 @@ import Foundation
 
 //----------------------------------
 
+
 //class A {
 //
-//    var reload:(()->())? = nil
+//    var reload:((string)->(Int))? = nil
 //
 //    func callClosure(){
 //        print("callClosure")
-//        self.reload?()
+//       var digit = self.reload?("faizan")
 //
 //    }
 //
@@ -1280,8 +1288,9 @@ import Foundation
 //    func closureBlock() {
 //
 //        print("closureBlock")
-//        a.reload = {
-//            print("execute clouse block======>>")
+//        a.reload = { name in
+//            print("execute clouse block======>> \(name)")
+//                retrun 6
 //        }
 //
 //        a.callClosure()
@@ -1301,7 +1310,7 @@ import Foundation
 //}
 //
 //// The closure is non-escaping in this case.
-//performOperation {
+//performOperation = {
 //    print("Operation completed")
 //}
 
@@ -1348,7 +1357,6 @@ import Foundation
 // Output: [6, 9]
 
 //===================================================================================
-
 
 //MARK: map
 //var numbers = [1, 2, 3, 4]
@@ -1404,13 +1412,15 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //let arrayOfStrings = arrayOfIntegers.compactMap { optionalInteger -> String? in
 //  guard let integer = optionalInteger else { return nil }
 //
-//  return String(integer)d
+//  return String(integer)
 //}
 //print(arrayOfStrings)
 
 // Prints ["1", "2", "4"]
 
 //====================================================================================
+
+
 //MARK:  FlatMap
 
 //let numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -1575,6 +1585,7 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //print("Student ID: \(studentID)")
 
 //---------------------------------------------
+
 //MARK: Add Elements to a Set
 
 //var numbers: Set = [21, 34, 54, 12]
@@ -1598,7 +1609,6 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //print("Set after remove(): \(languages)")
 
 //======================================================================================
-
 
 //**NSUSER DEFAULT
 //its store data into Plist and every time is load all Plist when we use in simulator
@@ -1938,25 +1948,157 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //}
 
 //======================================================================
-//======================================================================
 
-//struct Faizan {
-//    var label: UILabel = UILabel()
-//}
+//***MARK: newGen logic***
+
+
+// MARK: menue show select then show details
+
+// Event details
+//let totalEvents = 3
+//let events = [
+//    (title: "Music Concert", date: "August 15, 2023", time: "7:00 PM", ticketsSold: 150, ticketPrice: 2599),
+//    (title: "Art Exhibition", date: "September 10, 2023", time: "11:00 AM", ticketsSold: 80, ticketPrice: 159),
+//    (title: "Sports Tournament", date: "October 5, 2023", time: "2:30 PM", ticketsSold: 200, ticketPrice: 1299)
+//]
 //
-//
-//extension Faizan {
-//    func blackHair() {
-//        label.textColor = .black
+//// Function to display menu
+//func displayMenu() {
+//    print("Select an event to view details:")
+//    for (index, event) in events.enumerated() {
+//        print("\(index + 1). \(event.title)")
 //    }
 //}
 //
-//func sslfkj() {
-//    let fz = Faizan()
-//
-//    fz.blackHair()
+//// Function to display event details
+//func displayEventDetails(eventIndex: Int) {
+//    if eventIndex < 0 || eventIndex >= events.count {
+//        print("Invalid selection.")
+//        return
+//    }
+//    let event = events[eventIndex]
+//    print("\nEvent Details:")
+//    print("Title: \(event.title)")
+//    print("Date: \(event.date)")
+//    print("Time: \(event.time)")
+//    print("Tickets Sold: \(event.ticketsSold)")
+//    print("Ticket Price: \(event.ticketPrice)")
 //}
-//extension String{
 //
+//// Main program logic
+//func main() {
+//    displayMenu()
+//    
+//    // Reading user input
+//    print("Enter the number of the event you want to view:")
+//    if let input = readLine(), let eventNumber = Int(input), eventNumber > 0, eventNumber <= totalEvents {
+//        displayEventDetails(eventIndex: eventNumber - 1)
+//    } else {
+//        print("Invalid input. Please enter a number between 1 and \(totalEvents).")
+//    }
+//}
+//
+//// Run the main function
+//main()
+
+
+//O/p.....
+// Select an event to view details:
+//1. Music Concert
+//2. Art Exhibition
+//3. Sports Tournament
+//Enter the number of the event you want to view:
+//
+//
+//Event Details:
+//Title: Music Concert
+//Date: August 15, 2023
+//Time: 7:00 PM
+//Tickets Sold: 150
+//Ticket Price: 2599
+
+////======================================================================
+
+// MARK: calculate average mark
+
+
+// Declare and assign marks for the three subjects
+//let subject1Marks = 85
+//let subject2Marks = 92
+//let subject3Marks = 78
+//
+//// Calculate the average marks
+//let totalMarks = subject1Marks + subject2Marks + subject3Marks
+//let averageMarks = totalMarks / 3
+//
+//// Declare the drama school endorsement
+//let hasDramaSchoolEndorsement = true
+//
+//// Evaluate the student's performance
+//let isSelected = averageMarks >= 80 || hasDramaSchoolEndorsement
+//
+//// Print the result to the console
+//print("Is the user selected? \(isSelected)")
+
+////======================================================================
+
+
+//MARK: check condition mactch
+
+// Declare and assign values to the TV properties
+//let tvScreenSize = 55
+//let tvBrand = "Sony"
+//let tvPrice = 50000
+
+//let currentYear = Calendar.current.component(.year, from: Date())
+
+//
+//// Check if the TV meets the criteria
+//let meetsCriteria = tvScreenSize >= 50 && (tvBrand == "Sony" || tvBrand == "Samsung") && tvPrice <= 60000 && watchReleaseYear == currentYear - 1
+//
+//// Print the result to the console
+//print("Does the TV meet the criteria? \(meetsCriteria)")
+
+
+////======================================================================
+
+// Define a structure to represent a contractor
+//struct Contractor {
+//    var name: String
+//    var jobDescription: String
+//    var hourlyRate: Int
+//    var hoursWorked: Int
+//    var ratings: Int
+//}
+//
+//// List of contractors with their details
+//let contractors = [
+//    Contractor(name: "Rajesh", jobDescription: "Web Developer", hourlyRate: 300, hoursWorked: 80, ratings: 90),
+//    Contractor(name: "Priya", jobDescription: "Content Writer", hourlyRate: 250, hoursWorked: 60, ratings: 80),
+//    Contractor(name: "Amit", jobDescription: "Graphic Designer", hourlyRate: 350, hoursWorked: 40, ratings: 92),
+//    Contractor(name: "Ananya", jobDescription: "Digital Marketer", hourlyRate: 200, hoursWorked: 20, ratings: 88)
+//]
+//
+//print("Payment Chart:")
+//print("--------------------")
+//
+//for contractor in contractors {
+//    let totalPayment = contractor.hourlyRate * contractor.hoursWorked
+//    let isEligibleForGoodieBag = contractor.hoursWorked > 15 || contractor.ratings > 85
+//
+//    print("Contractor: \(contractor.name)")
+//    print("Job Description: \(contractor.jobDescription)")
+//    print("Hourly Rate: ₹\(contractor.hourlyRate)")
+//    print("Hours Worked: \(contractor.hoursWorked)")
+//    print("Total Payment: ₹\(totalPayment)")
+//    print("Ratings: \(contractor.ratings)")
+//    print("Is Eligible for Goodie Bag: \(isEligibleForGoodieBag)")
+//    print()
 //}
 
+////======================================================================
+
+
+
+
+//19. NEOG CAMP
