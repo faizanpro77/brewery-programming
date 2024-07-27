@@ -153,7 +153,7 @@ import Foundation
 //print(result)
 
 //===================================================================================
-**revised**
+
 //Q9)filter an array of words such that only words less than 4 characters long remain
 //for more learnig
 //passing manual function to filter
@@ -330,6 +330,7 @@ import Foundation
 
 //print(convertToIntArray(inputValue: input))
 //=================================================================================
+
 //MARK: find large and small number in array
 //let array = [2,4,6,3,7,2]
 //func findLargestNumber(from arg: [Int])
@@ -349,6 +350,7 @@ import Foundation
 //print(findSmallestNumber(from: array))
 
 //=================================================================================
+
 //MARK:  Merge two arrays into a new array
 
 //var array1: [Int] = [1,2,3,4]
@@ -563,7 +565,6 @@ import Foundation
 //}
 
 //===================================================================================
-
 //Q4)MARK: find factorial of number and (0 factorial is 1)
 
 //MARK: output:--  4---> 1*2*3*4 = 24
@@ -582,6 +583,7 @@ import Foundation
 
 
 //======================================================================================
+
 //MARK: 5) print fibonnacci series
 
 //MARK: output:-- 0,1,1,2,3,5,8,13,21
@@ -604,7 +606,7 @@ import Foundation
 
 
 
-//======================================================================================
+//=============================================================================
 //MARK: 6) reverse string
 //palindrome number is a number that is same after reverse
 
@@ -672,8 +674,7 @@ import Foundation
 //}
 
 
-//======================================================================================
-
+//============================================================================================
 //MARK: 8) from list of number or array move zero to end of the list
 
 //var list = [1, 0, 2, 0, 4, 0, 6,9,3]
@@ -877,28 +878,32 @@ import Foundation
 
 //----------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------
-
+// 2, 3, 5, 7, 11, 13
 //MARK: 16) check prime number
-//let primNumber = 14
-//var flag = true
-//for i in 2..<primNumber {
+//let number = 29
+//var isPrime = true
 //
-//    if (primNumber%i == 0) {
-//        flag = false
+//if number <= 1 {
+//    isPrime = false
+//} else {
+//    for i in 2..<number {
+//        if number % i == 0 {
+//            isPrime = false
+//            break
+//        }
 //    }
 //}
 //
-//if flag {
-//    print("it is prime")
-//}else{
-//    print("it is not prime")
+//if isPrime {
+//    print("\(number) is a prime number.")
+//} else {
+//    print("\(number) is not a prime number.")
 //}
 
 
 //======================================================================================
 
 //======================================================================================
-
 
 //MARK: Merge two arrays into a new array flight
 
@@ -922,11 +927,10 @@ import Foundation
 //print(arrayMerge1)
 //======================================================================================
 
-
-
 //MARK:  array of integers into an array of strings.
 
 //let arrayOfIntegers = [1, 2, 3, 4]
+
 //var arrayOfStrings: [String] = []
 //
 //for i in arrayOfIntegers {
@@ -938,6 +942,7 @@ import Foundation
 //// Prints ["1", "2", "3", "4"]
 
 //======================================================================================
+
 
 //MARK:  find number how much time it repeate
 //let numbers = [10, 20, 30, 40, 30, 50]
@@ -954,6 +959,7 @@ import Foundation
 //print(indices)
 
 //======================================================================================
+//MARK:  find multiple number how much time it repeate
 
 //func countOccurrences(array: [Int]) -> [Int: Int] {
 //    var occurrencesDictionary: [Int: Int] = [:]
@@ -990,6 +996,7 @@ import Foundation
 
 //======================================================================================
 //======================================================================================
+
 //MARK:  o2h pvt lmt
 
 //MARK: find even element from array
@@ -1039,22 +1046,25 @@ import Foundation
 
 //MARK: 15) print prim number till 14
 //2,3,5,7,11
-//for i in 2...14 {
-//    var roundComplete = true
-//    for j in 2..<i {
+//let limit = 50
 //
-//        if (i % j == 0 ) {
-//            roundComplete = false
+//for number in 2...limit {
+//    var isPrime = true
+//    
+//    if number > 1 {
+//        for i in 2..<number {
+//            if number % i == 0 {
+//                isPrime = false
+//                break
+//            }
 //        }
-//    }
-//
-//    if  roundComplete {
-//        print(i)
+//        if isPrime {
+//            print(number)
+//        }
 //    }
 //}
 
 //-------------------------------------------------------------------------
-
 
 //MARK: 17) print first table flight77
 
@@ -1194,11 +1204,26 @@ import Foundation
 //    print("Is JSON Array: \(isArray)") // Should print "Is JSON Array: true"
 //}
 
+------------------------------------------------------------
+// addition of program using swift pogram
+
+//addition program
+//let addNumbers: (Int, Int) -> Int = { (a: Int, b: Int) -> Int in
+//    return a + b
+//}
+
+
+//let closureWtihParameterandReturnType:(String) -> (String) = { name in
+//    let word = name + "programming"
+//    return word
+//}
+
 //**************************************************************************************
 //**************************************************************************************
 //**************************************************************************************
 //**************************************************************************************
 //**************************************************************************************
+
 
 //MARK:  ** swift comceptual programming**
 
@@ -1215,6 +1240,12 @@ import Foundation
 //}
 //
 //closer("faizan")
+
+
+//addition program
+//let addNumbers: (Int, Int) -> Int = { (a: Int, b: Int) -> Int in
+//    return a + b
+//}
 
 
 //let closureWtihParameterandReturnType:(String) -> (String) = { name in
@@ -1238,6 +1269,7 @@ import Foundation
 //}
 //
 //print(abc([2,4,5,6]))
+
 
 
 //closure by completion handler
@@ -1278,7 +1310,6 @@ import Foundation
 //       var digit = self.reload?("faizan")
 //
 //    }
-//
 //}
 //
 //class B {
@@ -1302,7 +1333,7 @@ import Foundation
 //b.closureBlock()
     
 
-//MARK: escaping closure
+//MARK: non-escaping closure
 
 //func performOperation(completion: () -> Void) {
 //    print("Performing operation")
@@ -1310,12 +1341,12 @@ import Foundation
 //}
 //
 //// The closure is non-escaping in this case.
-//performOperation = {
+//performOperation {
 //    print("Operation completed")
 //}
 
 
-//MARK:  nonescaping closure
+//MARK:  escaping closure
 
 //    var complitionHandler: ((Int)->Void)?
 //    func getSumOf(array:[Int], handler: @escaping ((Int)->Void)) {
@@ -1343,6 +1374,7 @@ import Foundation
 //doSomething()
 
 //===================================================================================
+
 //MARK: (HOF)
 
 //MARK: filter
@@ -1451,6 +1483,7 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //print(generic2)
 
 //---------------------------------
+
 //MARK: generic structure
 
 //struct Addition<Element> {
@@ -1550,8 +1583,8 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //====================================================================================
 //====================================================================================
 
-//MARK: tuple
 
+//MARK: tuple
 
 //// create tuple with two elements
 //var product = ("MacBook", 1099.99)
@@ -1573,8 +1606,6 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 
 //====================================================================================
 //====================================================================================
-
-
 //MARK:  set
 
 //MARK: Create a Set in Swift
@@ -1635,6 +1666,7 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 
 //=============================================================================================
 
+
 //**singleton Object
 
 //let defaults = UserDefaults.standard
@@ -1691,7 +1723,7 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //file.checkFileAccess(user: userName)
 
 
-//=================================================================================
+//========================================================================
 
 //MARK: loops
 
@@ -1724,8 +1756,7 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //    print("\(fruitName) is \(price) per piece")
 //}
 
-
-
+//-----------------------
 
 //MARK:  while loop
 
@@ -1860,7 +1891,7 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 
 //checkEvenOdd()
 //============================================
-
+//**revised**
 //MARK: retain cycle
 
 //class Person {
@@ -1914,7 +1945,6 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //
 //person = nil
 //book = nil
-
 
 //======================================================================
 //======================================================================
