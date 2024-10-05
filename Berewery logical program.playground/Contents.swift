@@ -5,8 +5,18 @@ import CoreFoundation
 import Darwin
 import Foundation
 
-//**revised**
+//======================================
+//**target**
+    //10 - 15 LPA + (good company) (remote - rent + eating cost + time + health)
+    //deep dive depth
+    // good company looking for good candidate +  cadidate looking for good company
 
+//======================================
+//**note**
+//write output below every question
+
+
+//=====================================
 // start77
 //import Darwin
 
@@ -17,8 +27,8 @@ import Foundation
  
  logic swift method
  pure logic
- swift comceptual programming
  self interview Question
+ Low priority logic
  *
  
  */
@@ -40,6 +50,7 @@ import Foundation
 //===================================================================================
 
 //MARK:  **logic swift method**T7
+
 
 //Q1)
 
@@ -72,6 +83,7 @@ import Foundation
 //======================================================================================
 
 //Q2)
+
 
 //consider one arrray that contain 26 alphabet like ["a", "b", "c"...."z"] generat 6 digit passwrd random
 
@@ -286,6 +298,7 @@ import Foundation
 
 
 //======================================================================================
+
 //MARK:  reverse String
 
 //let str = "Hello, world!"
@@ -350,7 +363,6 @@ import Foundation
 //print(findSmallestNumber(from: array))
 
 //=================================================================================
-
 //MARK:  Merge two arrays into a new array
 
 //var array1: [Int] = [1,2,3,4]
@@ -370,7 +382,22 @@ import Foundation
 //let mergeArray = Array(arrayCollection)
 // print(mergeArray)
 
+//===========================================================================
+//let words = ["Swift", "is", "awesome"]
+//let sentence = words.joined(separator: "|")
+//
+//print(sentence)
+//
+//Swift|is|awesome
 // ===================================================================================
+//let sentence = "Swift|is|awesome"
+//let words = sentence.split(separator: "|")
+//
+//print(words)
+
+//["Swift", "is", "awesome"]
+
+//=====================================================
 //MARK:  only learning ---> conver interger into string
 //let arrayOfIntegers = [1, 2, 3, 4]
 //
@@ -436,16 +463,43 @@ import Foundation
 //**************************************************************************************
 //**************************************************************************************
 
+
 //MARK: **pure logic**T7
 
 /**
  **swift interview logical and conceptual question**
  
- 1)sort array
- 2)reverse array element
- 3)find element in array
- 4)get object value
- 5)find json value
+ **practice program**
+
+ 6)Write a program that reads 5 Random 3 Digit values and then outputs the minimum
+ and the maximum value
+ 7)Write a program that takes day and month from the command line and prints true if
+ day of month is between March 20 and June 20, false otherwise.
+ 8)Write a program that takes a year as input and outputs the Year is a Leap Year or not
+ a Leap Year. A Leap Year checks for 4 Digit Number, Divisible by 4 and not 100 unless
+ divisible by 400.(leap.sh)
+ 1)Write a program that takes a command-line argument n and prints a table of the
+ powers of 2 that are less than or equal to 2^n.(forpower.sh)
+ output:--
+ 2^1=2
+ 2^2=4
+ 2^3=8
+ 2^4=16
+ 2)Extend the Flip Coin problem till either Heads or Tails wins 11 times.
+ 4)Write a Program to show Sum of three Integer adds to ZERO
+ 5)Take a range from 0 – 100, find the digits that are repeated twice like 33, 77,
+ etc and store them in an array
+
+ **dictionary**
+ 1)Write a program in the following steps
+ a. Roll a die and find the number between 1 to 6
+ b. Repeat the Die roll and find the result each time
+ c. Store the result in a dictionary
+ d. Repeat till any one of the number has reached 10 times
+ e. Find the number that reached maximum times and the one that was for minimum times
+ 2) Write a Program to generate a birth month of 50 individuals between the
+ year 92 & 93. Find all the individuals having birthdays in the same month.
+ Store it to finally print.
  
  */
 
@@ -565,6 +619,7 @@ import Foundation
 //}
 
 //===================================================================================
+
 //Q4)MARK: find factorial of number and (0 factorial is 1)
 
 //MARK: output:--  4---> 1*2*3*4 = 24
@@ -579,8 +634,6 @@ import Foundation
 //}
 //
 //print(factorial)
-
-
 
 //======================================================================================
 
@@ -601,10 +654,6 @@ import Foundation
 //    n2 = next
 //
 //}
-
-
-
-
 
 //=============================================================================
 //MARK: 6) reverse string
@@ -628,6 +677,8 @@ import Foundation
 //}
 
 //======================================================================================
+
+
 //MARK: 7) reverse number and check palindrom number example:-- 3443 ==> 3443
 
 //var number = 3553, reverseNum:Int = 0
@@ -642,31 +693,6 @@ import Foundation
 //print(reverseNum)
 //
 //if originalNum == reverseNum {
-//    print("number is palindrom")
-//} else {
-//    print("number is not palindrom")
-//}
-//----------------------------------------------------
-//o/p:--3553
-
-//MARK:  using function for only practice pupose
-//func isPalindrom(_ x:Int) -> Bool {
-//    var number = x
-//    var reverseNumber = 0
-//
-//    while(number != 0) {
-//
-//        let remainder = number % 10
-//        reverseNumber = reverseNumber * 10 + remainder
-//        number = number / 10
-//    }
-//    print("reverse \(reverseNumber)")
-//    return x == reverseNumber
-//}
-//
-// let result = isPalindrom(43346)
-//
-//if result {
 //    print("number is palindrom")
 //} else {
 //    print("number is not palindrom")
@@ -749,32 +775,47 @@ import Foundation
 
 //let numbers  = [3,6,55,4,8]
 //let numbers = [9,7,3,8,5]
-//var greater = numbers[0]
-//var lesser = numbers[0]
-//var secondeLargest = numbers[0]
-//var secondLessor = numbers[0]
-//
-//func getSmallAndGreatestNumber(_ data:[Int]) -> (Int,Int) {
-//
-//    for number in numbers {
-//
-//        if greater > number {
-//            secondeLargest = greater
+//func getSmallAndGreatestNumbers(_ data: [Int]) -> (Int, Int, Int, Int) {
+//    // Initializing all variables with the first element of the array
+//    var greater = data[0]
+//    var secondLargest = Int.min
+//    var lesser = data[0]
+//    var secondSmallest = Int.max
+//    
+//    for number in data {
+//        // Find largest and second largest numbers
+//        if number > greater {
+//            secondLargest = greater
 //            greater = number
-//        }else if number > secondeLargest && number != greater {
-//            secondeLargest = number
+//        } else if number > secondLargest && number != greater {
+//            secondLargest = number
 //        }
-//
-//        if lesser < number {
-//            secondLessor = lesser
+//        
+//        // Find smallest and second smallest numbers
+//        if number < lesser {
+//            secondSmallest = lesser
 //            lesser = number
-//        }else if secondLessor < number && number != lesser {
-//            secondLessor = number
+//        } else if number < secondSmallest && number != lesser {
+//            secondSmallest = number
 //        }
 //    }
-//
-//    return(greater,lesser)
+//    
+//    return (greater, secondLargest, lesser, secondSmallest)
 //}
+//
+//// Example usage with input
+//let numbers = [3, 6, 55, 4, 8]
+//print("Input: \(numbers)")
+//
+//// Fetch the results directly
+//let result = getSmallAndGreatestNumbers(numbers)
+//let (largest, secondLargest, smallest, secondSmallest) = result
+//
+//// Printing results individually
+//print("Largest = \(largest)")
+//print("Second Largest = \(secondLargest)")
+//print("Smallest = \(smallest)")
+//print("Second Smallest = \(secondSmallest)")
 //======================================================================================
 
 //MARK: 12) reverse array element
@@ -800,7 +841,6 @@ import Foundation
 //    print(filter)
 //    filter.insert(data, at: 0)
 //}
-
 
 //======================================================================================
 
@@ -833,21 +873,6 @@ import Foundation
 //    print("")
 //}
 
-//or
-//-----------------------------------------
-//func printLadderNumber(_ n: Int) {
-//    for i in 1...n {
-//        for j in 1...i {
-////            to print number
-////            print(j, terminator: "")
-//            //to print star pattern
-//            print("*", terminator: "")
-//        }
-//        print("")// Helps for printing new line
-//    }
-//}
-//printLadderNumber(4)
-
 //======================================================================================
 
     //MARK:  14) triangle
@@ -872,11 +897,76 @@ import Foundation
 //    print("")
 //
 //}
+//======================================================================================
+
+//  *     *
+//   *  *
+//    *
+//  *  *
+//*     *
+
+//for i in 1...5{
+//    for j in 1...9{
+//        if(j == i || j == 6 - i ) {
+//            print(i,terminator: "")
+//            print("*",terminator: "")
+//            print(j,terminator: "")
+//        }else{
+//            print(" ",terminator: "")
+//        }
+//
+//    }
+//    print("")
+//
+//}
+
+//======================================================================================
+//  1
+// 12
+//123
+// 12
+//  1
+//var x:Int
+//for i in 1...9{
+//for j in 1...5 {
+//i < 6 ? k++ : k--
+// x == 1
+//    if(j>= 6-k){
+//    print("x",terminator: "")
+//        x++
+//    }else{
+//    print(" ",terminator: "")
+//    }
+//}
+//    print("")
+//}
+//======================================================================================
+
+
+//*****
+// ****
+//  ***
+//   **
+//    *
+
+//for i in 1...5{
+//for j in 1...5 {
+//    if(j>=i){
+//    print("*",terminator: "")
+//    }else{
+//    print(" ",terminator: "")
+//    }
+//
+//}
+//    print("")
+//}
 
 //----------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------
+
 // 2, 3, 5, 7, 11, 13
 //MARK: 16) check prime number
+//print range of prime number
 //let number = 29
 //var isPrime = true
 //
@@ -899,48 +989,6 @@ import Foundation
 
 
 //======================================================================================
-
-//======================================================================================
-
-//MARK: Merge two arrays into a new array flight
-
-//using for loop
-
-//var arrayMerge1:[Int] = [2,3,4,5]
-//var arrayMerge2:[Int] = [6,7,8,9]
-//for i in arrayMerge2 {
-//    arrayMerge1.append(i)
-//}
-//print(arrayMerge1)
-
-//using while loop
-//var count = 0
-//while(count < arrayMerge2.count) {
-//
-//    arrayMerge1.append(arrayMerge2[count])
-//    count += 1
-//
-//}
-//print(arrayMerge1)
-//======================================================================================
-
-//MARK:  array of integers into an array of strings.
-
-//let arrayOfIntegers = [1, 2, 3, 4]
-
-//var arrayOfStrings: [String] = []
-//
-//for i in arrayOfIntegers {
-//    arrayOfStrings.append(String(i))
-//}
-//
-//print(arrayOfStrings)
-//
-//// Prints ["1", "2", "3", "4"]
-
-//======================================================================================
-
-
 //MARK:  find number how much time it repeate
 //let numbers = [10, 20, 30, 40, 30, 50]
 //
@@ -956,6 +1004,7 @@ import Foundation
 //print(indices)
 
 //======================================================================================
+
 //MARK:  find multiple number how much time it repeate
 
 //func countOccurrences(array: [Int]) -> [Int: Int] {
@@ -988,11 +1037,11 @@ import Foundation
 
 //======================================================================================
 
-
 //MARK:  o2h pvt lmt
 
 //MARK: find even element from array
 //let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//output :---[2,4,6,8,10]
 ////let evenNumbers = numbers.filter{$0 % 2 == 0}
 ////print(evenNumbers)
 //
@@ -1014,6 +1063,7 @@ import Foundation
 //MARK: find index of particular element from array..?
 
 //let numbers = [10, 20, 30, 40, 50]
+
 //
 //if let index = numbers.firstIndex(of: 30) {
 //    print("Index of 30 is: \(index)") // Output: Index of 30 is: 2
@@ -1032,7 +1082,6 @@ import Foundation
 //}
 
 //======================================================================================
-
 
 //MARK: Yup TV
 
@@ -1076,6 +1125,18 @@ import Foundation
 //    } else {
 //        print("1 * \(digit) = \(1*digit)")
 //    }
+//}
+
+//----------------------
+
+//for i in 1...6 {
+//    var result = 1 * i // Initial multiplication result
+//
+//    if i == 3 || i == 6 {
+//        result *= 2 // Double the result for 1*3 and 1*6
+//    }
+//    
+//    print("1*\(i)=\(result)")
 //}
 
 //======================================================================================
@@ -1126,88 +1187,72 @@ import Foundation
 //// Define structs that match your expected JSON structures
 ///struct for only decoding
 
-//struct MyJSONObject: Codable {
-//    // Define properties that match the JSON object's structure
-//    let name: String
-//    let age: Int
-//    let city: String
+//struct Person: Codable {
+//    var name: String
+//    var age: Int
+//    var city: String
 //}
 //
-//struct MyJSONArray: Codable {
-//    // Define properties that match the JSON array's structure
-//    let fruits: [String]
-//}
-//func isJSONObject(_ jsonData: Data) -> Bool {
+//func isPersonJSONObject(_ jsonData: Data) -> Bool {
 //    do {
-//        // Attempt to decode the JSON data into your specific struct
-//        _ = try JSONDecoder().decode(MyJSONObject.self, from: jsonData)
-//        return true
-//    } catch {
-//        return false
-//    }
-//}
-//
-//func isJSONArray(_ jsonData: Data) -> Bool {
-//    do {
-//        // Attempt to decode the JSON data into your specific struct
-//        _ = try JSONDecoder().decode(MyJSONArray.self, from: jsonData)
+//        // Attempt to decode the JSON data into a Person struct
+//        let _ = try JSONDecoder().decode(Person.self, from: jsonData)
 //        return true
 //    } catch {
 //        return false
 //    }
 //}
 
-
-//==================================================================
-
-
-//func isJSONObject(_ jsonData: Data) -> Bool {
+//func isPersonJSONArray(_ jsonData: Data) -> Bool {
 //    do {
-//        let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
-//        return jsonObject is [String: Any]
+//        // Attempt to decode the JSON data into an array of Person structs
+//        let _ = try JSONDecoder().decode([Person].self, from: jsonData)
+//        return true
 //    } catch {
 //        return false
 //    }
 //}
 //
-//func isJSONArray(_ jsonData: Data) -> Bool {
-//    do {
-//        let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
-//        return jsonObject is [Any]
-//    } catch {
-//        return false
-//    }
+//// JSON string representing a single Person object
+//let jsonStringObject = """
+//{
+//    "name": "John",
+//    "age": 30,
+//    "city": "New York"
 //}
-
-
-
-
-// Example usage:
-//let jsonStringObject = "{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}"
+//"""
+//
 //if let jsonDataObject = jsonStringObject.data(using: .utf8) {
-//    let isObject = isJSONObject(jsonDataObject)
-//    print("Is JSON Object: \(isObject)") // Should print "Is JSON Object: true"
+//    let isObject = isPersonJSONObject(jsonDataObject)
+//    print("Is Person JSON Object: \(isObject)") // Should print "Is Person JSON Object: true"
 //}
 //
-//let jsonStringArray = "[\"apple\",\"banana\",\"cherry\"]"
+
+//
+//let jsonStringArray = """
+//[
+//    {"name": "John", "age": 30, "city": "New York"},
+//    {"name": "Jane", "age": 25, "city": "Los Angeles"},
+//    {"name": "Bob", "age": 40, "city": "Chicago"}
+//]
+//"""
+//
 //if let jsonDataArray = jsonStringArray.data(using: .utf8) {
-//    let isArray = isJSONArray(jsonDataArray)
-//    print("Is JSON Array: \(isArray)") // Should print "Is JSON Array: true"
+//    let isArray = isPersonJSONArray(jsonDataArray)
+//    print("Is Person JSON Array: \(isArray)") // Should print "Is Person JSON Array: true"
 //}
-
 //------------------------------------------------------------
-// addition of program using swift pogram
-
-//addition program
-//let addNumbers: (Int, Int) -> Int = { (a: Int, b: Int) -> Int in
-//    return a + b
+/// Closure for addition
+//let add: (Int, Int) -> Int = { num1, num2 in
+//    return num1 + num2
 //}
-
-
-//let closureWtihParameterandReturnType:(String) -> (String) = { name in
-//    let word = name + "programming"
-//    return word
-//}
+//
+//// Example usage of the addition closure
+//let number1 = 5
+//let number2 = 10
+//let sum = add(number1, number2)
+//
+//print("Sum of \(number1) and \(number2) is: \(sum)")
 
 //**************************************************************************************
 //**************************************************************************************
@@ -1295,72 +1340,75 @@ import Foundation
 //// Calculate the average marks
 //let totalMarks = subject1Marks + subject2Marks + subject3Marks
 //let averageMarks = totalMarks / 3
-//
-//// Declare the drama school endorsement
-//let hasDramaSchoolEndorsement = true
-//
-//// Evaluate the student's performance
-//let isSelected = averageMarks >= 80 || hasDramaSchoolEndorsement
-//
-//// Print the result to the console
-//print("Is the user selected? \(isSelected)")
 
 ////======================================================================
-
-
-//MARK: check condition mactch
-
-// Declare and assign values to the TV properties
-//let tvScreenSize = 55
-//let tvBrand = "Sony"
-//let tvPrice = 50000
-
-//let currentYear = Calendar.current.component(.year, from: Date())
-
+//In this exercise, you will use an if-else statement to determine the price of a movie ticket based on the age of the customer.
 //
-//// Check if the TV meets the criteria
-//let meetsCriteria = tvScreenSize >= 50 && (tvBrand == "Sony" || tvBrand == "Samsung") && tvPrice <= 60000 && watchReleaseYear == currentYear - 1
-//
-//// Print the result to the console
-//print("Does the TV meet the criteria? \(meetsCriteria)")
+//1. Declare a variable **`customerAge`** to represent the age of the customer. Assign it a value of **`22`**.
+//2. Declare a variable **`baseTicketPrice`** to represent the base price of the movie ticket. Assign it a value of **`200`**.
+//3. Write JavaScript code using an if-else statement to check if the customer's age is less than or equal to 18. If it is, apply a 20% discount on the base ticket price. If not, keep the base ticket price as it is.
+//4. Print the final ticket price to the console in the following format: "Ticket Price: ₹{result}".
 
 
-////======================================================================
-
-// Define a structure to represent a contractor
-//struct Contractor {
-//    var name: String
-//    var jobDescription: String
-//    var hourlyRate: Int
-//    var hoursWorked: Int
-//    var ratings: Int
-//}
+//let customerAge = 22;
+//let baseTicketPrice = 200;
+//let finalTicketPrice;
 //
-//// List of contractors with their details
-//let contractors = [
-//    Contractor(name: "Rajesh", jobDescription: "Web Developer", hourlyRate: 300, hoursWorked: 80, ratings: 90),
-//    Contractor(name: "Priya", jobDescription: "Content Writer", hourlyRate: 250, hoursWorked: 60, ratings: 80),
-//    Contractor(name: "Amit", jobDescription: "Graphic Designer", hourlyRate: 350, hoursWorked: 40, ratings: 92),
-//    Contractor(name: "Ananya", jobDescription: "Digital Marketer", hourlyRate: 200, hoursWorked: 20, ratings: 88)
-//]
-//
-//print("Payment Chart:")
-//print("--------------------")
-//
-//for contractor in contractors {
-//    let totalPayment = contractor.hourlyRate * contractor.hoursWorked
-//    let isEligibleForGoodieBag = contractor.hoursWorked > 15 || contractor.ratings > 85
-//
-//    print("Contractor: \(contractor.name)")
-//    print("Job Description: \(contractor.jobDescription)")
-//    print("Hourly Rate: ₹\(contractor.hourlyRate)")
-//    print("Hours Worked: \(contractor.hoursWorked)")
-//    print("Total Payment: ₹\(totalPayment)")
-//    print("Ratings: \(contractor.ratings)")
-//    print("Is Eligible for Goodie Bag: \(isEligibleForGoodieBag)")
-//    print()
+//if (customerAge <= 18) {
+//    finalTicketPrice = baseTicketPrice - (baseTicketPrice * 20 / 100);
+//} else {
+//    finalTicketPrice = baseTicketPrice;
 //}
 
+//console.log("Ticket Price: ₹" + finalTicketPrice);
+
 ////======================================================================
 
-//19. NEOG CAMP
+
+
+//27. NEOG CAMP - A3_Exercise_2
+
+
+
+
+////======================================================================
+////======================================================================
+///======================================================================
+
+//MARK: Low priority logic
+
+//MARK: Merge two arrays into a new array flight
+
+//using for loop
+
+//var arrayMerge1:[Int] = [2,3,4,5]
+//var arrayMerge2:[Int] = [6,7,8,9]
+//for i in arrayMerge2 {
+//    arrayMerge1.append(i)
+//}
+//print(arrayMerge1)
+
+//using while loop
+//var count = 0
+//while(count < arrayMerge2.count) {
+//
+//    arrayMerge1.append(arrayMerge2[count])
+//    count += 1
+//
+//}
+//print(arrayMerge1)
+//-------------------------------------------------------------
+//MARK:  array of integers into an array of strings convert.
+
+//let arrayOfIntegers = [1, 2, 3, 4]
+
+//var arrayOfStrings: [String] = []
+//
+//for i in arrayOfIntegers {
+//    arrayOfStrings.append(String(i))
+//}
+//
+//print(arrayOfStrings)
+//
+//// Prints ["1", "2", "3", "4"]
+
