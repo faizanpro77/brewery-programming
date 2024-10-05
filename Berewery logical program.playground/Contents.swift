@@ -697,6 +697,31 @@ import Foundation
 //} else {
 //    print("number is not palindrom")
 //}
+//----------------------------------------------------
+//o/p:--3553
+
+//MARK:  using function for only practice pupose
+//func isPalindrom(_ x:Int) -> Bool {
+//    var number = x
+//    var reverseNumber = 0
+//
+//    while(number != 0) {
+//
+//        let remainder = number % 10
+//        reverseNumber = reverseNumber * 10 + remainder
+//        number = number / 10
+//    }
+//    print("reverse \(reverseNumber)")
+//    return x == reverseNumber
+//}
+//
+// let result = isPalindrom(43346)
+//
+//if result {
+//    print("number is palindrom")
+//} else {
+//    print("number is not palindrom")
+//}
 
 //============================================================================================
 //MARK: 8) from list of number or array move zero to end of the list
@@ -1037,6 +1062,7 @@ import Foundation
 
 //======================================================================================
 
+
 //MARK:  o2h pvt lmt
 
 //MARK: find even element from array
@@ -1082,6 +1108,7 @@ import Foundation
 //}
 
 //======================================================================================
+
 
 //MARK: Yup TV
 
