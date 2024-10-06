@@ -18,13 +18,6 @@ import UIKit
 //
 //closer("faizan")
 
-
-//addition program
-//let addNumbers: (Int, Int) -> Int = { (a: Int, b: Int) -> Int in
-//    return a + b
-//}
-
-
 //let closureWtihParameterandReturnType:(String) -> (String) = { name in
 //    let word = name + "programming"
 //    return word
@@ -201,8 +194,6 @@ import UIKit
 
 
 //====================================================================================
-
-
 //MARK: * compact map
 
 //MARK: it handle optinal and ignore nil
@@ -215,21 +206,7 @@ import UIKit
 if we do it with map output is
 O/p:-- [Optional(5), Optional(42), nil, nil]
  */
-//-----------------------
-//let arrayOfIntegers = [1, 2, nil, 4]
-//
-//let arrayOfStrings = arrayOfIntegers.compactMap { optionalInteger -> String? in
-//  guard let integer = optionalInteger else { return nil }
-//
-//  return String(integer)
-//}
-//print(arrayOfStrings)
-
-// Prints ["1", "2", "4"]
-
 //====================================================================================
-
-
 //MARK:  FlatMap
 
 //let numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -434,16 +411,12 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //let dictionary = ["name": "faizan"]
 //defaults.set(dictionary, forKey: dictionaryKey)
 //
-//
-//
 //let volume = defaults.float(forKey: "Volume")
 //let appLastOpen = defaults.object(forKey: "AppLastOpenedByUser")
 //let myArray = defaults.array(forKey: "myArray") as! [Int]
 //let myDictionary = defaults.dictionary(forKey: dictionaryKey)
 
 //=============================================================================================
-
-
 //**singleton Object
 
 //let defaults = UserDefaults.standard
@@ -463,7 +436,6 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //
 
 //=================================================================================
-
 
 //singleton
 
@@ -499,8 +471,158 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //
 //file.checkFileAccess(user: userName)
 
+//================================================================
 
-//========================================================================
+//MARK: interview topic
+//MARK:  class vs struture
+
+//class Developer {
+//
+//    var name:String
+//    var jobTitle:String
+//
+//
+//    init(name:String, jobTitle:String) {
+//
+//        self.name = name
+//        self.jobTitle = jobTitle
+//
+//    }
+//}
+
+//var jack = Developer(name: "salman", jobTitle: "IOS Developer")
+//var kate =  jack
+//kate.name = "steve"
+//
+//print(jack.name)
+//print(kate.name)
+ 
+////===========================================================
+
+//struct  Developer {
+//
+//    var name:String
+//    var jobTitle:String
+//
+//
+//}
+//
+//
+//var jack = Developer(name: "salman", jobTitle: "ios")
+//var kate = jack
+//
+//print(jack.name)
+//print(kate.name)
+
+//===================================================
+
+//MARK: optional
+
+//MARK:  optinal using if else
+//let name:String? = "faizan"
+//
+//if name != nil {
+//    print("my name is \(name!)")
+//}else{
+//print("nil value")
+//}
+
+
+//MARK: optional binding
+//let password:String? = "hol@87&"
+//
+//if let newPassword = password{
+//
+//    print("your password is \(newPassword)")
+//}else{
+//    print("this is nil")
+//}
+
+//MARK: optional chaining
+
+//class Exam {
+//   var student: Toppers? = Toppers()
+//}
+//class Toppers {
+//   var name = "Faizan"
+//}
+//let stud = Exam()
+//
+//if let studname = stud.student?.name {
+//   print("Student name is \(studname)")
+//} else {
+//   print("Student name cannot be retrieved")
+//}
+
+//MARK:  gard statement (optional)
+
+//func testFunction() {
+//    let someValue:Int? = 5
+//    guard let temp = someValue else {
+//        return
+//    }
+//    print("It has some value \(temp)")
+//}
+//
+//testFunction()
+
+//============================================
+//**revised**
+//MARK: retain cycle
+
+//class Person {
+//
+//    var name:String?
+//   weak var book:Book?
+//
+//    init(name:String, book:Book?) {
+//
+//        self.name = name
+//        self.book = book
+//    }
+//
+//    deinit {
+//
+//        print("\(name!) is deinitialize")
+//    }
+//
+//}
+//
+//
+//class Book {
+//
+//    var name:String?
+//    var owner:Person?
+//
+//    init(name:String, owner:Person?) {
+//
+//        self.name = name
+//        self.owner = owner
+//
+//    }
+//
+//    deinit {
+//        print("book \(name!) deinitialize")
+//    }
+//
+//}
+//
+//var person:Person?
+//var book:Book?
+//
+//person = Person(name: "jack", book: nil)
+//book = Book(name: "kate", owner: nil)
+//
+////person = nil
+////book = nil
+//
+//person?.book = book
+//book?.owner = person
+//
+//person = nil
+//book = nil
+
+//==========================================================
 
 //MARK: loops
 
@@ -558,170 +680,8 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //} while (sum <= 8)
 
 
-//===========================================================
-
-//MARK: interview topic
-//MARK:  class vs struture
-
-//class Developer {
-//
-//    var name:String
-//    var jobTitle:String
-//
-//
-//    init(name:String, jobTitle:String) {
-//
-//        self.name = name
-//        self.jobTitle = jobTitle
-//
-//    }
-//}
-
-//var jack = Developer(name: "salman", jobTitle: "IOS Developer")
-//var kate =  jack
-//kate.name = "steve"
-//
-//print(jack.name)
-//print(kate.name)
- 
-////===========================================================
-
-//struct  Developer {
-//
-//    var name:String
-//    var jobTitle:String
-//
-//
-//}
-//
-//
-//var jack = Developer(name: "salman", jobTitle: "ios")
-//var kate = jack
-//
-//print(jack.name)
-//print(kate.name)
-//
 
 ////===========================================================
-
-//MARK: optional
-
-//MARK:  optinal using if else
-//let name:String? = "faizan"
-//
-//if name != nil {
-//    print("my name is \(name!)")
-//}else{
-//print("nil value")
-//}
-
-
-//MARK: optional binding
-//let password:String? = "hol@87&"
-//
-//if let newPassword = password{
-//
-//    print("your password is \(newPassword)")
-//}else{
-//    print("this is nil")
-//}
-
-//MARK: optional chaining
-
-//class Exam {
-//   var student: Toppers? = Toppers()
-//}
-//class Toppers {
-//   var name = "Faizan"
-//}
-//let stud = Exam()
-//
-//if let studname = stud.student?.name {
-//   print("Student name is \(studname)")
-//} else {
-//   print("Student name cannot be retrieved")
-//}
-
-//MARK:  gard statement (optional)
-
-//func testFunction() {
-//    let someValue:Int? = 5
-//    guard let temp = someValue else {
-//        return
-//    }
-//    print("It has some value \(temp)")
-//}
-//
-//testFunction()
-
-//-==========================================
-
-//func checkEvenOdd() {
-//    let i = 2 //3
-//    guard i%2 == 0 else {
-//        print("odd number")
-//        return
-//    }
-//    print("even number")
-//
-//}
-
-//checkEvenOdd()
-//============================================
-//**revised**
-//MARK: retain cycle
-
-//class Person {
-//
-//    var name:String?
-//   weak var book:Book?
-//
-//    init(name:String, book:Book?) {
-//
-//        self.name = name
-//        self.book = book
-//    }
-//
-//    deinit {
-//
-//        print("\(name!) is deinitialize")
-//    }
-//
-//}
-//
-//
-//class Book {
-//
-//    var name:String?
-//    var owner:Person?
-//
-//    init(name:String, owner:Person?) {
-//
-//        self.name = name
-//        self.owner = owner
-//
-//    }
-//
-//    deinit {
-//        print("book \(name!) deinitialize")
-//    }
-//
-//}
-//
-//var person:Person?
-//var book:Book?
-//
-//person = Person(name: "jack", book: nil)
-//book = Book(name: "kate", owner: nil)
-//
-////person = nil
-////book = nil
-//
-//person?.book = book
-//book?.owner = person
-//
-//person = nil
-//book = nil
 
 //======================================================================
 //======================================================================
