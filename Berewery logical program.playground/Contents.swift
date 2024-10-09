@@ -1280,6 +1280,65 @@ import Foundation
 //let sum = add(number1, number2)
 //
 //print("Sum of \(number1) and \(number2) is: \(sum)")
+//=============================================================================
+//print table
+//2*1 = 2
+//2*2 = 4
+//2*3 = 6
+//2*4 = 8
+
+//var input = 2
+//for digit in 1...input{
+//    
+//    print("\(input) * \(digit) = \(input * digit)")
+//}
+
+//===================================================================
+
+//let myString = "Hello, world!"
+//let characterToCount: Character = "o"
+//var count = 0
+//
+//for character in myString {
+//    if character == characterToCount {
+//        count += 1
+//    }
+//}
+//
+//print("The character '\(characterToCount)' occurs \(count) times.")
+
+//===============================================================
+//func areAnagrams(_ str1: String, _ str2: String) -> Bool {
+//    // Sort the characters of both strings and compare
+//    let sortedStr1 = str1.sorted()
+//    let sortedStr2 = str2.sorted()
+//    
+//    return sortedStr1 == sortedStr2
+//}
+//
+//let string1 = "listen"
+//let string2 = "silent"
+//
+//if areAnagrams(string1, string2) {
+//    print("'\(string1)' and '\(string2)' are anagrams.")
+//} else {
+//    print("'\(string1)' and '\(string2)' are not anagrams.")
+//}
+
+//==================================================
+//print matching number in array
+
+//let numbers = [1, 2, 3, 4, 5, 5, 2, 1]
+//
+//for i in 0..<numbers.count {
+//    for j in (i + 1)..<numbers.count {
+//        if numbers[i] == numbers[j] {
+//            print("Matching element: \(numbers[i])")
+//        }
+//    }
+//}
+
+
 
 //**************************************************************************************
 //**************************************************************************************
@@ -1438,4 +1497,11 @@ import Foundation
 //print(arrayOfStrings)
 //
 //// Prints ["1", "2", "3", "4"]
+
+----------------------------------
+//find length of string
+
+//let myString = "Hello, world!"
+//let length = myString.count
+//print("The length of the string is \(length).")
 
