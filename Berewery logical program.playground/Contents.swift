@@ -407,8 +407,30 @@ import Foundation
 //
 //// Prints ["1", "2", "3", "4"]
 ///
-/////-------------------------------------
-///
+/////-------------------------------------=================================
+///find common element between both array
+
+//let digit1 = [1, 2, 3, 4, 5, 2, 3, 4]
+//let digit2 = [6, 7, 8, 9, 1, 2, 3, 4]
+//
+//// Use Set to find the common elements
+//let commonDigits = Array(Set(digit1).intersection(Set(digit2)))
+//
+//print("Common digits: \(commonDigits)")
+//===========================================================
+//find longest string in array
+//var data: [String] = ["hey", "hello", "good", "boy", "flight"]
+//
+//if let largestString = data.max(by: { $0.count < $1.count }) {
+//    print("The largest string is: \(largestString)")
+//} else {
+//    print("The array is empty.")
+//}
+
+//===========================================================
+
+///default end
+///=========================================================
 
 //MARK:  remove duplicate element from array using extension
 
@@ -1294,6 +1316,7 @@ import Foundation
 //}
 
 //===================================================================
+//calculate charachter count
 
 //let myString = "Hello, world!"
 //let characterToCount: Character = "o"
@@ -1338,7 +1361,87 @@ import Foundation
 //    }
 //}
 
+//==================================================
+//find string is contain unique element or not
 
+//var text = "good"
+//var data:[Character] = []
+//var checkUnique = true
+//
+//for str in text {
+//    
+//    if data.contains(str){
+//        checkUnique = false
+//    }
+//        data.append(str)
+//}
+//
+//if checkUnique {
+//    print("string is unique")
+//}else{
+//    print("string not unique")
+//}
+
+//---------------------------------------------
+//var duplicateText:Set<Character> = []
+//var checkDuplicate = true
+//
+//for singleChar in text{
+//    if duplicateText.contains(singleChar){
+//        checkDuplicate = false
+//        break
+//    }
+//    duplicateText.insert(singleChar)
+//}
+
+
+//----------------------------------------------
+//if text.count == Set(text).count{
+//    print("string is unique")
+//}else{
+//    print("String is not Unique")
+//}
+
+//==================================================
+//revised
+//find common element between both array
+
+//let digit1 = [1, 2, 3, 4, 5, 2, 3, 4]
+//let digit2 = [6, 7, 8, 9, 1, 2, 3, 4]
+//var commonDigits: [Int] = []
+//
+//for num1 in digit1 {
+//    for num2 in digit2 {
+//        if num1 == num2 && !commonDigits.contains(num1) {
+//            commonDigits.append(num1)
+//        }
+//    }
+//}
+//
+//print("Common digits: \(commonDigits)")
+
+
+//output:- [1,2,3,4]
+
+//==========================================================
+//find longest string in array
+//var data: [String] = ["hey", "hello", "good", "boy", "flight"]
+//
+//guard !data.isEmpty else {
+//    print("The array is empty.")
+//    exit(0)  // Exit the program if the array is empty
+//}
+//
+//var largestString = data[0]  // Assume the first element is the largest
+//
+//for str in data {
+//    if str.count > largestString.count {
+//        largestString = str  // Update the largest string if current string is longer
+//}
+//
+//print("The largest string is: \(largestString)")
+
+//pure end
 
 //**************************************************************************************
 //**************************************************************************************
@@ -1347,76 +1450,8 @@ import Foundation
 
 //***MARK: newGen logic***
 
-
-// MARK: menue show select then show details
-
-// Event details
-//let totalEvents = 3
-//let events = [
-//    (title: "Music Concert", date: "August 15, 2023", time: "7:00 PM", ticketsSold: 150, ticketPrice: 2599),
-//    (title: "Art Exhibition", date: "September 10, 2023", time: "11:00 AM", ticketsSold: 80, ticketPrice: 159),
-//    (title: "Sports Tournament", date: "October 5, 2023", time: "2:30 PM", ticketsSold: 200, ticketPrice: 1299)
-//]
-//
-//// Function to display menu
-//func displayMenu() {
-//    print("Select an event to view details:")
-//    for (index, event) in events.enumerated() {
-//        print("\(index + 1). \(event.title)")
-//    }
-//}
-//
-//// Function to display event details
-//func displayEventDetails(eventIndex: Int) {
-//    if eventIndex < 0 || eventIndex >= events.count {
-//        print("Invalid selection.")
-//        return
-//    }
-//    let event = events[eventIndex]
-//    print("\nEvent Details:")
-//    print("Title: \(event.title)")
-//    print("Date: \(event.date)")
-//    print("Time: \(event.time)")
-//    print("Tickets Sold: \(event.ticketsSold)")
-//    print("Ticket Price: \(event.ticketPrice)")
-//}
-//
-//// Main program logic
-//func main() {
-//    displayMenu()
-//    
-//    // Reading user input
-//    print("Enter the number of the event you want to view:")
-//    if let input = readLine(), let eventNumber = Int(input), eventNumber > 0, eventNumber <= totalEvents {
-//        displayEventDetails(eventIndex: eventNumber - 1)
-//    } else {
-//        print("Invalid input. Please enter a number between 1 and \(totalEvents).")
-//    }
-//}
-//
-//// Run the main function
-//main()
-
-
-//O/p.....
-// Select an event to view details:
-//1. Music Concert
-//2. Art Exhibition
-//3. Sports Tournament
-//Enter the number of the event you want to view:
-//
-//
-//Event Details:
-//Title: Music Concert
-//Date: August 15, 2023
-//Time: 7:00 PM
-//Tickets Sold: 150
-//Ticket Price: 2599
-
 ////======================================================================
-
 // MARK: calculate average mark
-
 
 // Declare and assign marks for the three subjects
 //let subject1Marks = 85
@@ -1449,14 +1484,6 @@ import Foundation
 //console.log("Ticket Price: ₹" + finalTicketPrice);
 
 ////======================================================================
-
-
-
-//27. NEOG CAMP - A3_Exercise_2
-
-
-
-
 ////======================================================================
 ////======================================================================
 ///======================================================================
@@ -1498,10 +1525,12 @@ import Foundation
 //
 //// Prints ["1", "2", "3", "4"]
 
-----------------------------------
+//----------------------------------
 //find length of string
 
 //let myString = "Hello, world!"
 //let length = myString.count
 //print("The length of the string is \(length).")
+
+//------------------------------------
 

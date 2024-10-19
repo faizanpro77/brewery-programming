@@ -713,3 +713,46 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //        NotificationCenter.default.removeObserver(self)
 //    }
 //}
+
+===============================================
+//enum
+
+//func getSeanOpenion(on phon: Phone) {
+//    if phon == .iphon11pro {
+//        print("this will be my next phone")
+//    }else if phon == .iphoneSE {
+//        print("I dislike this phone size. It makes design hard.")
+//    }else if phon == .pixel {
+//        print("Hardware is greate")
+//    }else{
+//        print("Can't be broken Classic")
+//    }
+//
+//}
+
+//===============================
+
+
+//​​enum PizzaSize: String {
+//    case small = "I ordered a small size pizza."
+//    case medium = "I ordered a medium size pizza."
+//    case large = "I ordered a large size pizza."
+//}
+
+
+
+
+////rowValue
+//enum PizzaSize: String {
+//    case small = "I ordered a small size pizza."
+//    case medium = "I ordered a medium size pizza."
+//    case large = "I ordered a large size pizza."
+//}
+//
+////print(PizzaSize.medium.rawValue)
+//func getPizzaOrder(on size: PizzaSize) {
+//    print(size.rawValue)
+//}
+//
+//getPizzaOrder(on: .medium)
+
