@@ -714,7 +714,7 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //    }
 //}
 
-===============================================
+//===============================================
 //enum
 
 //func getSeanOpenion(on phon: Phone) {
@@ -755,4 +755,191 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 //}
 //
 //getPizzaOrder(on: .medium)
+
+//=============================================
+
+//func addTwoNumbers() -> Int {
+//    let a = 2
+//    let b = 3
+//    let c = a + b
+//    
+//    return c
+//}
+//
+//
+//let sum = addTwoNumbers()
+//
+//
+//print(sum)
+//
+//
+////with label with multiple argument
+//
+//func addTwoNumbers(arg para:Int, arg2 para2:Int) -> Int {
+//    let a = para
+//    let b = para2
+//    let c = a + b
+//
+//
+//    return c
+//}
+//
+//
+//let sum = addTwoNumbers(arg: 5, arg2: 5)
+//
+//
+//print(sum)
+//
+//func addTwoNumbers(using number1:Int, and number2:Int) -> Int {
+//    let a = number1
+//    let b = number2
+//    let c = a + b
+//
+//
+//    return c
+//}
+//
+//
+//let sum = addTwoNumbers(using: 5, and: 5)
+//
+//
+//print(sum)
+//
+//
+//
+////without label
+//
+//
+//func addTwoNumbers( number1:Int, number2:Int) -> Int {
+//    let a = number1
+//    let b = number2
+//    let c = a + b
+//
+//
+//    return c
+//}
+//
+//
+//let sum = addTwoNumbers(number1: 5, number2: 5)
+//
+//
+//print(sum)
+//
+//
+//
+//
+//// if we want to pass direct value without label and parameter name we can use _
+//
+//func addTwoNumbers(_ number1:Int, _ number2:Int) -> Int {
+//    let a = number1
+//    let b = number2
+//    let c = a + b
+//
+//
+//    return c
+//}
+//
+//
+//let sum = addTwoNumbers(4, 5)
+//
+//
+//print(sum)
+
+//========================================
+
+//race condition
+
+//var userInfo: [String: String] = ["email": "", "name": ""]
+//let userInfoQueue = DispatchQueue(label: "com.example.userInfoQueue") // Serial queue
+//
+//func updateEmail(newEmail: String) {
+//    DispatchQueue.global().async {
+//        sleep(1) // Simulate network delay
+//        userInfoQueue.sync {
+//            userInfo["email"] = newEmail
+//            print("Email updated to: \(newEmail)")
+//        }
+//    }
+//}
+//
+//func updateName(newName: String) {
+//    DispatchQueue.global().async {
+//        sleep(2) // Simulate network delay
+//        userInfoQueue.sync {
+//            userInfo["name"] = newName
+//            print("Name updated to: \(newName)")
+//        }
+//    }
+//}
+//
+//updateEmail(newEmail: "newemail@example.com")
+//updateName(newName: "John Doe")
+//
+//DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//    print("Final userInfo: \(userInfo)")
+//}
+
+//=====================================================
+// MARK: dispath queue
+//let serialQueue = DispatchQueue(label: "com.example.serialQueue") // Serial queue
+//let concurrentQueue = DispatchQueue(label: "com.example.concurrentQueue", attributes: .concurrent) // Concurrent queue
+//
+//serialQueue.async {
+//    print("Task 1")
+//}
+//
+//serialQueue.async {
+//    print("Task 2")
+//}
+//
+//concurrentQueue.async {
+//    print("Task A")
+//}
+//
+//concurrentQueue.async {
+//    print("Task B")
+//}
+
+//==========================================
+// MARK: global concurrent queue for background tasks.
+
+//DispatchQueue.global().async {
+//    print("Running in the background")
+//}
+
+//=======================================
+// MARK: operation Queue
+//let operationQueue = OperationQueue()
+//
+//let operation1 = BlockOperation {
+//    print("Operation 1")
+//}
+//
+//let operation2 = BlockOperation {
+//    print("Operation 2")
+//}
+//
+//operation2.addDependency(operation1) // Operation 2 will start after Operation 1 finishes
+//
+//operationQueue.addOperation(operation1)
+//operationQueue.addOperation(operation2)
+
+//=======================================
+
+// MARK: lazy property
+//struct DataLoader {
+//    // Lazy property: Only initialized when accessed for the first time
+//    lazy var data: [String] = {
+//        print("Loading data...")
+//        return ["Item 1", "Item 2", "Item 3"]
+//    }()
+//}
+//
+//
+//var loader = DataLoader()
+//// `data` is not initialized until it is accessed
+//print(loader.data) // Output: "Loading data... ["Item 1", "Item 2", "Item 3"]
+
+//===========================================================
+
 

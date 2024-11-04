@@ -428,6 +428,65 @@ import Foundation
 //}
 
 //===========================================================
+//Finding first non repeated char in  given string
+//var input = "AABCDBE"
+//
+//for (index, character) in input.enumerated() {
+//    // Check if the current character appears only once in the string
+//    if input.filter({ $0 == character }).count == 1 {
+//        print("The first non-repeated character is: \(character)")
+//        break  // Exit the loop after finding the first non-repeated character
+//    }
+//}
+
+//===========================================================
+// MARK: search from string
+//var input = "SW"
+//var array1: [String] = ["swift", "xcode", "react native", "javaScript","swag","SWELL"]
+//
+//var find = array1.filter({$0.lowercased().contains(input.lowercased())})
+//print(find)
+
+//===========================================================
+//remove all whitespaces from string
+//input :-- ja va st
+
+//let input = "ja va st"
+//var result = ""
+//
+//for character in input {
+//    if character != " " {
+//        result.append(character)
+//    }
+//}
+
+//print("String without whitespaces: \(result)")
+//-------------
+//let input = "ja va st"
+//let result = input.replacingOccurrences(of: " ", with: "")
+//print("String without whitespaces: \(result)")
+
+//===========================================================
+
+//remove special charachter
+
+//let input = "ja!va@st#2023"
+//let result = input.replacingOccurrences(of: "[^a-zA-Z0-9]", with: "", options: .regularExpression)
+//print("String without special characters: \(result)")
+
+//===============================================================
+//count number of word in string
+
+func countWords(in string: String) -> Int {
+    let words = string.split { $0.isWhitespace || $0.isNewline }
+    return words.count
+}
+
+// Example usage
+let inputString = "Hello, this is a sample string with several words."
+let wordCount = countWords(in: inputString)
+
+print("Number of words: \(wordCount)")
 
 ///default end
 ///=========================================================
@@ -493,35 +552,7 @@ import Foundation
  
  **practice program**
 
- 6)Write a program that reads 5 Random 3 Digit values and then outputs the minimum
- and the maximum value
- 7)Write a program that takes day and month from the command line and prints true if
- day of month is between March 20 and June 20, false otherwise.
- 8)Write a program that takes a year as input and outputs the Year is a Leap Year or not
- a Leap Year. A Leap Year checks for 4 Digit Number, Divisible by 4 and not 100 unless
- divisible by 400.(leap.sh)
- 1)Write a program that takes a command-line argument n and prints a table of the
- powers of 2 that are less than or equal to 2^n.(forpower.sh)
- output:--
- 2^1=2
- 2^2=4
- 2^3=8
- 2^4=16
- 2)Extend the Flip Coin problem till either Heads or Tails wins 11 times.
- 4)Write a Program to show Sum of three Integer adds to ZERO
- 5)Take a range from 0 – 100, find the digits that are repeated twice like 33, 77,
- etc and store them in an array
 
- **dictionary**
- 1)Write a program in the following steps
- a. Roll a die and find the number between 1 to 6
- b. Repeat the Die roll and find the result each time
- c. Store the result in a dictionary
- d. Repeat till any one of the number has reached 10 times
- e. Find the number that reached maximum times and the one that was for minimum times
- 2) Write a Program to generate a birth month of 50 individuals between the
- year 92 & 93. Find all the individuals having birthdays in the same month.
- Store it to finally print.
  
  */
 
@@ -1441,6 +1472,179 @@ import Foundation
 //
 //print("The largest string is: \(largestString)")
 
+//==============================================================
+// MARK: string related
+
+//p = 1, r=2
+
+//Find occurrences of each character in string
+
+//let input = "programming"
+//var characterCounts: [Character: Int] = [:]  // Empty dictionary to store character counts
+//
+//for character in input {
+//    // If the character is already in the dictionary, increment its count
+//    if let count = characterCounts[character] {
+//        characterCounts[character] = count + 1
+//    } else {
+//        // If the character is not in the dictionary, set its count to 1
+//        characterCounts[character] = 1
+//    }
+//}
+
+// Print the occurrences of each character
+//for (character, count) in characterCounts {
+//    print("\(character): \(count)")
+//}
+
+//==============================================================
+
+//Finding first non repeated char in  given string
+//output:-- C
+
+
+//var input = "AABCDBE"
+//var occurrences: [Character: Int] = [:]
+//
+//// First pass: Count occurrences of each character
+//for character in input {
+//    if let count = occurrences[character] {
+//        occurrences[character] = count + 1
+//    } else {
+//        occurrences[character] = 1
+//    }
+//}
+//
+//// Second pass: Find the first character with a single occurrence
+//for character in input {
+//    if occurrences[character] == 1 {
+//        print("The first non-repeated character is: \(character)")
+//        break
+//    }
+//}
+
+//==============================================================
+///Finding first non repeated char in  given string
+//var input = "AABCDBE"
+//var characterCounts: [Character: Int] = [:]
+//
+//// Step 1: Count the occurrences of each character
+//for character in input {
+//    characterCounts[character, default: 0] += 1
+//}
+//
+//// Step 2: Find the first character with a count of 1
+//if let firstNonRepeatedChar = input.first(where: { characterCounts[$0] == 1 }) {
+//    print("The first non-repeated character is: \(firstNonRepeatedChar)")
+//} else {
+//    print("No non-repeated character found")
+//}
+
+//==============================================================
+
+//replace a character with its occurance in given String
+//INPUT-->OPENTEXT  TARGET = T
+//OUTPUT-->//OPEN1EX2
+
+//
+//var input = "OPENTEXT"
+//let target: Character = "T"
+//var result = ""
+//var occurrenceCount = 0
+//
+//for char in input {
+//    if char == target {
+//        occurrenceCount += 1
+//        result.append("\(occurrenceCount)")  // Replace with occurrence count
+//    } else {
+//        result.append(char)  // Keep the character as is
+//    }
+//}
+
+//print(result)  // Outputs: "OPEN1EX2"
+
+//==============================================================
+//sort string in alphabetical order
+
+//let input = "swift"
+//var characters = Array(input)  // Convert the string into an array of characters
+//
+//// Bubble Sort to sort characters in alphabetical order
+//for i in 0..<characters.count {
+//    for j in i+1..<characters.count {
+//        if characters[i] > characters[j] {
+//            // Swap characters[i] and characters[j]
+//            let temp = characters[i]
+//            characters[i] = characters[j]
+//            characters[j] = temp
+//        }
+//    }
+//}
+//
+//let sortedString = String(characters)  // Convert the sorted array back into a string
+//print("Sorted string: \(sortedString)")
+
+//==============================================================
+//check amstrong number
+//153 = (1*1*1)(5*5*5)(3*3*3) = 153
+//1+125+27 = 153
+//9474 = 9^4*4^4*7^4*4^4
+
+//var armstrongNumber = 0
+//var number = 153
+//var rem: Int
+//var temp = number
+//
+//while number > 0 {
+//    rem = number % 10
+//    armstrongNumber += rem * rem * rem
+//    number /= 10
+//}
+//
+//print("Sum of cubes of digits: \(armstrongNumber)")
+//
+//if temp == armstrongNumber {
+//    print("\(temp) is an Armstrong number")
+//} else {
+//    print("\(temp) is not an Armstrong number")
+//}
+
+//==============================================================
+// count number of word in given string
+//input --> "Hello world" --> "Hello world!"
+
+//func countWords(in string: String) -> Int {
+//    var count = 0
+//    var inWord = false
+//
+//    for character in string {
+//        if character.isWhitespace || character.isNewline {
+//            if inWord {
+//                count += 1
+//                inWord = false
+//            }
+//        } else {
+//            inWord = true
+//        }
+//    }
+//
+//    // Check if the last character was part of a word
+//    if inWord {
+//        count += 1
+//    }
+//
+//    return count
+//}
+//
+//// Example usage
+//let inputString = "Hello, this is a sample string with several words."
+//let wordCount = countWords(in: inputString)
+//
+//print("Number of words: \(wordCount)")
+
+//**************************************************************
+
+
 //pure end
 
 //**************************************************************************************
@@ -1449,6 +1653,7 @@ import Foundation
 //======================================================================
 
 //***MARK: newGen logic***
+
 
 ////======================================================================
 // MARK: calculate average mark
@@ -1533,4 +1738,69 @@ import Foundation
 //print("The length of the string is \(length).")
 
 //------------------------------------
+// remove special charachter from string
+
+//let input = "ja!va@st#2023"
+//var result = ""
+//
+//for character in input {
+//    if (character >= "a" && character <= "z") || (character >= "A" && character <= "Z") || (character >= "0" && character <= "9") {
+//        result.append(character)
+//    }
+//}
+//
+//print("String without special characters: \(result)")
+
+
+
+
+//------------------------------------------------------------
+
+//**********************************************************************
+//**********************************************************************
+
+// MARK: pending question
+
+//write program to find longest substring length which doesnt contain repeating charachter in given string
+/**
+ input :- abbac
+ output:-- bac
+ 
+ input:- abcabcbb
+ output:- abc
+ **/
+//-----------------------------
+
+//find clock angle degree on basis of clock knock
+
+//--------------
+
+
+//7)Write a program that takes day and month from the command line and prints true if
+//day of month is between March 20 and June 20, false otherwise.
+//8)Write a program that takes a year as input and outputs the Year is a Leap Year or not
+//a Leap Year. A Leap Year checks for 4 Digit Number, Divisible by 4 and not 100 unless
+//divisible by 400.(leap.sh)
+//1)Write a program that takes a command-line argument n and prints a table of the
+//powers of 2 that are less than or equal to 2^n.(forpower.sh)
+//output:--
+//2^1=2
+//2^2=4
+//2^3=8
+//2^4=16
+//2)Extend the Flip Coin problem till either Heads or Tails wins 11 times.
+//4)Write a Program to show Sum of three Integer adds to ZERO
+//5)Take a range from 0 – 100, find the digits that are repeated twice like 33, 77,
+//etc and store them in an array
+//
+//**dictionary**
+//1)Write a program in the following steps
+//a. Roll a die and find the number between 1 to 6
+//b. Repeat the Die roll and find the result each time
+//c. Store the result in a dictionary
+//d. Repeat till any one of the number has reached 10 times
+//e. Find the number that reached maximum times and the one that was for minimum times
+//2) Write a Program to generate a birth month of 50 individuals between the
+//year 92 & 93. Find all the individuals having birthdays in the same month.
+//Store it to finally print.
 
