@@ -467,7 +467,6 @@ import Foundation
 //print("String without whitespaces: \(result)")
 
 //===========================================================
-
 //remove special charachter
 
 //let input = "ja!va@st#2023"
@@ -477,18 +476,17 @@ import Foundation
 //===============================================================
 //count number of word in string
 
-func countWords(in string: String) -> Int {
-    let words = string.split { $0.isWhitespace || $0.isNewline }
-    return words.count
-}
+//func countWords(in string: String) -> Int {
+//    let words = string.split { $0.isWhitespace || $0.isNewline }
+//    return words.count
+//}
+//
+//// Example usage
+//let inputString = "Hello, this is a sample string with several words."
+//let wordCount = countWords(in: inputString)
+//
+//print("Number of words: \(wordCount)")
 
-// Example usage
-let inputString = "Hello, this is a sample string with several words."
-let wordCount = countWords(in: inputString)
-
-print("Number of words: \(wordCount)")
-
-///default end
 ///=========================================================
 
 //MARK:  remove duplicate element from array using extension
@@ -537,7 +535,54 @@ print("Number of words: \(wordCount)")
 //
 //var chararcterArray = ["a", "b", "b", "a", "c"]
 //print(chararcterArray.removeDuplicateValues())
+//---------------------------------------------------------------------------------
+// MARK: reverse each word of string
 
+var input = "interview points"
+//output:-- stniop weivretni
+
+// Split the string into words
+let words = input.split(separator: " ")
+
+// Reverse each word and create an array of reversed words
+let reversedWords = words.map { String($0.reversed()) }
+
+// Join the reversed words back into a single string
+let reversedString = reversedWords.joined(separator: " ")
+
+// Print the result
+print(reversedString)
+//---------------------------------------------------------------------------------
+// MARK: reverse word of string
+
+//let inputString = "swift is good language"
+//let reversedString = inputString.split(separator: " ").reversed().joined(separator: " ")
+//print(reversedString)
+//---------------------------------------------------------------------------------
+//MARK: sort array of string based on lenght
+//var input = "sort Array of String"
+////output:- of sort Array String
+//
+//// Split the string into words, then sort them by length
+//var words = input.split(separator: " ").map { String($0) }
+//words.sort { $0.count < $1.count }
+//
+//// Join the sorted words back into a single string
+//var output = words.joined(separator: " ")
+//
+//print(output)
+
+//---------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
+
+
+///default end
 //**************************************************************************************
 //**************************************************************************************
 //**************************************************************************************
@@ -1610,7 +1655,7 @@ print("Number of words: \(wordCount)")
 //}
 
 //==============================================================
-// count number of word in given string
+//MARK: count number of word in given string
 //input --> "Hello world" --> "Hello world!"
 
 //func countWords(in string: String) -> Int {
@@ -1641,12 +1686,216 @@ print("Number of words: \(wordCount)")
 //let wordCount = countWords(in: inputString)
 //
 //print("Number of words: \(wordCount)")
+//======================================================================================
+// MARK: check strong number
+
+/**
+ input :- 145
+ output:- !1+!4+!5 = 145
+ 
+ **/
+
+//var number = 145
+//var sumOfFactorials = 0
+//
+//// Keep the original number for comparison
+//let originalNumber = number
+//
+//// Iterate over each digit in the number
+//for digitChar in String(number) {
+//    var digitFactorial = 1
+//    
+//    // Convert the character to an integer
+//    if let digit = Int(String(digitChar)) {
+//        
+//        // Calculate the factorial of the digit
+//        for i in 1...digit {
+//            digitFactorial *= i
+//        }
+//    }
+//    
+//    // Add the factorial to the sum of factorials
+//    sumOfFactorials += digitFactorial
+//}
+//
+//// Check if the sum of factorials equals the original number
+//if sumOfFactorials == originalNumber {
+//    print("\(originalNumber) is a strong number.")
+//} else {
+//    print("\(originalNumber) is not a strong number.")
+//}
+
+//----------------------------------------------------------------
+//MARK: SECOND WAY AMSTRONG
+//var num = 145
+//var remainder: Int
+//var temp: Int
+//var sum = 0
+//temp = num
+//
+//while num > 0 {
+//    var factorial: Int = 1
+//
+//    remainder = num % 10 // Get the last digit
+//    
+//    // Calculate the factorial of the digit
+//    for digit in 1...remainder {
+//        factorial *= digit
+//    }
+//
+//    sum += factorial // Add factorial to sum
+//    num /= 10 // Remove the last digit
+//}
+//
+//// Print the sum of the factorials of the digits
+//print("Sum of factorials: \(sum)")
+//
+//// Check if the sum of factorials equals the original number
+//if sum == temp {
+//    print("\(temp) is a strong number")
+//} else {
+//    print("\(temp) is not a strong number")
+//}
+
+//======================================================================================
+//MARK: reverse each word of sentence
+
+//var input = "interview points"
+////var ouput =  "points interview"
+//var reversedString = ""
+//var currentWord = ""
+//
+//for character in input {
+//    if character == " " {
+//        
+//        reversedString += reverseWord(currentWord) + " "
+//        currentWord = ""
+//    } else {
+//        
+//        currentWord.append(character)
+//    }
+//}
+//
+//// Don't forget to reverse the last word after the loop
+//reversedString += reverseWord(currentWord)
+//
+//func reverseWord(_ word: String) -> String {
+//    var reversed = ""
+//    for character in word {
+//        reversed = String(character) + reversed
+//    }
+//    return reversed
+//}
+//
+//print(reversedString)
+//======================================================================================
+//reverse word of string
+
+/**
+ reverseString =  reverseWord.joined(separator: " ")
+ 
+ 
+ */
+
+//let inputString = "swift is good language"
+//
+///**
+// var convertArrayToStrign =  reverseWord.joined(separator: " ")
+// let converStringToArray = inputString.split(separator: " ")
+// */
+//
+//var word = ""
+//var words = [String]()
+//
+//for char in inputString {
+//    if char == " " {
+//        
+//        words.insert(word, at: 0)
+//        word = ""
+//    } else {
+//        // Accumulate characters into the `word`
+//        word.append(char)
+//    }
+//}
+//
+//words.insert(word, at: 0)
+//
+//// Join the reversed words array into a single string
+//let reversedString = words.joined(separator: " ")
+//print(reversedString)
+
+//======================================================================================
+//MARK: SORT Array of string on the basis of length
+
+//var input = "sort Array of String"
+////outpute: - of sort Array String
+//var words: [String] = []
+//var finalOutput = ""
+//
+//// Split the input string into words
+//words = input.split(separator: " ").map { String($0) }
+//
+//// Bubble sort the words based on length
+//var temp: String
+//for i in 0..<words.count {
+//    for j in (i + 1)..<words.count {
+//        if words[i].count > words[j].count {
+//            temp = words[i]
+//            words[i] = words[j]
+//            words[j] = temp
+//        }
+//    }
+//}
+//
+//// Join the sorted words into a single string
+//finalOutput = words.joined(separator: " ")
+//
+//print(finalOutput)
+//======================================================================================
+// MARK: find the angle between hour and minutes clocks
+
+/**
+ 360/12 = 30/hour
+ 30/60 = 0.5/minute
+ 
+ 360/60 = 6/minute
+ 
+ */
+
+//func clockHandAngle(hour: Int, minute: Int) -> Double {
+//    // Normalize the hour to be within 1-12
+//    let normalizedHour = hour % 12
+//    
+//    // Calculate the angle of the minute hand
+//    let minuteAngle = Double(minute) * 6.0
+//    
+//    // Calculate the angle of the hour hand
+//    let hourAngle = (Double(normalizedHour) * 30.0) + (Double(minute) * 0.5)
+//    
+//    // Calculate the absolute difference between the two angles
+//    var angle = abs(hourAngle - minuteAngle)
+//    
+//    // Choose the smaller angle if it's more than 180 degrees
+//    if angle > 180 {
+//        angle = 360 - angle
+//    }
+//    
+//    return angle
+//}
+//
+//// Example usage
+//let hour = 3
+//let minute = 15
+//let angle = clockHandAngle(hour: hour, minute: minute)
+//print("The angle between the hour and minute hands at \(hour):\(minute) is \(angle) degrees.")
+//====================================================================================
+
 
 //**************************************************************
 
 
 //pure end
-
+//MARK:
 //**************************************************************************************
 //**************************************************************************************
 //**************************************************************************************
@@ -1693,7 +1942,7 @@ print("Number of words: \(wordCount)")
 ////======================================================================
 ///======================================================================
 
-//MARK: Low priority logic
+//MARK: Low priority pure logic
 
 //MARK: Merge two arrays into a new array flight
 
@@ -1770,12 +2019,6 @@ print("Number of words: \(wordCount)")
  output:- abc
  **/
 //-----------------------------
-
-//find clock angle degree on basis of clock knock
-
-//--------------
-
-
 //7)Write a program that takes day and month from the command line and prints true if
 //day of month is between March 20 and June 20, false otherwise.
 //8)Write a program that takes a year as input and outputs the Year is a Leap Year or not
@@ -1793,7 +2036,7 @@ print("Number of words: \(wordCount)")
 //5)Take a range from 0 – 100, find the digits that are repeated twice like 33, 77,
 //etc and store them in an array
 //
-//**dictionary**
+//MARK: -**dictionary**
 //1)Write a program in the following steps
 //a. Roll a die and find the number between 1 to 6
 //b. Repeat the Die roll and find the result each time
