@@ -573,6 +573,28 @@ print(reversedString)
 //print(output)
 
 //---------------------------------------------------------------------------------
+/***
+ Consider input = "abc" and start = 0, end = 2:
+
+ input.index(input.startIndex, offsetBy: 0) is the start index of the string ("a").
+ input.index(input.startIndex, offsetBy: 2) is the index for the third character ("c").
+ So, input[0..<2] extracts "ab".
+
+ */
+
+// MARK: - find all possible substring of string
+
+//var input = "abc"
+//var substrings = [String]()
+//
+//for start in 0..<input.count {
+//    for end in (start + 1)...input.count {
+//        let substring = input[input.index(input.startIndex, offsetBy: start)..<input.index(input.startIndex, offsetBy: end)]
+//        substrings.append(String(substring))
+//    }
+//}
+//
+//print(substrings) // Output: ["a", "ab", "abc", "b", "bc", "c"]
 
 //---------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------
@@ -1889,10 +1911,37 @@ print(reversedString)
 //let angle = clockHandAngle(hour: hour, minute: minute)
 //print("The angle between the hour and minute hands at \(hour):\(minute) is \(angle) degrees.")
 //====================================================================================
+// MARK: Program to remove duplicate charachter from string
+//
+//var uniqueCharacters = ""
+//
+//for character in input {
+//    if !uniqueCharacters.contains(character) {
+//        uniqueCharacters.append(character)
+//    }
+//}
+//
+//print(uniqueCharacters)
+//===================================================================================
 
+// MARK: - find all possible substring of string
 
-//**************************************************************
-
+//let input = "abc"
+//var substrings = [String]()
+//
+//// Convert the input string to an array of characters
+//let characters = Array(input)
+//
+//for start in 0..<characters.count {
+//    var substring = ""
+//    for end in start..<characters.count {
+//        substring += String(characters[end])  // Append character at 'end' position to substring
+//        substrings.append(substring)  // Add the new substring to the list
+//    }
+//}
+//
+//print(substrings) // Output: ["a", "ab", "abc", "b", "bc", "c"]
+//********************************************************************************
 
 //pure end
 //MARK:
@@ -2046,4 +2095,6 @@ print(reversedString)
 //2) Write a Program to generate a birth month of 50 individuals between the
 //year 92 & 93. Find all the individuals having birthdays in the same month.
 //Store it to finally print.
+//program to compute quotient and Reminder without using division (/,%) operator
+
 
