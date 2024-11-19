@@ -597,9 +597,22 @@ print(reversedString)
 //print(substrings) // Output: ["a", "ab", "abc", "b", "bc", "c"]
 
 //---------------------------------------------------------------------------------
+//perform leftRotation
+
+//input =  [1,2,3,4,5]
+//output =[1,2,3,4,5]
+
+//var inputArray = [1, 2, 3, 4, 5]
+//var rotatedArray: [Int] = []
+//
+//if let firstElement = inputArray.first {
+//    rotatedArray = Array(inputArray.dropFirst())
+//    rotatedArray.append(firstElement)
+//}
+//
+//print(rotatedArray)
+
 //---------------------------------------------------------------------------------
-
-
 //---------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------
 
@@ -1912,7 +1925,7 @@ print(reversedString)
 //print("The angle between the hour and minute hands at \(hour):\(minute) is \(angle) degrees.")
 //====================================================================================
 // MARK: Program to remove duplicate charachter from string
-//
+//var inpute = "goodBoy"
 //var uniqueCharacters = ""
 //
 //for character in input {
@@ -1986,6 +1999,46 @@ print(reversedString)
 
 //console.log("Ticket Price: ₹" + finalTicketPrice);
 
+//------------------------------------------------------------------
+//MARK: check string contain vowels
+//let inputString = "faizan"
+//var containsVowel = false
+//
+//for character in inputString {
+//    if character == "a" || character == "e" || character == "i" || character == "o" || character == "u" {
+//        containsVowel = true
+//        break
+//    }
+//}
+//
+////for character in inputString {
+////    if "aeiou".contains(character) {
+////        containsVowel = true
+////        break
+////    }
+////}
+//
+//if containsVowel {
+//    print("Contains vowels")
+//} else {
+//    print("Does not contain vowels")
+//}
+//================================================
+////perform leftRotation on array
+
+//var inputArray = [1, 2, 3, 4, 5]
+//var rotatedArray: [Int] = []
+//
+//// Move all elements except the first one to the new array
+//for i in 1..<inputArray.count {
+//    rotatedArray.append(inputArray[i])
+//}
+//
+//// Add the first element of the original array to the end of the new array
+//rotatedArray.append(inputArray[0])
+//
+//print(rotatedArray)
+
 ////======================================================================
 ////======================================================================
 ////======================================================================
@@ -2049,11 +2102,7 @@ print(reversedString)
 //
 //print("String without special characters: \(result)")
 
-
-
-
 //------------------------------------------------------------
-
 //**********************************************************************
 //**********************************************************************
 
