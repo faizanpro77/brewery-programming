@@ -25,9 +25,9 @@ import Foundation
 /**
  **content table**
  
+ self interview ask Question
  logic swift method
  pure logic
- self interview Question
  Low priority logic
  *
  
@@ -48,6 +48,309 @@ import Foundation
 //===================================================================================
 //===================================================================================
 //===================================================================================
+// MARK:   self interview ask Question
+
+//MARK:  o2h pvt lmt
+
+//MARK: find even element from array
+//let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//output :---[2,4,6,8,10]
+////let evenNumbers = numbers.filter{$0 % 2 == 0}
+////print(evenNumbers)
+//
+//
+//var evenNumbers:[Int] = []
+//
+//for number in numbers {
+//
+//    if number % 2 == 0 {
+//
+//        evenNumbers.append(number)
+//
+//    }
+//}
+//print(evenNumbers)
+
+//-------------------------------------------------------------------------
+
+//MARK: find index of particular element from array..?
+
+//let numbers = [10, 20, 30, 40, 50]
+
+//
+//if let index = numbers.firstIndex(of: 30) {
+//    print("Index of 30 is: \(index)") // Output: Index of 30 is: 2
+//} else {
+//    print("Element not found")
+//}
+
+//--------------------------------------
+
+//var element = 40
+//for (index, number) in numbers.enumerated() {
+//    if element == number {
+//
+//            print("\(element) index is \(index)")
+//    }
+//}
+
+//***********************************************
+
+
+//MARK: Yup TV
+
+//MARK: 15) print prim number till 14
+//2,3,5,7,11
+//let limit = 50
+//
+//for number in 2...limit {
+//    var isPrime = true
+//
+//    if number > 1 {
+//        for i in 2..<number {
+//            if number % i == 0 {
+//                isPrime = false
+//                break
+//            }
+//        }
+//        if isPrime {
+//            print(number)
+//        }
+//    }
+//}
+
+//-------------------------------------------------------------------------
+
+//MARK: 17) print first table flight77
+
+//1*1=1
+//1*2=2
+//1*3=6 -
+//1*4=4
+//1*5=5
+//1*6=12 -
+
+//for digit in 1...6 {
+//
+//    if digit == 3 {
+//        print("1 * \(digit) = \(2*digit)")
+//    } else if digit == 6 {
+//        print("1 * \(digit) = \(2*digit)")
+//    } else {
+//        print("1 * \(digit) = \(1*digit)")
+//    }
+//}
+
+//----------------------
+
+//for i in 1...6 {
+//    var result = 1 * i // Initial multiplication result
+//
+//    if i == 3 || i == 6 {
+//        result *= 2 // Double the result for 1*3 and 1*6
+//    }
+//
+//    print("1*\(i)=\(result)")
+//}
+
+//======================================================================================
+
+//MARK: havizon private limited
+
+//MARK: find same repeated particular word from paragraph text
+
+//func countWord(wordToCount: String, in paragraph: String) -> Int
+//{
+//
+//    let words = paragraph.components(separatedBy: .whitespacesAndNewlines)
+//    let filteredWords = words.filter { !$0.isEmpty }
+////    let wordCount = filteredWords.filter { $0.lowercased() == wordToCount.lowercased()
+////
+////    }.count
+////    return wordCount
+//
+//    //---------------------------------------
+//    var filterData:[String] = []
+//        for word in filteredWords {
+//
+//            if word == wordToCount {
+//
+//                filterData.append(word)
+//            }
+//        }
+//    return filterData.count
+//    //--------------------------------
+//
+//}
+//
+//
+//let inputParagraph = "This is a sample ` paragraph with several words. This is a sample paragraph with more words."
+//let wordToCount = "sample"
+//let wordCount = countWord(wordToCount: wordToCount, in: inputParagraph)
+//print("The word '\(wordToCount)' appears \(wordCount) times.")
+
+
+//***************************************************
+//MARK: 5exception
+
+// MARK: separate int and String
+//let multiData: [Any?] = [1, 2, nil, "Faizan", "rich"]
+//
+//var intCollection: [Int] = []
+//var strCollection: [String] = []
+//
+//for case let data? in multiData {  // Safely unwrap non-nil values
+//    if let str = data as? String {
+//        strCollection.append(str)
+//    } else if let num = data as? Int {
+//        intCollection.append(num)
+//    }
+//}
+//
+//print("Strings:", strCollection)
+//print("Integers:", intCollection)
+
+//==================================================================================
+
+//MARK: - DELOITE
+
+// find repeating element from array
+
+//let input = [20, 4, 7, 22, 20, 23, 4, 55, 41, 23, 7]
+
+/**
+ *with array add this condition indiside array
+ 
+ if !repeated.contains(num) {
+ repeated.append(num)
+ }
+ 
+ */
+
+//var seen = Set<Int>()
+//var duplicates = Set<Int>()
+//
+//for num in input {
+//    if seen.contains(num) {
+//        duplicates.insert(num)
+//    } else {
+//        seen.insert(num)
+//    }
+//}
+//
+//let repeatedElements = Array(duplicates)
+//print(repeatedElements)  // Output: [4, 7, 20, 23] (Order may vary)
+
+//=================================================================
+//MARK: - neo soft
+
+Multiply 2 numbers and return by closure
+Single tone syntex
+
+//MARK: remove duplicate element from array using function
+
+
+//var tempArray:[Int] = [1,3,1,2,4,4,6,5,6]
+//
+//var numbers:[Int] = []
+
+//print(Set(numbers))
+////convert to array
+//print(Array(Set(numbers)))
+//print(Set(numbers).sorted())
+
+//func removeDuplicateValues(array: [Int]) -> [Int] {
+//
+//    guard !tempArray.isEmpty else {return []}
+//
+//    for number in array {
+//        if !numbers.contains(number) {
+//            numbers.append(number)
+//        }
+//    }
+//
+//    return numbers
+//}
+//
+//print(removeDuplicateValues(array: tempArray))
+
+
+
+//--------
+
+
+//MARK: 12) reverse array element
+//var array: [Int] = [2,8,4,7,3,2,5]
+//
+//print(array)
+//
+//var j = array.count
+//for i in 0..<array.count/2 {
+//
+//    j = j - 1
+//    var temp = 0
+//    temp = array[i]
+//    array[i] = array[j]
+//    array[j] = temp
+//}
+//
+//print(array)
+//op:-- [5,2,3,7,4,8,2]
+//---------------
+
+//for data in array {
+//    print(filter)
+//    filter.insert(data, at: 0)
+//}
+
+
+
+//=======================================================================
+// Given a string `s` and an array of strings `words`,
+// return the number of words[i] that are subsequences of `s`.
+//
+// Example:
+// Input: s = "abcde", words = ["a", "bb", "acd", "ace", "aft"]
+// Output: 3
+// Explanation: "a", "acd", and "ace" are subsequences of "abcde".
+
+
+//func numMatchingSubseq(_ s: String, _ words: [String]) -> Int {
+//    var waiting = [Character: [[Character]]]()
+//    
+//    for word in words {
+//        let chars = Array(word)
+//        if let firstChar = chars.first {
+//            waiting[firstChar, default: []].append(chars)
+//        }
+//    }
+//
+//    var count = 0
+//    for char in s {
+//        let advanceList = waiting[char] ?? []
+//        waiting[char] = []
+//
+//        for var word in advanceList {
+//            word.removeFirst()
+//            if word.isEmpty {
+//                count += 1
+//            } else {
+//                if let nextChar = word.first {
+//                    waiting[nextChar, default: []].append(word)
+//                }
+//            }
+//        }
+//    }
+//    
+//    return count
+//}
+
+
+
+//*****************************************************************************
+//*****************************************************************************
+//*****************************************************************************
+
 
 //MARK:  **logic swift method**T7
 
@@ -257,34 +560,7 @@ import Foundation
 //print(numbers)
 
 //======================================================================================
-//MARK: remove duplicate element from array using function
 
-
-
-
-//var tempArray:[Int] = [1,3,1,2,4,4,6,5,6]
-//
-//var numbers:[Int] = []
-
-//print(Set(numbers))
-////convert to array
-//print(Array(Set(numbers)))
-//print(Set(numbers).sorted())
-
-//func removeDuplicateValues(array: [Int]) -> [Int] {
-//
-//    guard !tempArray.isEmpty else {return []}
-//
-//    for number in array {
-//        if !numbers.contains(number) {
-//            numbers.append(number)
-//        }
-//    }
-//
-//    return numbers
-//}
-//
-//print(removeDuplicateValues(array: tempArray))
 
 //===================================
 //MARK: using for Each loop
@@ -640,20 +916,6 @@ print(reversedString)
 
 //===================================================================================================
 
-// Q1) swap 2 variable value between each other
- 
-
-//var a:Int = 10
-//var b:Int = 20
-//var temp:Int
-
-//print("a = \(a) and b = \(b)")
-//temp = a
-//a = b
-//b = temp
-//print("a = \(a) and b = \(b)")
-
-//======================================================================================
 
 //*) swap 2 variable value between each other without third variable
 
@@ -671,43 +933,6 @@ print(reversedString)
 
 //b = a + b - (a = b) //30 - a(20)==>a(20) & b(10)
 //======================================================================================
-
-//  swap 2 variable value between each other USING  tuple
-
-//var a = 10
-//var b = 20
-
-//var a = 10.12
-//var b = 4.45
-//
-//(a, b) = (b, a)
-//print("a", a)
-//print("b", b)
-//======================================================================================
-
-//MARK: swap generic and immutable function paramerter with "inout"
-
-//func swap<T>(_ a: inout T, b: inout T){
-//    (a, b) = (b, a)
-//}
-//
-//swap(&a, &b)
-//
-//print("a", a)
-//print("b", b)
-
-//======================================================================================
-
-//it only work in programiz online compiler or  by creating command line tool
-//print("Enter your favorite programming language:")
-
-//let name = readLine()
-
-//print("Your favorite programming language is \(name!).")
-
-
-//======================================================================================
-
 //MARK:  Q2) filter an array of words such that only words less than 4 characters long remain
 
 //let words = ["Hello", "This", "Is", "Nothing", "But", "A", "Test"]
@@ -725,33 +950,6 @@ print(reversedString)
 
 
 //======================================================================================
-
-//MARK:  *) call function and pass array and add(addition) all number inside single variable
-
-//func addTwoNumbers(numbers:[Int]) -> Int {
-//    var number = 0
-//    for num in numbers {
-//        number = number + num
-//    }
-//
-//    return number
-//}
-//
-//print(addTwoNumbers(numbers: [10,10,10,10]))
-
-//======================================================================================
-//Q3) MARK:  check odd number or even
-//
-//let number = 23
-//
-//if number%2 == 0 {
-//
-//    print("number is even")
-//} else {
-//    print("number is odd")
-//}
-
-//===================================================================================
 
 //Q4)MARK: find factorial of number and (0 factorial is 1)
 
@@ -831,32 +1029,6 @@ print(reversedString)
 //    print("number is not palindrom")
 //}
 //----------------------------------------------------
-//o/p:--3553
-
-//MARK:  using function for only practice pupose
-//func isPalindrom(_ x:Int) -> Bool {
-//    var number = x
-//    var reverseNumber = 0
-//
-//    while(number != 0) {
-//
-//        let remainder = number % 10
-//        reverseNumber = reverseNumber * 10 + remainder
-//        number = number / 10
-//    }
-//    print("reverse \(reverseNumber)")
-//    return x == reverseNumber
-//}
-//
-// let result = isPalindrom(43346)
-//
-//if result {
-//    print("number is palindrom")
-//} else {
-//    print("number is not palindrom")
-//}
-
-//============================================================================================
 //MARK: 8) from list of number or array move zero to end of the list
 
 //var list = [1, 0, 2, 0, 4, 0, 6,9,3]
@@ -939,7 +1111,7 @@ print(reversedString)
 //    var secondLargest = Int.min
 //    var lesser = data[0]
 //    var secondSmallest = Int.max
-//    
+//
 //    for number in data {
 //        // Find largest and second largest numbers
 //        if number > greater {
@@ -948,7 +1120,7 @@ print(reversedString)
 //        } else if number > secondLargest && number != greater {
 //            secondLargest = number
 //        }
-//        
+//
 //        // Find smallest and second smallest numbers
 //        if number < lesser {
 //            secondSmallest = lesser
@@ -957,7 +1129,7 @@ print(reversedString)
 //            secondSmallest = number
 //        }
 //    }
-//    
+//
 //    return (greater, secondLargest, lesser, secondSmallest)
 //}
 //
@@ -974,31 +1146,6 @@ print(reversedString)
 //print("Second Largest = \(secondLargest)")
 //print("Smallest = \(smallest)")
 //print("Second Smallest = \(secondSmallest)")
-//======================================================================================
-
-//MARK: 12) reverse array element
-//var array: [Int] = [2,8,4,7,3,2,5]
-//
-//print(array)
-//
-//var j = array.count
-//for i in 0..<array.count/2 {
-//
-//    j = j - 1
-//    var temp = 0
-//    temp = array[i]
-//    array[i] = array[j]
-//    array[j] = temp
-//}
-//
-//print(array)
-//op:-- [5,2,3,7,4,8,2]
-//---------------
-
-//for data in array {
-//    print(filter)
-//    filter.insert(data, at: 0)
-//}
 
 //======================================================================================
 
@@ -1120,7 +1267,6 @@ print(reversedString)
 //}
 
 //----------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------
 
 // 2, 3, 5, 7, 11, 13
 //MARK: 16) check prime number
@@ -1185,222 +1331,7 @@ print(reversedString)
 //for (element, count) in occurrences {
 //    print("Element \(element) occurs \(count) times.")
 //}
-//======================================================================================
-//MARK:  leap year
-//**************************************************************************************
-//**************************************************************************************
-//**************************************************************************************
 
-//***MARK: self interview Question*****
-
-//======================================================================================
-
-
-//MARK:  o2h pvt lmt
-
-//MARK: find even element from array
-//let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-//output :---[2,4,6,8,10]
-////let evenNumbers = numbers.filter{$0 % 2 == 0}
-////print(evenNumbers)
-//
-//
-//var evenNumbers:[Int] = []
-//
-//for number in numbers {
-//
-//    if number % 2 == 0 {
-//
-//        evenNumbers.append(number)
-//
-//    }
-//}
-//print(evenNumbers)
-
-//-------------------------------------------------------------------------
-
-//MARK: find index of particular element from array..?
-
-//let numbers = [10, 20, 30, 40, 50]
-
-//
-//if let index = numbers.firstIndex(of: 30) {
-//    print("Index of 30 is: \(index)") // Output: Index of 30 is: 2
-//} else {
-//    print("Element not found")
-//}
-
-//--------------------------------------
-
-//var element = 40
-//for (index, number) in numbers.enumerated() {
-//    if element == number {
-//        
-//            print("\(element) index is \(index)")
-//    }
-//}
-
-//======================================================================================
-
-
-//MARK: Yup TV
-
-//MARK: 15) print prim number till 14
-//2,3,5,7,11
-//let limit = 50
-//
-//for number in 2...limit {
-//    var isPrime = true
-//    
-//    if number > 1 {
-//        for i in 2..<number {
-//            if number % i == 0 {
-//                isPrime = false
-//                break
-//            }
-//        }
-//        if isPrime {
-//            print(number)
-//        }
-//    }
-//}
-
-//-------------------------------------------------------------------------
-
-//MARK: 17) print first table flight77
-
-//1*1=1
-//1*2=2
-//1*3=6 -
-//1*4=4
-//1*5=5
-//1*6=12 -
-
-//for digit in 1...6 {
-//
-//    if digit == 3 {
-//        print("1 * \(digit) = \(2*digit)")
-//    } else if digit == 6 {
-//        print("1 * \(digit) = \(2*digit)")
-//    } else {
-//        print("1 * \(digit) = \(1*digit)")
-//    }
-//}
-
-//----------------------
-
-//for i in 1...6 {
-//    var result = 1 * i // Initial multiplication result
-//
-//    if i == 3 || i == 6 {
-//        result *= 2 // Double the result for 1*3 and 1*6
-//    }
-//    
-//    print("1*\(i)=\(result)")
-//}
-
-//======================================================================================
-
-//MARK: havizon private limited
-
-//MARK: find same repeated particular word from paragraph text
-
-//func countWord(wordToCount: String, in paragraph: String) -> Int
-//{
-//
-//    let words = paragraph.components(separatedBy: .whitespacesAndNewlines)
-//    let filteredWords = words.filter { !$0.isEmpty }
-////    let wordCount = filteredWords.filter { $0.lowercased() == wordToCount.lowercased()
-////
-////    }.count
-////    return wordCount
-//
-//    //--------------------------------
-//    var filterData:[String] = []
-//        for word in filteredWords {
-//
-//            if word == wordToCount {
-//
-//                filterData.append(word)
-//            }
-//        }
-//    return filterData.count
-//    //--------------------------------
-//
-//}
-//
-//
-//let inputParagraph = "This is a sample ` paragraph with several words. This is a sample paragraph with more words."
-//let wordToCount = "sample"
-//let wordCount = countWord(wordToCount: wordToCount, in: inputParagraph)
-//print("The word '\(wordToCount)' appears \(wordCount) times.")
-
-//======================================================================================
-//======================================================================================
-
-//MARK: interview program conceptual question
-
-//MARK:  appriciation
-//MARK: How will you verify given string json array or json object
-
-
-//// Define structs that match your expected JSON structures
-///struct for only decoding
-
-//struct Person: Codable {
-//    var name: String
-//    var age: Int
-//    var city: String
-//}
-//
-//func isPersonJSONObject(_ jsonData: Data) -> Bool {
-//    do {
-//        // Attempt to decode the JSON data into a Person struct
-//        let _ = try JSONDecoder().decode(Person.self, from: jsonData)
-//        return true
-//    } catch {
-//        return false
-//    }
-//}
-
-//func isPersonJSONArray(_ jsonData: Data) -> Bool {
-//    do {
-//        // Attempt to decode the JSON data into an array of Person structs
-//        let _ = try JSONDecoder().decode([Person].self, from: jsonData)
-//        return true
-//    } catch {
-//        return false
-//    }
-//}
-//
-//// JSON string representing a single Person object
-//let jsonStringObject = """
-//{
-//    "name": "John",
-//    "age": 30,
-//    "city": "New York"
-//}
-//"""
-//
-//if let jsonDataObject = jsonStringObject.data(using: .utf8) {
-//    let isObject = isPersonJSONObject(jsonDataObject)
-//    print("Is Person JSON Object: \(isObject)") // Should print "Is Person JSON Object: true"
-//}
-//
-
-//
-//let jsonStringArray = """
-//[
-//    {"name": "John", "age": 30, "city": "New York"},
-//    {"name": "Jane", "age": 25, "city": "Los Angeles"},
-//    {"name": "Bob", "age": 40, "city": "Chicago"}
-//]
-//"""
-//
-//if let jsonDataArray = jsonStringArray.data(using: .utf8) {
-//    let isArray = isPersonJSONArray(jsonDataArray)
-//    print("Is Person JSON Array: \(isArray)") // Should print "Is Person JSON Array: true"
-//}
 //------------------------------------------------------------
 /// Closure for addition
 //let add: (Int, Int) -> Int = { num1, num2 in
@@ -1413,19 +1344,6 @@ print(reversedString)
 //let sum = add(number1, number2)
 //
 //print("Sum of \(number1) and \(number2) is: \(sum)")
-//=============================================================================
-//print table
-//2*1 = 2
-//2*2 = 4
-//2*3 = 6
-//2*4 = 8
-
-//var input = 2
-//for digit in 1...input{
-//    
-//    print("\(input) * \(digit) = \(input * digit)")
-//}
-
 //===================================================================
 //calculate charachter count
 
@@ -1441,25 +1359,9 @@ print(reversedString)
 //
 //print("The character '\(characterToCount)' occurs \(count) times.")
 
-//===============================================================
-//func areAnagrams(_ str1: String, _ str2: String) -> Bool {
-//    // Sort the characters of both strings and compare
-//    let sortedStr1 = str1.sorted()
-//    let sortedStr2 = str2.sorted()
-//    
-//    return sortedStr1 == sortedStr2
-//}
-//
-//let string1 = "listen"
-//let string2 = "silent"
-//
-//if areAnagrams(string1, string2) {
-//    print("'\(string1)' and '\(string2)' are anagrams.")
-//} else {
-//    print("'\(string1)' and '\(string2)' are not anagrams.")
-//}
-
 //==================================================
+
+
 //print matching number in array
 
 //let numbers = [1, 2, 3, 4, 5, 5, 2, 1]
@@ -1480,7 +1382,7 @@ print(reversedString)
 //var checkUnique = true
 //
 //for str in text {
-//    
+//
 //    if data.contains(str){
 //        checkUnique = false
 //    }
@@ -1493,48 +1395,38 @@ print(reversedString)
 //    print("string not unique")
 //}
 
-//---------------------------------------------
-//var duplicateText:Set<Character> = []
-//var checkDuplicate = true
-//
-//for singleChar in text{
-//    if duplicateText.contains(singleChar){
-//        checkDuplicate = false
-//        break
-//    }
-//    duplicateText.insert(singleChar)
-//}
-
-
-//----------------------------------------------
+//---------------------------------------------------------------------------
+// MARK: -
 //if text.count == Set(text).count{
 //    print("string is unique")
 //}else{
 //    print("String is not Unique")
 //}
 
-//==================================================
+//========================================================
 //revised
 //find common element between both array
 
 //let digit1 = [1, 2, 3, 4, 5, 2, 3, 4]
 //let digit2 = [6, 7, 8, 9, 1, 2, 3, 4]
-//var commonDigits: [Int] = []
 //
-//for num1 in digit1 {
-//    for num2 in digit2 {
-//        if num1 == num2 && !commonDigits.contains(num1) {
-//            commonDigits.append(num1)
-//        }
+//var commonElement: [Int] = []
+//
+//for digit in digit1 {
+//    // Check if digit is in digit2 and not already added in commonElement
+//    if digit2.contains(digit) && !commonElement.contains(digit) {
+//        commonElement.append(digit)
 //    }
 //}
-//
-//print("Common digits: \(commonDigits)")
+
+print(commonElement)
 
 
 //output:- [1,2,3,4]
 
 //==========================================================
+//cur77
+
 //find longest string in array
 //var data: [String] = ["hey", "hello", "good", "boy", "flight"]
 //
@@ -1643,222 +1535,6 @@ print(reversedString)
 
 //print(result)  // Outputs: "OPEN1EX2"
 
-//==============================================================
-//sort string in alphabetical order
-
-//let input = "swift"
-//var characters = Array(input)  // Convert the string into an array of characters
-//
-//// Bubble Sort to sort characters in alphabetical order
-//for i in 0..<characters.count {
-//    for j in i+1..<characters.count {
-//        if characters[i] > characters[j] {
-//            // Swap characters[i] and characters[j]
-//            let temp = characters[i]
-//            characters[i] = characters[j]
-//            characters[j] = temp
-//        }
-//    }
-//}
-//
-//let sortedString = String(characters)  // Convert the sorted array back into a string
-//print("Sorted string: \(sortedString)")
-
-//==============================================================
-//check amstrong number
-//153 = (1*1*1)(5*5*5)(3*3*3) = 153
-//1+125+27 = 153
-//9474 = 9^4*4^4*7^4*4^4
-
-//var armstrongNumber = 0
-//var number = 153
-//var rem: Int
-//var temp = number
-//
-//while number > 0 {
-//    rem = number % 10
-//    armstrongNumber += rem * rem * rem
-//    number /= 10
-//}
-//
-//print("Sum of cubes of digits: \(armstrongNumber)")
-//
-//if temp == armstrongNumber {
-//    print("\(temp) is an Armstrong number")
-//} else {
-//    print("\(temp) is not an Armstrong number")
-//}
-
-//==============================================================
-//MARK: count number of word in given string
-//input --> "Hello world" --> "Hello world!"
-
-//func countWords(in string: String) -> Int {
-//    var count = 0
-//    var inWord = false
-//
-//    for character in string {
-//        if character.isWhitespace || character.isNewline {
-//            if inWord {
-//                count += 1
-//                inWord = false
-//            }
-//        } else {
-//            inWord = true
-//        }
-//    }
-//
-//    // Check if the last character was part of a word
-//    if inWord {
-//        count += 1
-//    }
-//
-//    return count
-//}
-//
-//// Example usage
-//let inputString = "Hello, this is a sample string with several words."
-//let wordCount = countWords(in: inputString)
-//
-//print("Number of words: \(wordCount)")
-//======================================================================================
-// MARK: check strong number
-
-/**
- input :- 145
- output:- !1+!4+!5 = 145
- 
- **/
-
-//var number = 145
-//var sumOfFactorials = 0
-//
-//// Keep the original number for comparison
-//let originalNumber = number
-//
-//// Iterate over each digit in the number
-//for digitChar in String(number) {
-//    var digitFactorial = 1
-//    
-//    // Convert the character to an integer
-//    if let digit = Int(String(digitChar)) {
-//        
-//        // Calculate the factorial of the digit
-//        for i in 1...digit {
-//            digitFactorial *= i
-//        }
-//    }
-//    
-//    // Add the factorial to the sum of factorials
-//    sumOfFactorials += digitFactorial
-//}
-//
-//// Check if the sum of factorials equals the original number
-//if sumOfFactorials == originalNumber {
-//    print("\(originalNumber) is a strong number.")
-//} else {
-//    print("\(originalNumber) is not a strong number.")
-//}
-
-//----------------------------------------------------------------
-//MARK: SECOND WAY AMSTRONG
-//var num = 145
-//var remainder: Int
-//var temp: Int
-//var sum = 0
-//temp = num
-//
-//while num > 0 {
-//    var factorial: Int = 1
-//
-//    remainder = num % 10 // Get the last digit
-//    
-//    // Calculate the factorial of the digit
-//    for digit in 1...remainder {
-//        factorial *= digit
-//    }
-//
-//    sum += factorial // Add factorial to sum
-//    num /= 10 // Remove the last digit
-//}
-//
-//// Print the sum of the factorials of the digits
-//print("Sum of factorials: \(sum)")
-//
-//// Check if the sum of factorials equals the original number
-//if sum == temp {
-//    print("\(temp) is a strong number")
-//} else {
-//    print("\(temp) is not a strong number")
-//}
-
-//======================================================================================
-//MARK: reverse each word of sentence
-
-//var input = "interview points"
-////var ouput =  "points interview"
-//var reversedString = ""
-//var currentWord = ""
-//
-//for character in input {
-//    if character == " " {
-//        
-//        reversedString += reverseWord(currentWord) + " "
-//        currentWord = ""
-//    } else {
-//        
-//        currentWord.append(character)
-//    }
-//}
-//
-//// Don't forget to reverse the last word after the loop
-//reversedString += reverseWord(currentWord)
-//
-//func reverseWord(_ word: String) -> String {
-//    var reversed = ""
-//    for character in word {
-//        reversed = String(character) + reversed
-//    }
-//    return reversed
-//}
-//
-//print(reversedString)
-//======================================================================================
-//reverse word of string
-
-/**
- reverseString =  reverseWord.joined(separator: " ")
- 
- 
- */
-
-//let inputString = "swift is good language"
-//
-///**
-// var convertArrayToStrign =  reverseWord.joined(separator: " ")
-// let converStringToArray = inputString.split(separator: " ")
-// */
-//
-//var word = ""
-//var words = [String]()
-//
-//for char in inputString {
-//    if char == " " {
-//        
-//        words.insert(word, at: 0)
-//        word = ""
-//    } else {
-//        // Accumulate characters into the `word`
-//        word.append(char)
-//    }
-//}
-//
-//words.insert(word, at: 0)
-//
-//// Join the reversed words array into a single string
-//let reversedString = words.joined(separator: " ")
-//print(reversedString)
-
 //======================================================================================
 //MARK: SORT Array of string on the basis of length
 
@@ -1900,21 +1576,21 @@ print(reversedString)
 //func clockHandAngle(hour: Int, minute: Int) -> Double {
 //    // Normalize the hour to be within 1-12
 //    let normalizedHour = hour % 12
-//    
+//
 //    // Calculate the angle of the minute hand
 //    let minuteAngle = Double(minute) * 6.0
-//    
+//
 //    // Calculate the angle of the hour hand
 //    let hourAngle = (Double(normalizedHour) * 30.0) + (Double(minute) * 0.5)
-//    
+//
 //    // Calculate the absolute difference between the two angles
 //    var angle = abs(hourAngle - minuteAngle)
-//    
+//
 //    // Choose the smaller angle if it's more than 180 degrees
 //    if angle > 180 {
 //        angle = 360 - angle
 //    }
-//    
+//
 //    return angle
 //}
 //
@@ -1923,6 +1599,109 @@ print(reversedString)
 //let minute = 15
 //let angle = clockHandAngle(hour: hour, minute: minute)
 //print("The angle between the hour and minute hands at \(hour):\(minute) is \(angle) degrees.")
+
+//======================================================================================
+
+//MARK: reverse each word of sentence
+
+//var input = "interview points"
+////var ouput =  "points interview"
+//var reversedString = ""
+//var currentWord = ""
+//
+//for character in input {
+//    if character == " " {
+//
+//        reversedString += reverseWord(currentWord) + " "
+//        currentWord = ""
+//    } else {
+//
+//        currentWord.append(character)
+//    }
+//}
+//
+//// Don't forget to reverse the last word after the loop
+//reversedString += reverseWord(currentWord)
+//
+//func reverseWord(_ word: String) -> String {
+//    var reversed = ""
+//    for character in word {
+//        reversed = String(character) + reversed
+//    }
+//    return reversed
+//}
+//
+//print(reversedString)
+
+//==============================================================
+//MARK: count number of word in given string
+//input --> "Hello world" --> "Hello world!"
+
+//func countWords(in string: String) -> Int {
+//    var count = 0
+//    var inWord = false
+//
+//    for character in string {
+//        if character.isWhitespace || character.isNewline {
+//            if inWord {
+//                count += 1
+//                inWord = false
+//            }
+//        } else {
+//            inWord = true
+//        }
+//    }
+//
+//    // Check if the last character was part of a word
+//    if inWord {
+//        count += 1
+//    }
+//
+//    return count
+//}
+//
+//// Example usage
+//let inputString = "Hello, this is a sample string with several words."
+//let wordCount = countWords(in: inputString)
+//
+//print("Number of words: \(wordCount)")
+//=============================================================================
+//reverse word of string
+
+/**
+ reverseString =  reverseWord.joined(separator: " ")
+ 
+ 
+ */
+
+//let inputString = "swift is good language"
+//
+///**
+// var convertArrayToStrign =  reverseWord.joined(separator: " ")
+// let converStringToArray = inputString.split(separator: " ")
+// */
+//
+//var word = ""
+//var words = [String]()
+//
+//for char in inputString {
+//    if char == " " {
+//
+//        words.insert(word, at: 0)
+//        word = ""
+//    } else {
+//        // Accumulate characters into the `word`
+//        word.append(char)
+//    }
+//}
+//
+//words.insert(word, at: 0)
+//
+//// Join the reversed words array into a single string
+//let reversedString = words.joined(separator: " ")
+//print(reversedString)
+
+
 //====================================================================================
 // MARK: Program to remove duplicate charachter from string
 //var inpute = "goodBoy"
@@ -1938,6 +1717,7 @@ print(reversedString)
 //===================================================================================
 
 // MARK: - find all possible substring of string
+//substring is a contigous part of string
 
 //let input = "abc"
 //var substrings = [String]()
@@ -1954,6 +1734,359 @@ print(reversedString)
 //}
 //
 //print(substrings) // Output: ["a", "ab", "abc", "b", "bc", "c"]
+
+
+str77
+//******************************************************************************
+//o/p:--3553
+
+//  swap 2 variable value between each other USING  tuple
+
+//var a = 10
+//var b = 20
+
+//var a = 10.12
+//var b = 4.45
+//
+//(a, b) = (b, a)
+//print("a", a)
+//print("b", b)
+//======================================================================================
+
+// Q1) swap 2 variable value between each other
+ 
+
+//var a:Int = 10
+//var b:Int = 20
+//var temp:Int
+
+//print("a = \(a) and b = \(b)")
+//temp = a
+//a = b
+//b = temp
+//print("a = \(a) and b = \(b)")
+
+//======================================================================================
+
+
+//MARK: swap generic and immutable function paramerter with "inout"
+
+//func swap<T>(_ a: inout T, b: inout T){
+//    (a, b) = (b, a)
+//}
+//
+//swap(&a, &b)
+//
+//print("a", a)
+//print("b", b)
+
+//======================================================================================
+
+//it only work in programiz online compiler or  by creating command line tool
+//print("Enter your favorite programming language:")
+
+//let name = readLine()
+
+//print("Your favorite programming language is \(name!).")
+
+
+//======================================================================================
+
+
+//MARK:  *) call function and pass array and add(addition) all number inside single variable
+
+//func addTwoNumbers(numbers:[Int]) -> Int {
+//    var number = 0
+//    for num in numbers {
+//        number = number + num
+//    }
+//
+//    return number
+//}
+//
+//print(addTwoNumbers(numbers: [10,10,10,10]))
+
+//======================================================================================
+//Q3) MARK:  check odd number or even
+//
+//let number = 23
+//
+//if number%2 == 0 {
+//
+//    print("number is even")
+//} else {
+//    print("number is odd")
+//}
+
+//===================================================================================
+//MARK:  using function for only practice pupose
+//func isPalindrom(_ x:Int) -> Bool {
+//    var number = x
+//    var reverseNumber = 0
+//
+//    while(number != 0) {
+//
+//        let remainder = number % 10
+//        reverseNumber = reverseNumber * 10 + remainder
+//        number = number / 10
+//    }
+//    print("reverse \(reverseNumber)")
+//    return x == reverseNumber
+//}
+//
+// let result = isPalindrom(43346)
+//
+//if result {
+//    print("number is palindrom")
+//} else {
+//    print("number is not palindrom")
+//}
+
+//============================================================================================
+
+//======================================================================================
+
+//======================================================================================
+//**************************************************************************************
+//**************************************************************************************
+//**************************************************************************************
+
+
+//======================================================================================
+
+//MARK: interview program conceptual question
+
+//MARK:  appriciation
+//MARK: How will you verify given string json array or json object
+
+
+//// Define structs that match your expected JSON structures
+///struct for only decoding
+
+//struct Person: Codable {
+//    var name: String
+//    var age: Int
+//    var city: String
+//}
+//
+//func isPersonJSONObject(_ jsonData: Data) -> Bool {
+//    do {
+//        // Attempt to decode the JSON data into a Person struct
+//        let _ = try JSONDecoder().decode(Person.self, from: jsonData)
+//        return true
+//    } catch {
+//        return false
+//    }
+//}
+
+//func isPersonJSONArray(_ jsonData: Data) -> Bool {
+//    do {
+//        // Attempt to decode the JSON data into an array of Person structs
+//        let _ = try JSONDecoder().decode([Person].self, from: jsonData)
+//        return true
+//    } catch {
+//        return false
+//    }
+//}
+//
+//// JSON string representing a single Person object
+//let jsonStringObject = """
+//{
+//    "name": "John",
+//    "age": 30,
+//    "city": "New York"
+//}
+//"""
+//
+//if let jsonDataObject = jsonStringObject.data(using: .utf8) {
+//    let isObject = isPersonJSONObject(jsonDataObject)
+//    print("Is Person JSON Object: \(isObject)") // Should print "Is Person JSON Object: true"
+//}
+//
+
+//
+//let jsonStringArray = """
+//[
+//    {"name": "John", "age": 30, "city": "New York"},
+//    {"name": "Jane", "age": 25, "city": "Los Angeles"},
+//    {"name": "Bob", "age": 40, "city": "Chicago"}
+//]
+//"""
+//
+//if let jsonDataArray = jsonStringArray.data(using: .utf8) {
+//    let isArray = isPersonJSONArray(jsonDataArray)
+//    print("Is Person JSON Array: \(isArray)") // Should print "Is Person JSON Array: true"
+//}
+
+//=============================================================================
+//print table
+//2*1 = 2
+//2*2 = 4
+//2*3 = 6
+//2*4 = 8
+
+//var input = 2
+//for digit in 1...input{
+//    
+//    print("\(input) * \(digit) = \(input * digit)")
+//}
+
+//================================================================
+//sort string in alphabetical order
+
+//let input = "swift"
+//var characters = Array(input)  // Convert the string into an array of characters
+//
+//// Bubble Sort to sort characters in alphabetical order
+//for i in 0..<characters.count {
+//    for j in i+1..<characters.count {
+//        if characters[i] > characters[j] {
+//            // Swap characters[i] and characters[j]
+//            let temp = characters[i]
+//            characters[i] = characters[j]
+//            characters[j] = temp
+//        }
+//    }
+//}
+//
+//let sortedString = String(characters)  // Convert the sorted array back into a string
+//print("Sorted string: \(sortedString)")
+
+
+//======================================================================================
+// MARK: check strong number
+
+/**
+ input :- 145
+ output:- !1+!4+!5 = 145
+ 
+ **/
+
+//var number = 145
+//var sumOfFactorials = 0
+//
+//// Keep the original number for comparison
+//let originalNumber = number
+//
+//// Iterate over each digit in the number
+//for digitChar in String(number) {
+//    var digitFactorial = 1
+//    
+//    // Convert the character to an integer
+//    if let digit = Int(String(digitChar)) {
+//        
+//        // Calculate the factorial of the digit
+//        for i in 1...digit {
+//            digitFactorial *= i
+//        }
+//    }
+//    
+//    // Add the factorial to the sum of factorials
+//    sumOfFactorials += digitFactorial
+//}
+//
+//// Check if the sum of factorials equals the original number
+//if sumOfFactorials == originalNumber {
+//    print("\(originalNumber) is a strong number.")
+//} else {
+//    print("\(originalNumber) is not a strong number.")
+//}
+//==============================================================
+//check amstrong number
+//153 = (1*1*1)(5*5*5)(3*3*3) = 153
+//1+125+27 = 153
+//9474 = 9^4*4^4*7^4*4^4
+
+//var armstrongNumber = 0
+//var number = 153
+//var rem: Int
+//var temp = number
+//
+//while number > 0 {
+//    rem = number % 10
+//    armstrongNumber += rem * rem * rem
+//    number /= 10
+//}
+//
+//print("Sum of cubes of digits: \(armstrongNumber)")
+//
+//if temp == armstrongNumber {
+//    print("\(temp) is an Armstrong number")
+//} else {
+//    print("\(temp) is not an Armstrong number")
+//}
+
+//----------------------------------------------------------------
+//MARK: SECOND WAY AMSTRONG
+//var num = 145
+//var remainder: Int
+//var temp: Int
+//var sum = 0
+//temp = num
+//
+//while num > 0 {
+//    var factorial: Int = 1
+//
+//    remainder = num % 10 // Get the last digit
+//    
+//    // Calculate the factorial of the digit
+//    for digit in 1...remainder {
+//        factorial *= digit
+//    }
+//
+//    sum += factorial // Add factorial to sum
+//    num /= 10 // Remove the last digit
+//}
+//
+//// Print the sum of the factorials of the digits
+//print("Sum of factorials: \(sum)")
+//
+//// Check if the sum of factorials equals the original number
+//if sum == temp {
+//    print("\(temp) is a strong number")
+//} else {
+//    print("\(temp) is not a strong number")
+//}
+str88
+
+
+
+//=======================================================================
+
+////perform leftRotation on array
+
+//var inputArray = [1, 2, 3, 4, 5]
+//var rotatedArray: [Int] = []
+
+//// Move all elements except the first one to the new array
+//for i in 1..<inputArray.count {
+//    rotatedArray.append(inputArray[i])
+//}
+//
+//// Add the first element of the original array to the end of the new array
+//rotatedArray.append(inputArray[0])
+//
+//print(rotatedArray)
+
+//===============================================================
+//func areAnagrams(_ str1: String, _ str2: String) -> Bool {
+//    // Sort the characters of both strings and compare
+//    let sortedStr1 = str1.sorted()
+//    let sortedStr2 = str2.sorted()
+//
+//    return sortedStr1 == sortedStr2
+//}
+//
+//let string1 = "listen"
+//let string2 = "silent"
+//
+//if areAnagrams(string1, string2) {
+//    print("'\(string1)' and '\(string2)' are anagrams.")
+//} else {
+//    print("'\(string1)' and '\(string2)' are not anagrams.")
+//}
+
+
 //********************************************************************************
 
 //pure end
@@ -2003,6 +2136,7 @@ print(reversedString)
 //MARK: check string contain vowels
 //let inputString = "faizan"
 //var containsVowel = false
+//aeiou
 //
 //for character in inputString {
 //    if character == "a" || character == "e" || character == "i" || character == "o" || character == "u" {
@@ -2024,20 +2158,6 @@ print(reversedString)
 //    print("Does not contain vowels")
 //}
 //================================================
-////perform leftRotation on array
-
-//var inputArray = [1, 2, 3, 4, 5]
-//var rotatedArray: [Int] = []
-//
-//// Move all elements except the first one to the new array
-//for i in 1..<inputArray.count {
-//    rotatedArray.append(inputArray[i])
-//}
-//
-//// Add the first element of the original array to the end of the new array
-//rotatedArray.append(inputArray[0])
-//
-//print(rotatedArray)
 
 ////======================================================================
 ////======================================================================
@@ -2067,6 +2187,21 @@ print(reversedString)
 //}
 //print(arrayMerge1)
 //-------------------------------------------------------------
+// remove special charachter from string
+
+//let input = "ja!va@st#2023"
+//var result = ""
+//
+//for character in input {
+//    if (character >= "a" && character <= "z") || (character >= "A" && character <= "Z") || (character >= "0" && character <= "9") {
+//        result.append(character)
+//    }
+//}
+//
+//print("String without special characters: \(result)")
+
+//----------------------------------
+
 //MARK:  array of integers into an array of strings convert.
 
 //let arrayOfIntegers = [1, 2, 3, 4]
@@ -2081,26 +2216,25 @@ print(reversedString)
 //
 //// Prints ["1", "2", "3", "4"]
 
-//----------------------------------
 //find length of string
 
 //let myString = "Hello, world!"
 //let length = myString.count
 //print("The length of the string is \(length).")
 
-//------------------------------------
-// remove special charachter from string
+//----------------------------------
 
-//let input = "ja!va@st#2023"
-//var result = ""
+//var duplicateText:Set<Character> = []
+//var checkDuplicate = true
 //
-//for character in input {
-//    if (character >= "a" && character <= "z") || (character >= "A" && character <= "Z") || (character >= "0" && character <= "9") {
-//        result.append(character)
+//for singleChar in text{
+//    if duplicateText.contains(singleChar){
+//        checkDuplicate = false
+//        break
 //    }
+//    duplicateText.insert(singleChar)
 //}
-//
-//print("String without special characters: \(result)")
+
 
 //------------------------------------------------------------
 //**********************************************************************
@@ -2115,6 +2249,9 @@ print(reversedString)
  
  input:- abcabcbb
  output:- abc
+ 
+ //MARK:  leap year
+
  **/
 //-----------------------------
 //7)Write a program that takes day and month from the command line and prints true if
