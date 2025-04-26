@@ -303,9 +303,10 @@ Single tone syntex
 //    filter.insert(data, at: 0)
 //}
 
-
-
 //=======================================================================
+
+//MARK: eka care
+
 // Given a string `s` and an array of strings `words`,
 // return the number of words[i] that are subsequences of `s`.
 //
@@ -345,15 +346,47 @@ Single tone syntex
 //    return count
 //}
 
+//===============================================================================
+
+// You have to sort array and store String values & Int values in separate arrays.
+
+// Output should be:
+// let strArray = ["one", "three"]
+// let intArray = [2, 5]
+
+// Using manual approach
+//var anyTypeArray: [Any?] = ["one", "three", 2, 5, nil]
+//
+//var intArray: [Int] = []
+//var stringArray: [String] = []
+//
+//for element in anyTypeArray {
+//    if let element = element {
+//        if element is String {
+//            stringArray.append(element as! String)
+//        } else if element is Int {
+//            intArray.append(element as! Int)
+//        }
+//    }
+//}
+
+// Using default method (compactMap)
+//let intArray2 = anyTypeArray.compactMap { $0 as? Int }
+//let stringArray2 = anyTypeArray.compactMap { $0 as? String }
+//
+//print(intArray)     // Manual approach output
+//print(stringArray)
+//
+//print(intArray2)    // Default method output
+//print(stringArray2)
+
 
 
 //*****************************************************************************
 //*****************************************************************************
 //*****************************************************************************
-
 
 //MARK:  **logic swift method**T7
-
 
 //Q1)
 
@@ -2047,8 +2080,9 @@ str77
 //} else {
 //    print("\(temp) is not a strong number")
 //}
-str88
 
+
+str88
 
 
 //=======================================================================
@@ -2236,7 +2270,7 @@ str88
 //}
 
 
-//------------------------------------------------------------
+//----------------------------------------------------------------------
 //**********************************************************************
 //**********************************************************************
 

@@ -942,4 +942,64 @@ O/p:-- [Optional(5), Optional(42), nil, nil]
 
 //===========================================================
 
+//MARK: deloite specific interview
+// MVVM PROGRAM//
+
+// MARK: - Model
+struct User {
+    var name: String
+    var age: Int
+}
+
+// MARK: - ViewModel
+class UserViewModel {
+    private var user: User
+
+    init(user: User) {
+        self.user = user
+    }
+
+    var displayName: String {
+        return "Name: \(user.name)"
+    }
+
+    var displayAge: String {
+        return "Age: \(user.age)"
+    }
+
+    func updateName(newName: String) {
+        user.name = newName
+    }
+}
+
+// MARK: - Simulated ViewController (in Playground)
+let userData = User(name: "Faizan", age: 18)
+let viewModel = UserViewModel(user: userData)
+
+print(viewModel.displayName)
+print(viewModel.displayAge)
+
+viewModel.updateName(newName: "Jack")
+
+print(viewModel.displayName)
+print(viewModel.displayAge)
+
+
+//================================================
+
+core data thread read write
+
+let backgroundContext = persistentContainer.newBackgroundContext()
+
+backgroundContext.perform {
+    // Safe read/write in background
+    let newUser = UserEntity(context: backgroundContext)
+    newUser.name = "Alice"
+    try? backgroundContext.save()
+}
+
+
+
+
+
 
