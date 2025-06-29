@@ -244,8 +244,8 @@ import Foundation
 //=================================================================
 //MARK: - neo soft
 
-Multiply 2 numbers and return by closure
-Single tone syntex
+//Multiply 2 numbers and return by closure
+//Single tone syntex
 
 //MARK: remove duplicate element from array using function
 
@@ -387,64 +387,6 @@ Single tone syntex
 //*****************************************************************************
 
 //MARK:  **logic swift method**T7
-
-//Q1)
-
-//1)expample:--1*2,2*3,3*4,4*5
-//var a = [1,2,3,4,5]
-//desire output:-- var b = [2,6,12,20]
-
-
-//var numbers = [45, 73, 195, 53,]
-//print(numbers.count - 2)
-
-//
-// var index = 1
-//var computedNumbers : [Int] =  []
-//
-//for item in 0...2 {
-//    print(item , "good boy", numbers[item] , numbers[index])
-//    computedNumbers.append(numbers[item] * numbers[index])
-//    index = index + 1
-//
-//}
-//
-//print(computedNumbers)
-//
-//
-//
-//
-
-//======================================================================================
-//======================================================================================
-
-//Q2)
-
-
-//consider one arrray that contain 26 alphabet like ["a", "b", "c"...."z"] generat 6 digit passwrd random
-
-//random number with upper bound
-//var random = arc4random_uniform(10)
-
-//func exercise() {
-//
-//    //The number of letters in alphabet equals 26
-//    let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-
-//
-//    var password = ""
-//
-//    for item in 1...6 {
-//     password = password + alphabet[Int.random(in: 0...25)]
-//        password = password  + alphabet.randomElement()!
-//        print(item)
-//
-//    }
-//
-
-//}
-//
-//exercise()
 
 //======================================================================================
 //======================================================================================
@@ -938,12 +880,9 @@ print(reversedString)
 
 /**
  **swift interview logical and conceptual question**
- 
  **practice program**
-
-
- 
  */
+
 
 
 
@@ -1452,7 +1391,7 @@ print(reversedString)
 //    }
 //}
 
-print(commonElement)
+//print(commonElement)
 
 
 //output:- [1,2,3,4]
@@ -2082,9 +2021,6 @@ str77
 //}
 
 
-str88
-
-
 //=======================================================================
 
 ////perform leftRotation on array
@@ -2119,6 +2055,66 @@ str88
 //} else {
 //    print("'\(string1)' and '\(string2)' are not anagrams.")
 //}
+
+//---------------------------------------------------
+
+//Q1)
+
+//1)expample:--1*2,2*3,3*4,4*5
+//var a = [1,2,3,4,5]
+//desire output:-- var b = [2,6,12,20]
+
+
+//var numbers = [45, 73, 195, 53,]
+//print(numbers.count - 2)
+
+//
+// var index = 1
+//var computedNumbers : [Int] =  []
+//
+//for item in 0...2 {
+//    print(item , "good boy", numbers[item] , numbers[index])
+//    computedNumbers.append(numbers[item] * numbers[index])
+//    index = index + 1
+//
+//}
+//
+//print(computedNumbers)
+//
+//
+//
+//
+
+//======================================================================================
+//======================================================================================
+
+//Q2)
+
+
+//consider one arrray that contain 26 alphabet like ["a", "b", "c"...."z"] generat 6 digit passwrd random
+
+//random number with upper bound
+//var random = arc4random_uniform(10)
+
+//func exercise() {
+//
+//    //The number of letters in alphabet equals 26
+//    let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+//
+//    var password = ""
+//
+//    for item in 1...6 {
+//     password = password + alphabet[Int.random(in: 0...25)]
+//        password = password  + alphabet.randomElement()!
+//        print(item)
+//
+//    }
+//
+
+//}
+//
+//exercise()
 
 
 //********************************************************************************
