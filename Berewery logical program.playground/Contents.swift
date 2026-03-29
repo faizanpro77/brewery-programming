@@ -2313,4 +2313,20 @@ str77
 //Store it to finally print.
 //program to compute quotient and Reminder without using division (/,%) operator
 
+//================================add new code
+
+/**
+let collectionData:[String] = [
+let data = ["This", "is", "a", "sample", "`", "paragraph", "with", "several", "words.", "This", "is", "a", "sample", "paragraph", "with", "more", "words."]
+
+for chunkStart in stride(from: 0, to: data.count, by: 5) {
+    let end = min(chunkStart + 5, data.count)
+    let childCollection = Array(data[chunkStart..<end])
+    collectionData.append(childCollection)
+}
+
+print(collectionData)
+
+**/
+
 
