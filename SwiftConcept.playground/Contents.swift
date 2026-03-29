@@ -997,7 +997,119 @@ backgroundContext.perform {
     newUser.name = "Alice"
     try? backgroundContext.save()
 }
+//=========================================add new code
 
+/**
+//================================================new code added
+//store closure and run
+
+import Foundation
+
+class Test {
+    private var test: ((String) -> ())? = nil
+    
+    func testA(va: @escaping (String) -> ()) {
+        print("Closure received and stored")
+        self.test = va   // storing escaping closure
+    }
+    
+    func trigger() {
+        print("Triggering closure...")
+        test?("Hello from stored closure")
+    }
+}
+
+// Usage
+let obj = Test()
+
+obj.testA { value in
+    print("Callback received:", value)
+}
+
+// Later execution
+obj.trigger()
+
+//----------------------------------------------------------------------------
+//Q) with multi threading in batch of 5 send images to backend total images 20
+
+
+func createBatches(images: [UIImage], batchSize: Int) -> [[UIImage]] {
+    var batches: [[UIImage]] = []
+    
+    for i in stride(from: 0, to: images.count, by: batchSize) {
+        let end = min(i + batchSize, images.count)
+        batches.append(Array(images[i..<end]))
+    }
+    
+    return batches
+}
+
+
+func uploadBatch(images: [UIImage], completion: @escaping (Bool) -> Void) {
+    let url = URL(string: "YOUR_API_URL")!
+    
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+    
+    let boundary = "Boundary-\(UUID().uuidString)"
+    request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+    
+    var body = Data()
+    
+    for (index, image) in images.enumerated() {
+        guard let data = image.jpegData(compressionQuality: 0.7) else { continue }
+        
+        body.append("--\(boundary)\r\n")
+        body.append("Content-Disposition: form-data; name=\"images[]\"; filename=\"image\(index).jpg\"\r\n")
+        body.append("Content-Type: image/jpeg\r\n\r\n")
+        body.append(data)
+        body.append("\r\n")
+    }
+    
+    body.append("--\(boundary)--\r\n")
+    
+    URLSession.shared.uploadTask(with: request, from: body) { _, _, error in
+        completion(error == nil)
+    }.resume()
+}
+
+func uploadImagesInBackground(images: [UIImage]) {
+    
+    let batches = createBatches(images: images, batchSize: 5)
+    
+    let queue = OperationQueue()
+    queue.name = "com.image.upload.queue"
+    queue.maxConcurrentOperationCount = 2 // 🔥 control load (important)
+    
+    let completionOperation = BlockOperation {
+        DispatchQueue.main.async {
+            print("✅ All uploads completed")
+        }
+    }
+    
+    for (index, batch) in batches.enumerated() {
+        
+        let operation = BlockOperation {
+            let semaphore = DispatchSemaphore(value: 0)
+            
+            self.uploadBatch(images: batch) { success in
+                print("Batch \(index + 1): \(success ? "Success" : "Fail")")
+                semaphore.signal()
+            }
+            
+            semaphore.wait() // wait until API finishes
+        }
+        
+        completionOperation.addDependency(operation)
+        queue.addOperation(operation)
+    }
+    
+    queue.addOperation(completionOperation)
+}
+ */
+
+
+**/
 
 
 
