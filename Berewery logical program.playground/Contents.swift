@@ -576,6 +576,12 @@ import Foundation
 //print(filterCapitalCharacters(fromString: str))
 
 
+// ------------------
+//for char in input where char.isUppercase {
+//    print(char)
+//}
+
+
 //===================================================================================
 //MARK:  convert to [any] to [Int]
 
@@ -593,6 +599,18 @@ import Foundation
 //}
 
 //print(convertToIntArray(inputValue: input))
+
+-------
+//for digit in input where digit as? Int != nil {
+//    
+//    print(digit)
+//}
+//--------------------------
+//for digit in input {
+//    if let intDigit = digit as? Int {
+//        print(digit)
+//    }
+//}
 //=================================================================================
 
 //MARK: find large and small number in array
