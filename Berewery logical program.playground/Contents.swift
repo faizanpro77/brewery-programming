@@ -862,6 +862,21 @@ print(reversedString)
 //        substrings.append(String(substring))
 //    }
 //}
+
+//-----------------------
+
+// var input = "abc"
+
+// var operationChar = input.split(separator: "")
+// print(operationChar)
+
+// for i in 0..<operationChar.count {
+//     for j in i ..< operationChar.count {
+//         let substring = operationChar[i...j].joined()
+//         print(substring)
+//     }
+// }
+
 //
 //print(substrings) // Output: ["a", "ab", "abc", "b", "bc", "c"]
 
