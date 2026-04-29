@@ -881,21 +881,6 @@ print(reversedString)
 //print(substrings) // Output: ["a", "ab", "abc", "b", "bc", "c"]
 
 //---------------------------------------------------------------------------------
-//perform leftRotation
-
-//input =  [1,2,3,4,5]
-//output =[1,2,3,4,5]
-
-//var inputArray = [1, 2, 3, 4, 5]
-//var rotatedArray: [Int] = []
-//
-//if let firstElement = inputArray.first {
-//    rotatedArray = Array(inputArray.dropFirst())
-//    rotatedArray.append(firstElement)
-//}
-//
-//print(rotatedArray)
-
 //---------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------
@@ -2220,6 +2205,37 @@ str77
 //} else {
 //    print("Does not contain vowels")
 //}
+//---------------------------------------------------
+// perform left Rotation
+
+//input =   [1,2,3,4,5]
+//output = [2,3,4,5,1]
+
+//var inputArray = [1, 2, 3, 4, 5]
+//var rotatedArray: [Int] = []
+//
+//if let firstElement = inputArray.first {
+//    rotatedArray = Array(inputArray.dropFirst())
+//    rotatedArray.append(firstElement)
+//}
+//
+//print(rotatedArray)
+
+//=======================
+
+//perform right rotation
+
+//var inputArray = [1, 2, 3, 4, 5]
+//output = [5, 1, 2, 3, 4]
+//var rotatedArray: [Int] = []
+//
+//if let lastElement = inputArray.last {
+//    rotatedArray = Array(inputArray.dropLast())
+//    rotatedArray.insert(lastElement, at: 0)
+//}
+//
+//print(rotatedArray)
+
 //================================================
 
 ////======================================================================
