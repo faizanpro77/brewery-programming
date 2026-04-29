@@ -2041,20 +2041,7 @@ str77
 
 //=======================================================================
 
-////perform leftRotation on array
 
-//var inputArray = [1, 2, 3, 4, 5]
-//var rotatedArray: [Int] = []
-
-//// Move all elements except the first one to the new array
-//for i in 1..<inputArray.count {
-//    rotatedArray.append(inputArray[i])
-//}
-//
-//// Add the first element of the original array to the end of the new array
-//rotatedArray.append(inputArray[0])
-//
-//print(rotatedArray)
 
 //===============================================================
 //func areAnagrams(_ str1: String, _ str2: String) -> Bool {
@@ -2222,7 +2209,6 @@ str77
 //print(rotatedArray)
 
 //=======================
-
 //perform right rotation
 
 //var inputArray = [1, 2, 3, 4, 5]
@@ -2235,6 +2221,27 @@ str77
 //}
 //
 //print(rotatedArray)
+//--------------------------------------
+////perform leftRotation on array
+
+//var inputArray = [1, 2, 3, 4, 5]
+//var rotatedArray: [Int] = []
+
+//// Move all elements except the first one to the new array
+//for i in 1..<inputArray.count {
+//    rotatedArray.append(inputArray[i])
+//}
+//
+//// Add the first element of the original array to the end of the new array
+//rotatedArray.append(inputArray[0])
+//
+//print(rotatedArray)
+// -----------------------------------
+//var leftRotation:[Int] = []
+
+//for i in 0 ... input.count-1 {
+//    leftRotation.append(input[input.count-1-i])
+//}
 
 //================================================
 
